@@ -24,7 +24,6 @@ change_to_id <- function(x, column=1){
 #' @param root \code{character} name of the root level of the hierarchy
 #'
 #' @return nested \code{data.frame}
-#' @importFrom dplyr %>%
 #' @export
 #'
 #' @example ./inst/examples/example_table.R
@@ -37,18 +36,22 @@ d3_nest <- function(
   stopifnot(!is.null(data), inherits(data, "data.frame"))
   nonnest_cols <- dplyr::setdiff(colnames(data),value_cols)
 
-  data_nested <- tidyr::nest_(
-    data=data,
-    nest_cols=c(nonnest_cols[length(nonnest_cols)], value_cols),
-    key_col="children"
-  ) %>% change_to_id()
+  data_nested <- change_to_id(
+    tidyr::nest_(
+      data=data,
+      nest_cols=c(nonnest_cols[length(nonnest_cols)], value_cols),
+      key_col="children"
+    )
+  )
 
   for(x in rev(colnames(data_nested)[-ncol(data_nested)])){
-    data_nested <- tidyr::nest_(
-      data_nested,
-      nest_cols = c(x,"children"),
-      key_col = "children"
-    ) %>% change_to_id()
+    data_nested <- change_to_id(
+      tidyr::nest_(
+        data_nested,
+        nest_cols = c(x,"children"),
+        key_col = "children"
+      )
+    )
   }
   data_nested$id = root
   return(data_nested)
