@@ -2,3 +2,4 @@
 
 export(d3_dep_v3)
 export(d3_dep_v4)
+export(d3_nest)
