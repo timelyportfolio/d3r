@@ -1,4 +1,4 @@
-Package: d3R
+Package: d3r
 Type: Package
 Title: 'd3.js' Utilities for R
 Version: 0.1.0
@@ -20,5 +20,6 @@ Maintainer: Kent Russell <kent.russell@timelyportfolio.com>
 Description: Provide helper functions for using 'd3.js' in R
 License: BSD_3_clause | file LICENSE
 Encoding: UTF-8
+Imports: htmltools
 LazyData: true
 RoxygenNote: 5.0.1
