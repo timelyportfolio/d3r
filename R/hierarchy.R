@@ -11,7 +11,7 @@
 #' @return \code{data.frame}
 change_to_id <- function(x, column=1){
   dplyr::mutate(x, children = lapply(
-    children,
+    quote(children),
     function(y) dplyr::rename_(y,id=colnames(y)[column])
   ))
 }
