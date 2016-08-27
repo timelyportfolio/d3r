@@ -1,0 +1,5 @@
+The d3R package as a whole is distributed under the “BSD 3-clause License”.
+
+The d3R package includes other open source software components. The following is a list of these components (full copies of the license agreements used by these components are included below):
+
+- d3.js, https://github.com/d3/d3
