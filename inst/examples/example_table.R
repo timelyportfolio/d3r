@@ -13,3 +13,7 @@ tit_tb
 
 # see as json
 jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE)
+
+# see the structure with listviewer
+jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE) %>%
+  listviewer::jsonedit()

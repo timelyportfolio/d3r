@@ -23,7 +23,8 @@ Encoding: UTF-8
 Imports:  dplyr,
           htmltools,
           tidyr
-Suggests: jsonlite
+Suggests: jsonlite,
+          listviewer
 Enhances: htmltools,
           treemap
 LazyData: true
