@@ -27,6 +27,7 @@ change_to_id <- function(x, column=1){
 #' @export
 #'
 #' @example ./inst/examples/example_table.R
+#' @example ./inst/examples/example_treemap.R
 d3_nest <- function(
   data=NULL,
   value_cols=character(),
