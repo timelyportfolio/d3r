@@ -9,6 +9,8 @@ change_to_id(x, column = 1)
 \arguments{
 \item{x}{\code{data.frame} or \code{data.frame} derivative, such
 as \code{tibble}}
+
+\item{column}{column to convert}
 }
 \value{
 \code{data.frame}

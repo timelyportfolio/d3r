@@ -17,8 +17,8 @@ Authors@R: c(
       )
     )
 Maintainer: Kent Russell <kent.russell@timelyportfolio.com>
-Description: Provide helper functions for using 'd3.js' in R
-License: BSD_3_clause | file LICENSE
+Description: 'd3r' provides helper functions for using 'd3.js' in R.
+License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports:  dplyr,
           htmltools,

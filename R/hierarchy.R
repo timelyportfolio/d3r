@@ -6,6 +6,7 @@
 #'
 #' @param x \code{data.frame} or \code{data.frame} derivative, such
 #'         as \code{tibble}
+#' @param column column to convert
 #'
 #' @return \code{data.frame}
 change_to_id <- function(x, column=1){
