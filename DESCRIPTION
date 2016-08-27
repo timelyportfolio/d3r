@@ -25,7 +25,6 @@ Imports:  dplyr,
           tidyr
 Suggests: jsonlite,
           listviewer
-Enhances: htmltools,
-          treemap
+Enhances: treemap
 LazyData: true
 RoxygenNote: 5.0.1

@@ -24,6 +24,7 @@ change_to_id <- function(x, column=1){
 #' @param root \code{character} name of the root level of the hierarchy
 #'
 #' @return nested \code{data.frame}
+#' @importFrom dplyr %>%
 #' @export
 #'
 #' @example ./inst/examples/example_table.R
