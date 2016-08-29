@@ -16,6 +16,43 @@ change_to_id <- function(x, column=1){
   ))
 }
 
+
+#' Promote NA to Top Level
+#'
+#' @param x \code{data.frame}
+#'
+#' @return \code{data.frame}
+promote_na_one <- function(x){
+  # find children that are na
+  # expect this to only happen once, so only take first na
+  #   to define values
+  na_child <- dplyr::filter(x$children[[1]], is.na(id))[1,]
+  na_child_loc <- which(is.na(x$children[[1]]$id))
+
+  # promote all non-id columns to top level
+  if(length(na_child_loc)){
+    x <- dplyr::bind_cols(
+      x,
+      dplyr::select(na_child,-(match(colnames(na_child),c("id","children"))))
+    )
+
+    # eliminate na child
+    dplyr::mutate(x,children=list(children[[1]][-na_child_loc,]))
+  } else {
+    x
+  }
+}
+
+
+#' Apply `promote_na` to All Rows
+#'
+#' @param x \code{data.frame}
+#'
+#' @return \code{data.frame}
+promote_na <- function(x){
+  purrr:::by_row(x, promote_na_one)$.out
+}
+
 #' Convert a \code{data.frame} to a 'd3.js' Hierarchy
 #'
 #' @param data \code{data.frame} or \code{data.frame} derivative, such
@@ -37,22 +74,33 @@ d3_nest <- function(
   stopifnot(!is.null(data), inherits(data, "data.frame"))
   nonnest_cols <- dplyr::setdiff(colnames(data),value_cols)
 
-  data_nested <- change_to_id(
-    tidyr::nest_(
-      data=data,
-      nest_cols=c(nonnest_cols[length(nonnest_cols)], value_cols),
-      key_col="children"
-    )
-  )
+  # convert factor to character
+  data <- dplyr::mutate_if(data, is.factor, as.character)
 
-  for(x in rev(colnames(data_nested)[-ncol(data_nested)])){
-    data_nested <- change_to_id(
+  data_nested <- dplyr::bind_rows(promote_na(
+    change_to_id(
       tidyr::nest_(
-        data_nested,
-        nest_cols = c(x,"children"),
-        key_col = "children"
+        data=data,
+        nest_cols=c(nonnest_cols[length(nonnest_cols)], value_cols),
+        key_col="children"
       )
     )
+  ))
+
+  for(x in rev(
+    colnames(data_nested)[
+      -which(colnames(data_nested) %in% c("children",value_cols))
+    ]
+  )){
+    data_nested <- dplyr::bind_rows(promote_na(
+      change_to_id(
+        tidyr::nest_(
+          data_nested,
+          nest_cols = colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)],
+          key_col = "children"
+        )
+      )
+    ))
   }
   data_nested$id = root
   return(data_nested)
