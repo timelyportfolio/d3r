@@ -102,7 +102,7 @@ Titanic %>>%
   listviewer::jsonedit()
 ```
 
-### Lots More
+### lots more
 
 There is a whole lot more left to do, but I think the current set of `d3r` functionality will already make using `d3.js` in R a little more pleasant.  Please let me know if you have any ideas or spot any problems.
 
