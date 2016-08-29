@@ -36,10 +36,10 @@ tit_tb <- titanic_df \%>\%
 tit_tb
 
 # see as json
-jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE)
+d3_json(tit_tb)
 
 # see the structure with listviewer
-jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE) \%>\%
+d3_json(tit_tb) \%>\%
   listviewer::jsonedit()
 \dontrun{
   library(treemap)
@@ -48,7 +48,6 @@ jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE) \%>\%
   library(tidyr)
 
   treemap::random.hierarchical.data() \%>\%
-    drop_na() \%>\%
     d3_nest(value_cols = "x")
 
   # use example from ?treemap

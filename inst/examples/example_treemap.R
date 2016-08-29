@@ -5,7 +5,6 @@
   library(tidyr)
 
   treemap::random.hierarchical.data() %>%
-    drop_na() %>%
     d3_nest(value_cols = "x")
 
   # use example from ?treemap

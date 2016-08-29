@@ -12,8 +12,8 @@ tit_tb <- titanic_df %>%
 tit_tb
 
 # see as json
-jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE)
+d3_json(tit_tb)
 
 # see the structure with listviewer
-jsonlite::toJSON(tit_tb, dataframe="row", auto_unbox=TRUE) %>%
+d3_json(tit_tb) %>%
   listviewer::jsonedit()
