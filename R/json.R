@@ -8,5 +8,7 @@
 #' @return \code{string} of 'JSON' data
 #' @export
 d3_json <- function(x=NULL){
-  jsonlite::toJSON(x, auto_unbox=TRUE, dataframe="rows")
+  xj <- jsonlite::toJSON(x, auto_unbox=TRUE, dataframe="rows")
+  # remove array so only get first element as object
+  substr(xj,2,nchar(xj)-1)
 }
