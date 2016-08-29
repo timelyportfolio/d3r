@@ -1,0 +1,108 @@
+---
+title: "Why d3r?"
+author: "Kenton Russell"
+date: "August 28, 2016"
+output:
+  html_document:
+    mathjax: null
+    theme: null
+    css: https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css
+---
+
+`d3r` doesn't make beautiful interactive `htmlwidgets`, so what does it do?  `d3r` provides helpers for `d3.js` in R by providing two (and more coming) functions. *Note: this is very much a work in progress*
+
+1. easy dependency functions for `d3.js` v3 and v4
+2. converter for R data structures to `d3.js` nested hierarchies
+
+### dependency functions
+
+There are a whole lot of `htmlwidgets` built on top of `d3.js`, and each one requires a local copy of `d3.js`.  On my computer, this means I have >15 copies of `d3.js` in my R library.  When I build a `htmlwidget`, I have to copy `d3.min.js` along with license and other meta information.  Lots of times I just want to add `d3` to my `htmltools::tags`.  `d3r` solves all of these problems by supplying functions `d3_dep_v3()` and `d3_dep_v4()` that return up-to-date `htmltools::htmlDependency` for `d3`.  I'll start to convert each of my d3-based `htmlwidgets` to use `d3r`, and my life as an `htmlwidget` author will become easier.  I will not need to worry any more when `d3` updates.  To add a dependency to a `htmlwidget`, we can use this pattern.
+
+```{r eval=FALSE}
+library(d3r)
+
+widget$dependencies <- c(
+  widget$dependencies,
+  d3r::d3_dep_d3()
+)
+```
+
+Often, I build ad-hoc html with `htmltools::tags`, and I want all the power of `d3.js`.  Usually, I'll do something like
+
+```{r eval=FALSE}
+tags$head(tags$script("http://d3js.org/d3.v3.min.js"))
+```
+
+which isn't so bad but I lose the dependency conflict management built into `htmltools` and `htmlwidgets`.  The more robust way is to use `htmltools::htmlDependency`.
+
+```{r eval=FALSE}
+attachDependencies(
+  tagList(...),
+  htmlDependency(
+    name="d3",
+    version="3.5.7",
+    src=c(href="https://d3js.org"),
+    script="d3.v3.min.js"
+  )
+)
+```
+
+That is a lot to type, so let's save a couple of lines with our new `d3r` helper function.
+
+```{r eval=FALSE}
+library(d3r)
+attachDependencies(
+  tagList(...),
+  d3r::d3_dep_v4()
+)
+```
+
+### d3 hierarchy builder
+
+Nested d3 hierarchies can be tricky especially for users from other languages, such as R, and for those not trained in the specialized dark of art of nested `JSON`.  After converting R data to nested `d3` hierarchies in many ways, I decided it was time to leverage my favorite pattern using `tidyr::nest` and `dplyr` to convert a R `data.frame` to a `d3` hierarchy.
+
+```{r}
+library(d3r)
+
+(d3n <- d3_nest(
+  data.frame(
+    number=rep(1:4,each=3),
+    letter=LETTERS[1:12],
+    value=runif(12),
+    stringsAsFactors=FALSE
+  ),
+  value_cols="value"
+))
+```
+
+`listviewer::jsonedit` will help us visualize our hierarchy.
+
+```{r}
+listviewer::jsonedit(
+  jsonlite::toJSON(
+    d3n, auto_unbox=TRUE, dataframe="rows"
+  )
+)
+```
+
+The data in the above example was not all that exciting.  Let's look at how we might go from a R `table` to nested `d3`.
+
+```{r eval=TRUE}
+library(pipeR)
+
+# will soon make s3 generic for table so no need
+#  to explicitly convert to data.frame
+
+Titanic %>>%
+  as.data.frame() %>>%
+  d3_nest(value_cols="Freq") %>>%
+  # also think I'll provide helper for this
+  #  see https://github.com/timelyportfolio/d3r/issues/1
+  jsonlite::toJSON(auto_unbox=TRUE, dataframe="rows") %>>%
+  listviewer::jsonedit()
+```
+
+### Lots More
+
+There is a whole lot more left to do, but I think the current set of `d3r` functionality will already make using `d3.js` in R a little more pleasant.  Please let me know if you have any ideas or spot any problems.
+
