@@ -8,5 +8,7 @@ d3r::d3_igraph(igraph::sample_pa(100))
 
 # with karate from igraphdata
 data("karate",package="igraphdata")
-d3r::d3_igraph(karate)
+(karate_d3 <- d3r::d3_igraph(karate))
+
+listviewer::jsonedit(karate_d3)
 }

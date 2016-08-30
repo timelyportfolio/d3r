@@ -78,11 +78,7 @@ library(d3r)
 `listviewer::jsonedit` will help us visualize our hierarchy.
 
 ```{r}
-listviewer::jsonedit(
-  jsonlite::toJSON(
-    d3n, auto_unbox=TRUE, dataframe="rows"
-  )
-)
+listviewer::jsonedit(d3n)
 ```
 
 The data in the above example was not all that exciting.  Let's look at how we might go from a R `table` to nested `d3`.
@@ -96,9 +92,6 @@ library(pipeR)
 Titanic %>>%
   as.data.frame() %>>%
   d3_nest(value_cols="Freq") %>>%
-  # also think I'll provide helper for this
-  #  see https://github.com/timelyportfolio/d3r/issues/1
-  jsonlite::toJSON(auto_unbox=TRUE, dataframe="rows") %>>%
   listviewer::jsonedit()
 ```
 

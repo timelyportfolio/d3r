@@ -38,11 +38,13 @@ tit_tb <- titanic_df \%>\%
 
 tit_tb
 
-# see as json
-d3_json(tit_tb)
+# see as tibble
+titanic_df \%>\%
+  select(Class,Age,Survived,Sex,Freq) \%>\%
+  d3_nest(value_cols="Freq", root="titanic", json=FALSE)
 
 # see the structure with listviewer
-d3_json(tit_tb) \%>\%
+tit_tb \%>\%
   listviewer::jsonedit()
 \dontrun{
   library(treemap)
