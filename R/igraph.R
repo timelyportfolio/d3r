@@ -15,8 +15,12 @@ d3_igraph <- function(igrf = NULL, json=TRUE) {
     what = "both"
   )
 
+  nodes <- network$vertices
+
   # use rownames as id
-  nodes <- dplyr::mutate(network$vertices, id=rownames(network$vertices))
+  if(!("id" %in% colnames(nodes))){
+    nodes <- dplyr::mutate(nodes, id=rownames(network$vertices))
+  }
   links <- dplyr::rename(
     network$edges,
     source = from,
