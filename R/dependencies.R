@@ -15,7 +15,7 @@ d3_dep_v4 <- function(){
       file = system.file("www/d3/v4/dist", package="d3r"),
       href = "https://d3js.org/"
     ),
-    script = "d3.min.js"
+    script = "d3.v4.min.js"
   )
 }
 
@@ -36,6 +36,6 @@ d3_dep_v3 <- function(){
       file = system.file("www/d3/v3/dist", package="d3r"),
       href = "https://d3js.org/"
     ),
-    script = "d3.min.js"
+    script = "d3.v3.min.js"
   )
 }
