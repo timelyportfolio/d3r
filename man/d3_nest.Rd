@@ -4,7 +4,8 @@
 \alias{d3_nest}
 \title{Convert a \code{data.frame} to a 'd3.js' Hierarchy}
 \usage{
-d3_nest(data = NULL, value_cols = character(), root = "root")
+d3_nest(data = NULL, value_cols = character(), root = "root",
+  json = TRUE)
 }
 \arguments{
 \item{data}{\code{data.frame} or \code{data.frame} derivative, such
@@ -14,6 +15,8 @@ as \code{tibble}}
 columns to use as data}
 
 \item{root}{\code{character} name of the root level of the hierarchy}
+
+\item{json}{\code{logical} to return as \code{JSON}}
 }
 \value{
 nested \code{data.frame}

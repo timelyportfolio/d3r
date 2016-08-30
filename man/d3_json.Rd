@@ -4,10 +4,13 @@
 \alias{d3_json}
 \title{Create 'JSON' that 'd3.js' Expects}
 \usage{
-d3_json(x = NULL)
+d3_json(x = NULL, strip = TRUE)
 }
 \arguments{
 \item{x}{data, usually in the form of \code{data.frame} or \code{list}}
+
+\item{strip}{\code{logical} to remove outer array.  Use \code{strip=TRUE}
+for hierarchies from \code{d3_nest}}
 }
 \value{
 \code{string} of 'JSON' data

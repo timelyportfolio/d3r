@@ -60,6 +60,7 @@ promote_na <- function(x){
 #' @param value_cols \code{character} vector with the names of the
 #'                columns to use as data
 #' @param root \code{character} name of the root level of the hierarchy
+#' @param json \code{logical} to return as \code{JSON}
 #'
 #' @return nested \code{data.frame}
 #' @export
@@ -69,7 +70,8 @@ promote_na <- function(x){
 d3_nest <- function(
   data=NULL,
   value_cols=character(),
-  root = "root"
+  root = "root",
+  json = TRUE
 ) {
   stopifnot(!is.null(data), inherits(data, "data.frame"))
   nonnest_cols <- dplyr::setdiff(colnames(data),value_cols)
@@ -103,5 +105,9 @@ d3_nest <- function(
     ))
   }
   data_nested$id = root
-  return(data_nested)
+  if(json){
+    d3_json(data_nested,strip=TRUE)
+  } else {
+    data_nested
+  }
 }
