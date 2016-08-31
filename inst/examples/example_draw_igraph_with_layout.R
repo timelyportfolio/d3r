@@ -3,7 +3,7 @@ library(d3r)
 library(igraph)
 
 d3_draw_igraph <- function(igrf, layout=layout.auto, width=400, height=400, ...){
-  coords <- norm_coords(layout(karate),0,width-30,0,height-30)
+  coords <- norm_coords(layout(igrf),0,width-30,0,height-30)
   V(igrf)$x <- coords[,1]
   V(igrf)$y <- coords[,2]
   json <- d3r::d3_igraph(igrf)
