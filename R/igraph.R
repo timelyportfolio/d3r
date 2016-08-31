@@ -40,9 +40,12 @@ d3_igraph <- function(igrf = NULL, json=TRUE) {
     links$target <- as.character(as.numeric(links$target)-1)
   }
 
+  # add graph attributes
+  graphattr <- igraph::graph_attr(igrf)
+
   if(json){
-    d3_json(list(nodes=nodes,links=links),strip=FALSE)
+    d3_json(list(nodes=nodes,links=links,attributes=graphattr),strip=FALSE)
   } else {
-    list(nodes=nodes,links=links)
+    list(nodes=nodes,links=links,attributes=graphattr)
   }
 }
