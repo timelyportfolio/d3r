@@ -26,7 +26,7 @@ promote_na_one <- function(x){
   # find children that are na
   # expect this to only happen once, so only take first na
   #   to define values
-  na_child <- dplyr::filter(x$children[[1]], is.na(id))[1,]
+  na_child <- dplyr::filter(x$children[[1]], is.na(quote(id)))[1,]
   na_child_loc <- which(is.na(x$children[[1]]$id))
 
   # promote all non-id columns to top level
@@ -37,7 +37,7 @@ promote_na_one <- function(x){
     )
 
     # eliminate na child
-    dplyr::mutate(x,children=list(children[[1]][-na_child_loc,]))
+    dplyr::mutate(x,children=list(quote(children)[[1]][-na_child_loc,]))
   } else {
     x
   }
@@ -50,7 +50,7 @@ promote_na_one <- function(x){
 #'
 #' @return \code{data.frame}
 promote_na <- function(x){
-  purrr:::by_row(x, promote_na_one)$.out
+  purrr::by_row(x, promote_na_one)$.out
 }
 
 #' Convert a \code{data.frame} to a 'd3.js' Hierarchy
