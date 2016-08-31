@@ -1,6 +1,8 @@
 library(htmltools)
 library(d3r)
 library(igraph)
+library(igraphdata)
+data("karate")
 
 d3_draw_igraph <- function(igrf, layout=layout.auto, width=400, height=400, ...){
   coords <- norm_coords(layout(karate),0,width-30,0,height-30)
