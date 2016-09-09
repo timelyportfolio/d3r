@@ -21,8 +21,11 @@ d3_party = function (tree=NULL, json=TRUE) {
   stopifnot(!is.null(tree), requireNamespace("partykit"))
 
   # Checking the decision tree object
-  if(!inherits(tree, c("constparty","party")))
+  if(!inherits(tree, c("constparty","party"))){
     tree_pk <- partykit::as.party(tree)
+  } else {
+    tree_pk <- tree
+  }
 
   data <- rapply(tree_pk$node, unclass, how="list")
 
