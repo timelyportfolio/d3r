@@ -17,6 +17,8 @@
 #' @export
 d3_party = function (tree=NULL, json=TRUE) {
 
+  stopifnot(!is.null(tree), requireNamespace("partykit"))
+
   # Checking the decision tree object
   if(!is(tree, c("constparty","party")))
     tree_pk <- partykit::as.party(tree)
@@ -25,7 +27,7 @@ d3_party = function (tree=NULL, json=TRUE) {
 
   #fill in information at the root level for now
   #that might be nice to provide to our interactive graph
-  data$info = rapply(
+  data$info <- rapply(
     unclass(tree_pk)[-1]
     ,function(l){
       l = unclass(l)
@@ -41,26 +43,22 @@ d3_party = function (tree=NULL, json=TRUE) {
   #get all the other meta data we need and merge it in to the list
 
   ## changed pattern from [1-9] to [0-9] because we were missing node 10
-  tree_text <- invisible( capture.output( print(tree_pk) ) ) %>>%
-    ( .[grep( x = ., pattern = "(\\[)([0-9]*)(\\])")] ) %>>%
-    strsplit( "[\\[\\|\\]]" , perl = T) %>>%
-    (
-      lapply(
-        seq.int(1,length(.)),
-        function(i){
-          x <- .[[i]]
-          tail(x,2) %>>%
-            (tail_data ~
-               data.frame(
-                 "id" = as.numeric(tail_data[1])
-                 , description = tail_data[2]
-                 , stringsAsFactors = F
-               )
-            )
-        }
+  tree_text <- invisible( capture.output( print(tree_pk) ) )
+  tree_text <- tree_text[grep( x = tree_text, pattern = "(\\[)([0-9]*)(\\])")]
+  tree_text <- strsplit( tree_text, "[\\[\\|\\]]" , perl = T)
+  tree_text <- lapply(
+    seq.int(1,length(tree_text)),
+    function(i){
+      x <- tree_text[[i]]
+      tail_data <- tail(x,2)
+      data.frame(
+        "id" = as.numeric(tail_data[1])
+        , description = tail_data[2]
+        , stringsAsFactors = F
       )
-    )  %>>%
-    (do.call(rbind,.))
+    }
+  )
+  tree_text <- do.call(rbind, tree_text)
 
 
   # terminal nodes have descriptive stats in their names, so I stripped these out
@@ -68,7 +66,7 @@ d3_party = function (tree=NULL, json=TRUE) {
   tree_text$description <- sapply(strsplit(tree_text[,2], ":"), "[", 1)
 
   # add rules
-  tree_text$rule <- sapply(nodeids(tree_pk),function(n){partykit:::.list.rules.party(tree_pk,n)})
+  tree_text$rule <- sapply(partykit::nodeids(tree_pk),function(n){partykit:::.list.rules.party(tree_pk,n)})
 
   # if frame data (rpart, maybe others) then add
   # binding the node names from rpk with more of the relevant meta data from rp

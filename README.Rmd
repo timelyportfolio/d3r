@@ -79,7 +79,11 @@ library(d3treeR)
 library(d3r)
 
 # example from ?rpart
-rp <-  rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+data("kyphosis", package="rpart")
+rp <-  rpart::rpart(
+  Kyphosis ~ Age + Number + Start,
+  data = kyphosis
+)
 
 # get the json hierarchy
 d3_party(tree=rp)

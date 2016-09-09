@@ -55,7 +55,11 @@ As another example, let's go from `treemap` to `d3.js`.
     library(d3r)
 
     # example from ?rpart
-    rp <-  rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+    data("kyphosis", package="rpart")
+    rp <-  rpart::rpart(
+      Kyphosis ~ Age + Number + Start,
+      data = kyphosis
+    )
 
     # get the json hierarchy
     d3_party(tree=rp)

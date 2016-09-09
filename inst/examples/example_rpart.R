@@ -1,12 +1,13 @@
 library(d3r)
 # from ?rpart
+data("kyphosis", package="rpart")
 d3_party(
-  rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+  rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
 )
 
 # if you want the list instead of json
 d3_party(
-  rpart(Kyphosis ~ Age + Number + Start, data = kyphosis),
+  rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis),
   json = FALSE
 )
 
@@ -17,7 +18,7 @@ d3_party(
 
   d3tree2(
     d3_party(
-      rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+      rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
     ),
     celltext = "rule",
     valueField = "n"
