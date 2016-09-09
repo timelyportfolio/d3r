@@ -76,7 +76,7 @@ As another example, let's go from `treemap` to `d3.js`.
 `igraph` to `d3.js` network of `nodes` and `links` is a very common conversion. `d3r::d3_igraph` will do this for you.
 
     library(igraph)
-    libary(d3r)
+    library(d3r)
 
     d3_igraph(igraph::watts.strogatz.game(1, 50, 4, 0.05))
 

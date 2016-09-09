@@ -102,7 +102,7 @@ d3tree2(
 
 ```
 library(igraph)
-libary(d3r)
+library(d3r)
 
 d3_igraph(igraph::watts.strogatz.game(1, 50, 4, 0.05))
 ```
