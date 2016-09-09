@@ -75,17 +75,33 @@ d3_party = function (tree=NULL, json=TRUE) {
   # if frame data (rpart, maybe others) then add
   # binding the node names from rpk with more of the relevant meta data from rp
   # i don't think that partykit imports this automatically for the inner nodes, so i did it manually
-  if(!is.null(tree$frame)){
+  if("frame" %in% names(tree)){
     tree_text <- cbind(tree_text, tree$frame)
     # rounding the mean DV value
     tree_text$yval <- round(tree_text$yval, 2)
+  }
+
+  # now try to add size / count information
+  #  rpart easy and will have n but other more difficult
+  if("fitted" %in% names(unclass(tree_pk)) && "weights" %in% names(tree_pk$fitted)){
+    counts <- data.frame(
+      xtabs(`(weights)`~`(fitted)`+`(response)`,tree_pk$fitted),
+      stringsAsFactors=FALSE
+    )
+    colnames(counts) <- c("fitted", "response", "freq")
+    counts <- dplyr::mutate(counts, fitted = as.numeric(as.character(fitted)))
+    counts <- tidyr::nest(counts, response, freq, .key="size")
   }
 
   # do the merge of tree_text with data by
   # walking the tree and joining by id
   join_data <- function(l){
     l <- unclass(l)
-    utils::modifyList(l,subset(tree_text,`id`==l$id))
+    l <- utils::modifyList(l,subset(tree_text,`id`==l$id))
+    if("fitted" %in% names(unclass(tree_pk)) && "weights" %in% names(tree_pk$fitted)){
+      l$size <- subset(counts, `fitted`==l$id)
+    }
+    l
   }
 
   merge_data <- function(l){
