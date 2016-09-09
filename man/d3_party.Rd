@@ -19,20 +19,21 @@ This thing is not even close to being done, so please help
 with ideas and contributions.
 }
 \examples{
-library(d3r)
-# from ?rpart
-data("kyphosis", package="rpart")
-d3_party(
-  rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
-)
-
-# if you want the list instead of json
-d3_party(
-  rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis),
-  json = FALSE
-)
-
 \dontrun{
+
+  library(d3r)
+  # from ?rpart
+  data("kyphosis", package="rpart")
+  d3_party(
+    rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+  )
+
+  # if you want the list instead of json
+  d3_party(
+    rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis),
+    json = FALSE
+)
+
   #devtools::install_github("timelyportfolio/d3treeR")
 
   library(d3treeR)
@@ -44,6 +45,7 @@ d3_party(
     celltext = "rule",
     valueField = "n"
   )
+
 }
 }
 
