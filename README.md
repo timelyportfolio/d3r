@@ -45,6 +45,28 @@ As another example, let's go from `treemap` to `d3.js`.
       value_cols = "x"
     )
 
+### d3 Hierarchy from partykit / rpart
+
+`rpart` and similar objects in `R` are very difficult to convert but make perfect subjects for `d3` hierarchical layouts. `d3_party` helps convert these objects for easy usage with `d3.js`.
+
+    #devtools::install_github("timelyportfolio/d3treeR")
+
+    library(d3treeR)
+    library(d3r)
+
+    # example from ?rpart
+    rp <-  rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+
+    # get the json hierarchy
+    d3_party(tree=rp)
+
+    # interactive plot with d3treeR
+    d3tree2(
+      d3_party(tree=rp),
+      celltext="description",
+      valueField="n"
+    )
+
 ### d3 Network from igraph
 
 `igraph` to `d3.js` network of `nodes` and `links` is a very common conversion. `d3r::d3_igraph` will do this for you.
