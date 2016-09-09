@@ -82,7 +82,7 @@ d3_party = function (tree=NULL, json=TRUE) {
   # walking the tree and joining by id
   join_data <- function(l){
     l <- unclass(l)
-    utils::modifyList(l,subset(tree_text,id==l$id))
+    utils::modifyList(l,subset(tree_text,`id`==l$id))
   }
 
   merge_data <- function(l){
