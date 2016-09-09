@@ -14,13 +14,14 @@
 #'
 #' @example ./inst/examples/example_rpart.R
 #'
+#'
 #' @export
 d3_party = function (tree=NULL, json=TRUE) {
 
   stopifnot(!is.null(tree), requireNamespace("partykit"))
 
   # Checking the decision tree object
-  if(!is(tree, c("constparty","party")))
+  if(!inherits(tree, c("constparty","party")))
     tree_pk <- partykit::as.party(tree)
 
   data <- rapply(tree_pk$node, unclass, how="list")
@@ -43,14 +44,14 @@ d3_party = function (tree=NULL, json=TRUE) {
   #get all the other meta data we need and merge it in to the list
 
   ## changed pattern from [1-9] to [0-9] because we were missing node 10
-  tree_text <- invisible( capture.output( print(tree_pk) ) )
+  tree_text <- invisible( utils::capture.output( print(tree_pk) ) )
   tree_text <- tree_text[grep( x = tree_text, pattern = "(\\[)([0-9]*)(\\])")]
   tree_text <- strsplit( tree_text, "[\\[\\|\\]]" , perl = T)
   tree_text <- lapply(
     seq.int(1,length(tree_text)),
     function(i){
       x <- tree_text[[i]]
-      tail_data <- tail(x,2)
+      tail_data <- utils::tail(x,2)
       data.frame(
         "id" = as.numeric(tail_data[1])
         , description = tail_data[2]
@@ -81,7 +82,7 @@ d3_party = function (tree=NULL, json=TRUE) {
   # walking the tree and joining by id
   join_data <- function(l){
     l <- unclass(l)
-    modifyList(l,subset(tree_text,id==l$id))
+    utils::modifyList(l,subset(tree_text,id==l$id))
   }
 
   merge_data <- function(l){

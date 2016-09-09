@@ -11,7 +11,7 @@
   d3_party(
     rpart::rpart(Kyphosis ~ Age + Number + Start, data = kyphosis),
     json = FALSE
-)
+  )
 
   #devtools::install_github("timelyportfolio/d3treeR")
 
