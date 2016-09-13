@@ -2,8 +2,9 @@
 
 language: R
 sudo: false
+r_packages:
+ - igraph
 cache: packages
-r_packages: igraph
 
 after_success:
   - Rscript -e 'covr::codecov()'

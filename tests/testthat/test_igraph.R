@@ -1,6 +1,6 @@
 context("igraph")
 
-library(igraph)
+library("igraph")
 
 bull <- graph.famous("Bull")
 data("karate", package="igraphdata")
