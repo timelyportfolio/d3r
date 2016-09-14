@@ -1,5 +1,7 @@
 context("igraph")
 
+skip_if_not_installed("igraph")
+
 library("igraph")
 
 bull <- graph.famous("Bull")

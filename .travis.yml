@@ -2,8 +2,6 @@
 
 language: R
 sudo: false
-r_packages:
- - igraph
 cache: packages
 
 after_success:
