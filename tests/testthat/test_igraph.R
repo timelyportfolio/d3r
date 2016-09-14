@@ -1,13 +1,14 @@
 context("igraph")
 
-skip_if_not_installed("igraph")
-
-library("igraph")
-
-bull <- graph.famous("Bull")
-data("karate", package="igraphdata")
-
 test_that("d3_igraph works",{
+  skip_if_not_installed("igraph")
+
+  library("igraph")
+
+  bull <- graph.famous("Bull")
+  data("karate", package="igraphdata")
+
+
   # default as json
   expect_identical(
     unclass(d3_igraph(bull)),
@@ -26,9 +27,8 @@ test_that("d3_igraph works",{
   karate_d3 <- d3_igraph(karate, json=FALSE)
   expect_identical(names(karate_d3), c("nodes","links","attributes"))
   expect_equal(length(V(karate)),nrow(karate_d3$nodes))
-})
 
-test_that("d3_igraph converts node and edge attributes",{
+  #d3_igraph converts node and edge attributes"
   bull_node_attr <- bull
   V(bull_node_attr)$color <- "blue"
 
@@ -44,3 +44,4 @@ test_that("d3_igraph converts node and edge attributes",{
     '{\"nodes\":[{\"color\":\"blue\",\"id\":\"0\"},{\"color\":\"blue\",\"id\":\"1\"},{\"color\":\"blue\",\"id\":\"2\"},{\"color\":\"blue\",\"id\":\"3\"},{\"color\":\"blue\",\"id\":\"4\"}],\"links\":[{\"source\":\"0\",\"target\":\"1\",\"weight\":\"1\"},{\"source\":\"0\",\"target\":\"2\",\"weight\":\"2\"},{\"source\":\"1\",\"target\":\"2\",\"weight\":\"3\"},{\"source\":\"1\",\"target\":\"3\",\"weight\":\"4\"},{\"source\":\"2\",\"target\":\"4\",\"weight\":\"5\"}],\"attributes\":{\"name\":\"Bull\"}}'
   )
 })
+
