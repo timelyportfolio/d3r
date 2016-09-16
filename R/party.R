@@ -108,6 +108,11 @@ d3_party = function (tree=NULL, json=TRUE) {
     l <- unclass(l)
     l <- utils::modifyList(l,subset(tree_text,`id`==l$id))
     l$size <- subset(counts, `fitted`==l$id)
+    if(!("n" %in% names(tree_text))){
+      if(nrow(l$size) > 0){
+        l$n <- sum(l$size$size[[1]]$freq)
+      }
+    }
     l
   }
 
