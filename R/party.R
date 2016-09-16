@@ -83,24 +83,31 @@ d3_party = function (tree=NULL, json=TRUE) {
 
   # now try to add size / count information
   #  rpart easy and will have n but other more difficult
-  if("fitted" %in% names(unclass(tree_pk)) && "weights" %in% names(tree_pk$fitted)){
-    counts <- data.frame(
-      xtabs(`(weights)`~`(fitted)`+`(response)`,tree_pk$fitted),
-      stringsAsFactors=FALSE
-    )
-    colnames(counts) <- c("fitted", "response", "freq")
-    counts <- dplyr::mutate(counts, fitted = as.numeric(as.character(fitted)))
-    counts <- tidyr::nest(counts, response, freq, .key="size")
+  if(
+    "fitted" %in% names(unclass(tree_pk)) &&
+    !("(weights)" %in% names(tree_pk$fitted))
+  ){
+    tree_pk$fitted$weights <- 1
   }
+
+  counts <- data.frame(
+    xtabs(`(weights)`~`(fitted)`+`(response)`,tree_pk$fitted),
+    stringsAsFactors=FALSE
+  )
+  colnames(counts) <- c("fitted", "response", "freq")
+  counts <- dplyr::mutate(counts, fitted = as.numeric(as.character(fitted)))
+  counts <- tidyr::nest(counts, response, freq, .key="size")
+  # would use dplyr join here, but nested data.frame
+  #   flattened on join;  this does not happen with nested
+  #   tibble, but dont' want to add another depedency
+
 
   # do the merge of tree_text with data by
   # walking the tree and joining by id
   join_data <- function(l){
     l <- unclass(l)
     l <- utils::modifyList(l,subset(tree_text,`id`==l$id))
-    if("fitted" %in% names(unclass(tree_pk)) && "weights" %in% names(tree_pk$fitted)){
-      l$size <- subset(counts, `fitted`==l$id)
-    }
+    l$size <- subset(counts, `fitted`==l$id)
     l
   }
 
