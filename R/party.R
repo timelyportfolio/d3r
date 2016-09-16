@@ -87,7 +87,7 @@ d3_party = function (tree=NULL, json=TRUE) {
     "fitted" %in% names(unclass(tree_pk)) &&
     !("(weights)" %in% names(tree_pk$fitted))
   ){
-    tree_pk$fitted$weights <- 1
+    tree_pk$fitted["(weights)"] <- 1
   }
 
   counts <- data.frame(
@@ -133,6 +133,8 @@ d3_party = function (tree=NULL, json=TRUE) {
 
   hier <- rapply(merge_data(data), unclass, how="list")
 
+  hier <- recurse(hier, sum_var)
+
   hier <- recurse(hier, rename_children)
 
   if(json){
@@ -148,6 +150,23 @@ rename_children <- function(l, old_name="kids", new_name="children") {
     names(l)[which(names(l)==old_name)] <- new_name
   }
   l
+}
+
+#' @keywords internal
+sum_var <- function(l, varname="n", childname="kids"){
+  if(is.list(l) && length(l)>0 && childname %in% names(l)){
+    ul <- unlist(l)
+    nms <- names(ul)
+    loc <- grep(x=nms, pattern=sprintf("\\.%s$",varname), perl=TRUE)
+    if(length(loc)>0){
+      l[[varname]] <- sum(as.numeric(unlist(ul[loc])))
+    } else {
+      l[[varname]] <- 0
+    }
+    l
+  } else {
+    l
+  }
 }
 
 #' @keywords internal
