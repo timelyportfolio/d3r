@@ -27,7 +27,7 @@ If you don’t care about modularity, you can mostly ignore this change and keep
 
 ### Other Global Changes
 
-The default [UMD bundle](https://github.com/umdjs/umd) is now [anonymous](https://github.com/requirejs/requirejs/wiki/Updating-existing-libraries#register-as-an-anonymous-module-). No `d3` global is exported if AMD or CommonJS is detected. In a vanilla environment, the D3 microlibraries share the `d3` global, even if you load them independently; thus, code you write is the same whether or not you use the default bundle. (See [Let’s Make a (D3) Plugin](https://bost.ocks.org/mike/d3-plugin/) for more.) The generated bundle is no longer stored in the Git repository; Bower has been repointed to [d3-bower](https://github.com/mbostock-bower/d3-bower), and you can find the generated files on [unpkg](https://unpkg.com/d3@next/) or attached to the [latest release](https://github.com/d3/d3/releases/latest). The non-minified default bundle is no longer mangled, making it more readable and preserving inline comments.
+The default [UMD bundle](https://github.com/umdjs/umd) is now [anonymous](https://github.com/requirejs/requirejs/wiki/Updating-existing-libraries#register-as-an-anonymous-module-). No `d3` global is exported if AMD or CommonJS is detected. In a vanilla environment, the D3 microlibraries share the `d3` global, even if you load them independently; thus, code you write is the same whether or not you use the default bundle. (See [Let’s Make a (D3) Plugin](https://bost.ocks.org/mike/d3-plugin/) for more.) The generated bundle is no longer stored in the Git repository; Bower has been repointed to [d3-bower](https://github.com/mbostock-bower/d3-bower), and you can find the generated files on [npm](https://unpkg.com/d3) or attached to the [latest release](https://github.com/d3/d3/releases/latest). The non-minified default bundle is no longer mangled, making it more readable and preserving inline comments.
 
 To the consternation of some users, 3.x employed Unicode variable names such as λ, φ, τ and π for a concise representation of mathematical operations. A downside of this approach was that a SyntaxError would occur if you loaded the non-minified D3 using ISO-8859-1 instead of UTF-8. 3.x also used Unicode string literals, such as the SI-prefix µ for 1e-6. 4.0 uses only ASCII variable names and ASCII string literals (see [rollup-plugin-ascii](https://github.com/mbostock/rollup-plugin-ascii)), avoiding encoding problems.
 
@@ -47,6 +47,7 @@ To the consternation of some users, 3.x employed Unicode variable names such as 
 * [Number Formats](#number-formats-d3-format)
 * [Geographies](#geographies-d3-geo)
 * [Hierarchies](#hierarchies-d3-hierarchy)
+* [Internals](#internals)
 * [Interpolators](#interpolators-d3-interpolate)
 * [Paths](#paths-d3-path)
 * [Polygons](#polygons-d3-polygon)
@@ -360,7 +361,7 @@ There’s now a nice [visual reference](https://github.com/d3/d3-ease/blob/maste
 
 The force layout d3.layout.force has been renamed to d3.forceSimulation. The force simulation now uses [velocity Verlet integration](https://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet) rather than position Verlet, tracking the nodes’ positions (*node*.x, *node*.y) and velocities (*node*.vx, *node*.vy) rather than their previous positions (*node*.px, *node*.py).
 
-Rather than hard-coding a set of built-in forces, the force simulation is now extensible: you specify which forces you want! The approach affords greater flexibility through composition. The new forces are more flexible, too: force parameters can typically be configured per-node or per-link. There are separate positioning forces for [*x*](https://github.com/d3/d3-force#forceX) and [*y*](https://github.com/d3/d3-force#forceY) that replace *force*.gravity. The new [link force](https://github.com/d3/d3-force#forceLink) replaces *force*.linkStrength and employs better default heuristics to improve stability. The new [many-body force](https://github.com/d3/d3-force#forceManyBody) replaces *force*.charge and supports a new [minimum-distance parameter](https://github.com/d3/d3-force#manyBody_distanceMin) and performance improvements thanks to 4.0’s [new quadtrees](#quadtrees-d3-quadtree). There are also brand-new forces for [centering nodes](https://github.com/d3/d3-force#forceCenter) and [collision resolution](https://github.com/d3/d3-force#forceCollision).
+Rather than hard-coding a set of built-in forces, the force simulation is now extensible: you specify which forces you want! The approach affords greater flexibility through composition. The new forces are more flexible, too: force parameters can typically be configured per-node or per-link. There are separate positioning forces for [*x*](https://github.com/d3/d3-force#forceX) and [*y*](https://github.com/d3/d3-force#forceY) that replace *force*.gravity; [*x*.x](https://github.com/d3/d3-force#x_x) and [*y*.y](https://github.com/d3/d3-force#y_y) replace *force*.size. The new [link force](https://github.com/d3/d3-force#forceLink) replaces *force*.linkStrength and employs better default heuristics to improve stability. The new [many-body force](https://github.com/d3/d3-force#forceManyBody) replaces *force*.charge and supports a new [minimum-distance parameter](https://github.com/d3/d3-force#manyBody_distanceMin) and performance improvements thanks to 4.0’s [new quadtrees](#quadtrees-d3-quadtree). There are also brand-new forces for [centering nodes](https://github.com/d3/d3-force#forceCenter) and [collision resolution](https://github.com/d3/d3-force#forceCollision).
 
 The new forces and simulation have been carefully crafted to avoid nondeterminism. Rather than initializing nodes randomly, if the nodes do not have preset positions, they are placed in a phyllotaxis pattern:
 
@@ -368,7 +369,7 @@ The new forces and simulation have been carefully crafted to avoid nondeterminis
 
 Random jitter is still needed to resolve link, collision and many-body forces if there are coincident nodes, but at least in the common case, the force simulation (and the resulting force-directed graph layout) is now consistent across browsers and reloads. D3 no longer plays dice!
 
-The force simulation has several new methods for greater control over heating, such as [*simulation*.alphaMin](https://github.com/d3/d3-force#simulation_alphaMin) and [*simulation*.alphaDecay](https://github.com/d3/d3-force#simulation_alphaDecay), and the internal timer. Calling [*simulation*.alpha](https://github.com/d3/d3-force#simulation_alpha) now has no effect on the internal timer, which is controlled independently via [*simulation*.stop](https://github.com/d3/d3-force#simulation_stop) and [*simulation*.restart](https://github.com/d3/d3-force#simulation_restart). As in 3.x, you can advance the simulation manually using [*simulation*.tick](https://github.com/d3/d3-force#simulation_tick). The *force*.friction parameter is replaced by *simulation*.velocityDecay. A new [*simulation*.alphaTarget](https://github.com/d3/d3-force#simulation_alphaTarget) method allows you to set the desired alpha (temperature) of the simulation, such that the simulation can be smoothly reheated during interaction, and then smoothly cooled again. This improves the stability of the graph during interaction.
+The force simulation has several new methods for greater control over heating, such as [*simulation*.alphaMin](https://github.com/d3/d3-force#simulation_alphaMin) and [*simulation*.alphaDecay](https://github.com/d3/d3-force#simulation_alphaDecay), and the internal timer. Calling [*simulation*.alpha](https://github.com/d3/d3-force#simulation_alpha) now has no effect on the internal timer, which is controlled independently via [*simulation*.stop](https://github.com/d3/d3-force#simulation_stop) and [*simulation*.restart](https://github.com/d3/d3-force#simulation_restart). The force layout’s internal timer now starts automatically on creation, removing *force*.start. As in 3.x, you can advance the simulation manually using [*simulation*.tick](https://github.com/d3/d3-force#simulation_tick). The *force*.friction parameter is replaced by *simulation*.velocityDecay. A new [*simulation*.alphaTarget](https://github.com/d3/d3-force#simulation_alphaTarget) method allows you to set the desired alpha (temperature) of the simulation, such that the simulation can be smoothly reheated during interaction, and then smoothly cooled again. This improves the stability of the graph during interaction.
 
 The force layout no longer depends on the [drag behavior](#dragging-d3-drag), though you can certainly create [draggable force-directed graphs](http://bl.ocks.org/mbostock/ad70335eeef6d167bc36fd3c04378048)! Set *node*.fx and *node*.fy to fix a node’s position. As an alternative to a [Voronoi](#voronoi-d3-voronoi) SVG overlay, you can now use [*simulation*.find](https://github.com/d3/d3-force#simulation_find) to find the closest node to a pointer.
 
@@ -450,7 +451,7 @@ d3.format("<10c")("foo"); // "foo       "
 
 There are several new methods for computing suggested decimal precisions; these are used by [d3-scale](#scales-d3-scale) for tick formatting, and are helpful for implementing custom number formats: [d3.precisionFixed](https://github.com/d3/d3-format#precisionFixed), [d3.precisionPrefix](https://github.com/d3/d3-format#precisionPrefix) and [d3.precisionRound](https://github.com/d3/d3-format#precisionRound). There’s also a new [d3.formatSpecifier](https://github.com/d3/d3-format#formatSpecifier) method for parsing, validating and debugging format specifiers; it’s also good for deriving related format specifiers, such as when you want to substitute the precision automatically.
 
-You can now set the default locale using [d3.formatDefaultLocale](https://github.com/d3/d3-format#formatDefaultLocale)! The locales are published as [JSON](https://github.com/d3/d3-request#json) to [NPM](https://unpkg.com/d3-format/locale/).
+You can now set the default locale using [d3.formatDefaultLocale](https://github.com/d3/d3-format#formatDefaultLocale)! The locales are published as [JSON](https://github.com/d3/d3-request#json) to [npm](https://unpkg.com/d3-format/locale/).
 
 ## [Geographies (d3-geo)](https://github.com/d3/d3-geo/blob/master/README.md)
 
@@ -552,6 +553,33 @@ The circle-packing layout, [d3.pack](https://github.com/d3/d3-hierarchy#pack), h
 <img alt="Circle Packing in 3.x" src="https://raw.githubusercontent.com/d3/d3/master/img/pack-v3.png" width="420" height="420"> <img alt="Circle Packing in 4.0" src="https://raw.githubusercontent.com/d3/d3/master/img/pack-v4.png" width="420" height="420">
 
 A non-hierarchical implementation is also available as [d3.packSiblings](https://github.com/d3/d3-hierarchy#packSiblings), and the smallest enclosing circle implementation is available as [d3.packEnclose](https://github.com/d3/d3-hierarchy#packEnclose). [Pack padding](https://github.com/d3/d3-hierarchy#pack_padding) now applies between a parent and its children, as well as between adjacent siblings. In addition, you can now specify padding as a function that is computed dynamically for each parent.
+
+## Internals
+
+The d3.rebind method has been removed. (See the [3.x source](https://github.com/d3/d3/blob/v3.5.17/src/core/rebind.js).) If you want to wrap a getter-setter method, the recommend pattern is to implement a wrapper method and check the return value. For example, given a *component* that uses an internal [*dispatch*](#dispatches-d3-dispatch), *component*.on can rebind *dispatch*.on as follows:
+
+```js
+component.on = function() {
+  var value = dispatch.on.apply(dispatch, arguments);
+  return value === dispatch ? component : value;
+};
+```
+
+The d3.functor method has been removed. (See the [3.x source](https://github.com/d3/d3/blob/v3.5.17/src/core/functor.js).) If you want to promote a constant value to a function, the recommended pattern is to implement a closure that returns the constant value. If desired, you can use a helper method as follows:
+
+```js
+function constant(x) {
+  return function() {
+    return x;
+  };
+}
+```
+
+Given a value *x*, to promote *x* to a function if it is not already:
+
+```js
+var fx = typeof x === "function" ? x : constant(x);
+```
 
 ## [Interpolators (d3-interpolate)](https://github.com/d3/d3-interpolate/blob/master/README.md)
 
@@ -1046,7 +1074,7 @@ d3.timeFormat("%x")(new Date); // "6/23/2016"
 d3.timeFormat("%X")(new Date); // "2:01:38 PM"
 ```
 
-You can now set the default locale using [d3.timeFormatDefaultLocale](https://github.com/d3/d3-time-format#timeFormatDefaultLocale)! The locales are published as [JSON](https://github.com/d3/d3-request#json) to [NPM](https://unpkg.com/d3-time-format/locale/).
+You can now set the default locale using [d3.timeFormatDefaultLocale](https://github.com/d3/d3-time-format#timeFormatDefaultLocale)! The locales are published as [JSON](https://github.com/d3/d3-request#json) to [npm](https://unpkg.com/d3-time-format/locale/).
 
 The performance of time formatting and parsing has been improved, and the UTC formatter and parser have a cleaner implementation (that avoids temporarily overriding the Date global).
 
