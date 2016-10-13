@@ -41,7 +41,7 @@ test_that("d3_igraph works",{
   E(bull_node_attr)$weight <- 1:length(E(bull_node_attr))
   expect_identical(
     unclass(d3_igraph(bull_node_attr)),
-    '{\"nodes\":[{\"color\":\"blue\",\"id\":\"0\"},{\"color\":\"blue\",\"id\":\"1\"},{\"color\":\"blue\",\"id\":\"2\"},{\"color\":\"blue\",\"id\":\"3\"},{\"color\":\"blue\",\"id\":\"4\"}],\"links\":[{\"source\":\"0\",\"target\":\"1\",\"weight\":\"1\"},{\"source\":\"0\",\"target\":\"2\",\"weight\":\"2\"},{\"source\":\"1\",\"target\":\"2\",\"weight\":\"3\"},{\"source\":\"1\",\"target\":\"3\",\"weight\":\"4\"},{\"source\":\"2\",\"target\":\"4\",\"weight\":\"5\"}],\"attributes\":{\"name\":\"Bull\"}}'
+    '{"nodes":[{"color":"blue","id":"0"},{"color":"blue","id":"1"},{"color":"blue","id":"2"},{"color":"blue","id":"3"},{"color":"blue","id":"4"}],"links":[{"source":"0","target":"1","weight":1},{"source":"0","target":"2","weight":2},{"source":"1","target":"2","weight":3},{"source":"1","target":"3","weight":4},{"source":"2","target":"4","weight":5}],"attributes":{"name":"Bull"}}'
   )
 })
 

@@ -50,7 +50,12 @@ promote_na_one <- function(x){
 #'
 #' @return \code{data.frame}
 promote_na <- function(x){
-  purrr::by_row(x, promote_na_one)$.out
+  #by_row now deprecated
+  #purrr::by_row(x, promote_na_one)$.out
+  lapply(
+    seq_len(nrow(x)),
+    function(row){promote_na_one(x[row,])}
+  )
 }
 
 #' Convert a \code{data.frame} to a 'd3.js' Hierarchy
