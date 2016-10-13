@@ -11,6 +11,7 @@ hier <- data.frame(
 test_that("d3_nest works as json", {
 
   skip_on_cran()
+  skip_on_travis()
 
   # default as json
   expect_identical(
