@@ -6,3 +6,4 @@
 ^CONDUCT\.md$
 docs
 ^codecov\.yml$
+^cran-comments\.md$

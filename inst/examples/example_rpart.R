@@ -13,6 +13,11 @@
     json = FALSE
   )
 
+  # with ctree instead of rpart
+  #  using example from ?ctree
+  d3_party(partykit::ctree(Species ~ .,data = iris))
+
+
   #devtools::install_github("timelyportfolio/d3treeR")
 
   library(d3treeR)

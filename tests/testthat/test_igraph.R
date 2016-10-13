@@ -2,7 +2,7 @@ context("igraph")
 
 test_that("d3_igraph works",{
   skip_if_not_installed("igraph")
-
+  skip_if_not_installed("igraphdata")
   library("igraph")
 
   bull <- graph.famous("Bull")

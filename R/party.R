@@ -70,7 +70,7 @@ d3_party = function (tree=NULL, json=TRUE) {
   tree_text$description <- sapply(strsplit(tree_text[,2], ":"), "[", 1)
 
   # add rules
-  tree_text$rule <- sapply(partykit::nodeids(tree_pk),function(n){partykit:::.list.rules.party(tree_pk,n)})
+  tree_text$rule <- sapply(partykit::nodeids(tree_pk),function(n){.list.rules.party(tree_pk,n)})
 
   # if frame data (rpart, maybe others) then add
   # binding the node names from rpk with more of the relevant meta data from rp
@@ -91,23 +91,23 @@ d3_party = function (tree=NULL, json=TRUE) {
   }
 
   counts <- data.frame(
-    xtabs(`(weights)`~`(fitted)`+`(response)`,tree_pk$fitted),
+    stats::xtabs(`(weights)`~`(fitted)`+`(response)`,tree_pk$fitted),
     stringsAsFactors=FALSE
   )
   colnames(counts) <- c("fitted", "response", "freq")
-  counts <- dplyr::mutate(counts, fitted = as.numeric(as.character(fitted)))
-  counts <- tidyr::nest(counts, response, freq, .key="size")
+  counts$fitted = as.numeric(as.character(counts$fitted))
+  counts <- tidyr::nest_(counts, nest_cols=c("response", "freq"), key_col="size")
   # would use dplyr join here, but nested data.frame
   #   flattened on join;  this does not happen with nested
-  #   tibble, but dont' want to add another depedency
+  #   tibble, but don't want to add another depedency
 
 
   # do the merge of tree_text with data by
   # walking the tree and joining by id
   join_data <- function(l){
     l <- unclass(l)
-    l <- utils::modifyList(l,subset(tree_text,`id`==l$id))
-    l$size <- subset(counts, `fitted`==l$id)
+    l <- utils::modifyList(l,tree_text[which(tree_text$id==l$id),])
+    l$size <- counts[which(counts$fitted==l$id),]
     if(!("n" %in% names(tree_text))){
       if(nrow(l$size) > 0){
         l$n <- sum(l$size$size[[1]]$freq)

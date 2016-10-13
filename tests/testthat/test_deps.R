@@ -23,8 +23,7 @@ test_that("d3_dep-* src file is a valid file", {
 
 
 test_that("d3_dep_v4 on latest d3 release", {
-  # skip on travis??
-  skip_on_travis()
+  skip_if_not_installed("github")
 
   expect_identical(
     sprintf("v%s",v4$version),
