@@ -10,7 +10,7 @@
 d3_dep_v4 <- function(){
   htmltools::htmlDependency(
     name = "d3",
-    version = "4.2.7",
+    version = "4.2.8",
     src = c(
       file = system.file("www/d3/v4/dist", package="d3r"),
       href = "https://d3js.org/"
