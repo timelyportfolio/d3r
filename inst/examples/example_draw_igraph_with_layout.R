@@ -1,8 +1,11 @@
 library(htmltools)
 library(d3r)
 library(igraph)
+library(scales)
 
-d3_draw_igraph <- function(igrf, layout=layout.auto, width=400, height=400, ...){
+d3_draw_igraph <- function(
+  igrf, layout=layout.auto, width=400, height=400, ...
+){
   coords <- norm_coords(layout(igrf),0,width-30,0,height-30)
   V(igrf)$x <- coords[,1]
   V(igrf)$y <- coords[,2]
@@ -68,18 +71,20 @@ d3_draw_igraph <- function(igrf, layout=layout.auto, width=400, height=400, ...)
     .attr("stroke", "black");
 
   var nodes = svg.selectAll("node")
-  .data(data.nodes)
-  .enter()
-  .append("circle")
-  .attr("class", "node")
-  .attr("cx", function(d) {
-    return d.x
-  })
-  .attr("cy", function(d) {
-    return d.y
-  })
-  .attr("r", 10)
-  .call(drag);
+    .data(data.nodes)
+    .enter()
+    .append("circle")
+    .attr("class", "node")
+    .attr("cx", function(d) {
+      return d.x
+    })
+    .attr("cy", function(d) {
+      return d.y
+    })
+    .attr("r", 10)
+    .style("fill", function(d){return d.fill;})
+    .style("stroke", "none")
+    .call(drag);
 '
             ,
             json,
@@ -92,3 +97,12 @@ d3_draw_igraph <- function(igrf, layout=layout.auto, width=400, height=400, ...)
     )
   )
 }
+
+
+
+data("karate", package="igraphdata")
+# simple community example
+wc <- cluster_walktrap(karate)
+# apply some color to the nodes
+V(karate)$fill <- col_factor(palette="Set1",domain=NULL)(membership(wc))
+d3_draw_igraph(karate)

@@ -1,7 +1,9 @@
 context("dependencies")
 
 v3 <- d3_dep_v3()
+v3_offline <- d3_dep_v3(offline=FALSE)
 v4 <- d3_dep_v4()
+v4_offline <- d3_dep_v4(offline=FALSE)
 
 test_that("d3_dep-* returns html_dependency", {
   expect_is(v3, "html_dependency")
@@ -12,8 +14,8 @@ test_that("d3_dep-* src href is a valid url", {
   is_valid_url <- function(u){
     !httr::http_error(u)
   }
-  expect_true(is_valid_url(file.path(v3$src$href,v3$script)))
-  expect_true(is_valid_url(file.path(v4$src$href,v4$script)))
+  expect_true(is_valid_url(file.path(v3_offline$src$href,v3$script)))
+  expect_true(is_valid_url(file.path(v4_offline$src$href,v4$script)))
 })
 
 test_that("d3_dep-* src file is a valid file", {

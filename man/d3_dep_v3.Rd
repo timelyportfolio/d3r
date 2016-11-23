@@ -4,7 +4,11 @@
 \alias{d3_dep_v3}
 \title{'d3.js' Dependency for Version 3}
 \usage{
-d3_dep_v3()
+d3_dep_v3(offline = TRUE)
+}
+\arguments{
+\item{offline}{\code{logical} to specify whether to use
+a local copy of d3.js (\code{TRUE}) or use cdn (\code{FALSE})}
 }
 \value{
 \code{htmltools::htmlDependency}
