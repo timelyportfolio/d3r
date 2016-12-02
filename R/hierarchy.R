@@ -12,7 +12,12 @@
 change_to_id <- function(x, column=1){
   dplyr::mutate(x, children = lapply(
     quote(children),
-    function(y) dplyr::rename_(y,id=colnames(y)[column])
+    function(y) {
+      dplyr::mutate(
+        dplyr::rename_(y,id=colnames(y)[column]),
+        "colname" = colnames(y)[column]
+      )
+    }
   ))
 }
 
@@ -33,7 +38,7 @@ promote_na_one <- function(x){
   if(length(na_child_loc)){
     x <- dplyr::bind_cols(
       x,
-      dplyr::select(na_child,-(match(colnames(na_child),c("id","children"))))
+      dplyr::select(na_child,-(match(colnames(na_child),c("id","children","colname"))))
     )
 
     # eliminate na child
