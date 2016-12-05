@@ -1,20 +1,16 @@
-### Work In Progress function
-###  to create nested d3 hierarchy
-### will make s3 with some iteration
-
-#' Change Column Name of Children to "id"
+#' Change Column Name in Children to "name"
 #'
 #' @param x \code{data.frame} or \code{data.frame} derivative, such
 #'         as \code{tibble}
 #' @param column column to convert
 #'
 #' @return \code{data.frame}
-change_to_id <- function(x, column=1){
+change_to_name <- function(x, column=1){
   dplyr::mutate(x, children = lapply(
     quote(children),
     function(y) {
       dplyr::mutate(
-        dplyr::rename_(y,id=colnames(y)[column]),
+        dplyr::rename_(y,name=colnames(y)[column]),
         "colname" = colnames(y)[column]
       )
     }
@@ -31,14 +27,14 @@ promote_na_one <- function(x){
   # find children that are na
   # expect this to only happen once, so only take first na
   #   to define values
-  na_child <- dplyr::filter(x$children[[1]], is.na(quote(id)))[1,]
-  na_child_loc <- which(is.na(x$children[[1]]$id))
+  na_child <- dplyr::filter(x$children[[1]], is.na(quote(name)))[1,]
+  na_child_loc <- which(is.na(x$children[[1]]$name))
 
-  # promote all non-id columns to top level
+  # promote all non-d3r columns to top level
   if(length(na_child_loc)){
     x <- dplyr::bind_cols(
       x,
-      dplyr::select(na_child,-(match(colnames(na_child),c("id","children","colname"))))
+      dplyr::select(na_child,-(match(colnames(na_child),c("name","children","colname"))))
     )
 
     # eliminate na child
@@ -90,7 +86,7 @@ d3_nest <- function(
   data <- dplyr::mutate_if(data, is.factor, as.character)
 
   data_nested <- dplyr::bind_rows(promote_na(
-    change_to_id(
+    change_to_name(
       tidyr::nest_(
         data=data,
         nest_cols=c(nonnest_cols[length(nonnest_cols)], value_cols),
@@ -101,11 +97,11 @@ d3_nest <- function(
 
   for(x in rev(
     colnames(data_nested)[
-      -which(colnames(data_nested) %in% c("children",value_cols))
+      -which(colnames(data_nested) %in% c("children","colname",value_cols))
     ]
   )){
     data_nested <- dplyr::bind_rows(promote_na(
-      change_to_id(
+      change_to_name(
         tidyr::nest_(
           data_nested,
           nest_cols = colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)],
@@ -114,7 +110,7 @@ d3_nest <- function(
       )
     ))
   }
-  data_nested$id = root
+  data_nested$name = root
   if(json){
     d3_json(data_nested,strip=TRUE)
   } else {
