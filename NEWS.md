@@ -2,11 +2,11 @@
 
 ### Updates
 
-* add `colname` to return value (see https://github.com/timelyportfolio/d3r/commit/5787e03a6b59c89b367a88f16e9c5a899482a8d3)
+* add `colname` to return value (see [commit](https://github.com/timelyportfolio/d3r/commit/5787e03a6b59c89b367a88f16e9c5a899482a8d3))
 
 ### API Changes
 
-* **(BREAKING)** change `id` to `name` (see https://github.com/timelyportfolio/d3r/issues/10)
+* **(BREAKING)** change `id` to `name` (see [issue]( https://github.com/timelyportfolio/d3r/issues/10))
 
 # d3r 0.5.0
 
