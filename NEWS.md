@@ -4,6 +4,8 @@
 
 * add `colname` to return value (see [commit](https://github.com/timelyportfolio/d3r/commit/5787e03a6b59c89b367a88f16e9c5a899482a8d3))
 
+* improve `NA` child promotion for deeply nested hierarchies
+
 ### API Changes
 
 * **(BREAKING)** change `id` to `name` (see [issue]( https://github.com/timelyportfolio/d3r/issues/10))
