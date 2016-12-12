@@ -30,14 +30,14 @@ promote_na_one <- function(x){
 
   # promote all non-d3r columns to top level
   if(length(na_child_loc)){
-    na_child <- Filter(function(y){is.na(y$name)},x$children)[[1]][1,]
+    na_child <- x$children[[1]][na_child_loc,]
     x <- dplyr::bind_cols(
       x,
       na_child[,setdiff(colnames(na_child),c("name","children","colname"))]
     )
 
     # eliminate na child
-    x$children <- NULL
+    x$children[[1]] <- x$children[[1]][-na_child_loc,]
     x
   } else {
     x
