@@ -6,15 +6,14 @@
 #'
 #' @return \code{data.frame}
 change_to_name <- function(x, column=1){
-  dplyr::mutate(x, children = lapply(
-    quote(children),
+  child_list <- lapply(
+    x$children,
     function(y) {
-      dplyr::mutate(
-        dplyr::rename_(y,name=colnames(y)[column]),
-        "colname" = colnames(y)[column]
-      )
+      y <- dplyr::mutate(y, "colname" = colnames(y)[column])
+      dplyr::rename_(y,"name"=colnames(y)[column])
     }
-  ))
+  )
+  dplyr::mutate(x, children = child_list)
 }
 
 
@@ -27,18 +26,19 @@ promote_na_one <- function(x){
   # find children that are na
   # expect this to only happen once, so only take first na
   #   to define values
-  na_child <- dplyr::filter(x$children[[1]], is.na(quote(name)))[1,]
   na_child_loc <- which(is.na(x$children[[1]]$name))
 
   # promote all non-d3r columns to top level
   if(length(na_child_loc)){
+    na_child <- Filter(function(y){is.na(y$name)},x$children)[[1]][1,]
     x <- dplyr::bind_cols(
       x,
-      dplyr::select(na_child,-(match(colnames(na_child),c("name","children","colname"))))
+      na_child[,setdiff(colnames(na_child),c("name","children","colname"))]
     )
 
     # eliminate na child
-    dplyr::mutate(x,children=list(quote(children)[[1]][-na_child_loc,]))
+    x$children <- NULL
+    x
   } else {
     x
   }
