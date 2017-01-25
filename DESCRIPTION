@@ -1,8 +1,8 @@
 Package: d3r
 Type: Package
 Title: 'd3.js' Utilities for R
-Version: 0.6.0
-Date: 2016-12-04
+Version: 0.6.1
+Date: 2017-01-25
 Authors@R: c(
       person(
         "Mike", "Bostock"

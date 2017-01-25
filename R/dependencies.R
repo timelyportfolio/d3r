@@ -18,7 +18,7 @@ d3_dep_v4 <- function(offline=TRUE){
 
   htmltools::htmlDependency(
     name = "d3",
-    version = "4.4.0",
+    version = "4.4.4",
     src = src,
     script = "d3.min.js"
   )
