@@ -3,6 +3,7 @@ context("igraph")
 test_that("d3_igraph works",{
   skip_if_not_installed("igraph")
   skip_if_not_installed("igraphdata")
+  skip_if_not_installed("jsonlite")
   library("igraph")
 
   bull <- graph.famous("Bull")
@@ -40,8 +41,24 @@ test_that("d3_igraph works",{
   # add edge attributes
   E(bull_node_attr)$weight <- 1:length(E(bull_node_attr))
   expect_identical(
-    unclass(d3_igraph(bull_node_attr)),
-    '{"nodes":[{"color":"blue","id":"0"},{"color":"blue","id":"1"},{"color":"blue","id":"2"},{"color":"blue","id":"3"},{"color":"blue","id":"4"}],"links":[{"source":"0","target":"1","weight":1},{"source":"0","target":"2","weight":2},{"source":"1","target":"2","weight":3},{"source":"1","target":"3","weight":4},{"source":"2","target":"4","weight":5}],"attributes":{"name":"Bull"}}'
+    jsonlite::fromJSON(d3_igraph(bull_node_attr), simplifyVector=FALSE),
+    list(
+      nodes = list(
+        list(color = "blue", id = "0"),
+        list(color = "blue", id = "1"),
+        list(color = "blue", id = "2"),
+        list(color = "blue", id = "3"),
+        list(color = "blue", id = "4")
+      ),
+      links = list(
+        list(source = "0", target = "1", weight = 1L),
+        list(source = "0", target = "2", weight = 2L),
+        list(source = "1", target = "2", weight = 3L),
+        list(source = "1", target = "3", weight = 4L),
+        list(source = "2", target = "4", weight = 5L)
+      ),
+      "attributes" = list(name = "Bull")
+    )
   )
 })
 
