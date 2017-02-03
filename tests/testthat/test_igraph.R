@@ -34,21 +34,18 @@ test_that("d3_igraph works",{
   # add edge attributes
   E(bull_node_attr)$weight <- 1:length(E(bull_node_attr))
   expect_equal(
-    jsonlite::fromJSON(d3_igraph(bull_node_attr), simplifyVector=FALSE),
+    d3_igraph(bull_node_attr, json=FALSE),
     list(
-      nodes = list(
-        list(color = "blue", id = "0"),
-        list(color = "blue", id = "1"),
-        list(color = "blue", id = "2"),
-        list(color = "blue", id = "3"),
-        list(color = "blue", id = "4")
+      nodes = data.frame(
+        "color" = rep("blue", 5),
+        "id" = as.character(0:4),
+        stringsAsFactors = FALSE
       ),
-      links = list(
-        list(source = "0", target = "1", weight = 1),
-        list(source = "0", target = "2", weight = 2),
-        list(source = "1", target = "2", weight = 3),
-        list(source = "1", target = "3", weight = 4),
-        list(source = "2", target = "4", weight = 5)
+      links = data.frame(
+        "source" = as.character(c(0,0,1,1,2)),
+        "target" = as.character(c(1,2,2,3,4)),
+        "weight" = 1:5,
+        stringsAsFactors = FALSE
       ),
       "attributes" = list(name = "Bull")
     )
