@@ -11,6 +11,7 @@ test_that("d3_dep-* returns html_dependency", {
 })
 
 test_that("d3_dep-* src href is a valid url", {
+  skip_if_not_installed("httr")
   is_valid_url <- function(u){
     !httr::http_error(u)
   }
