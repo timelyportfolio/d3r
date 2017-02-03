@@ -1,3 +1,10 @@
+Further improve tests to prevent fails on some OS:
+
+  - removed karate igraphdata to avoid extra dependency
+  - use expect_equal instead of expect_identical on edge attribute test
+  
+thanks Deepayan!
+
 ## Test environments
 * local Windows 10 install, R 3.3.1
 * ubuntu 12.04 (on travis-ci), R 3.3.1

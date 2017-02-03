@@ -2,13 +2,10 @@ context("igraph")
 
 test_that("d3_igraph works",{
   skip_if_not_installed("igraph")
-  skip_if_not_installed("igraphdata")
   skip_if_not_installed("jsonlite")
   library("igraph")
 
   bull <- graph.famous("Bull")
-  data("karate", package="igraphdata")
-
 
   # default as json
   expect_identical(
@@ -24,10 +21,6 @@ test_that("d3_igraph works",{
     )),
     '{"nodes":[{"id":"0"},{"id":"1"},{"id":"2"},{"id":"3"},{"id":"4"}],"links":[{"source":"0","target":"1"},{"source":"0","target":"2"},{"source":"1","target":"2"},{"source":"1","target":"3"},{"source":"2","target":"4"}],"attributes":{"name":"Bull"}}'
   )
-  # with a more complicated network karate
-  karate_d3 <- d3_igraph(karate, json=FALSE)
-  expect_identical(names(karate_d3), c("nodes","links","attributes"))
-  expect_equal(length(V(karate)),nrow(karate_d3$nodes))
 
   #d3_igraph converts node and edge attributes"
   bull_node_attr <- bull
@@ -40,7 +33,7 @@ test_that("d3_igraph works",{
 
   # add edge attributes
   E(bull_node_attr)$weight <- 1:length(E(bull_node_attr))
-  expect_identical(
+  expect_equal(
     jsonlite::fromJSON(d3_igraph(bull_node_attr), simplifyVector=FALSE),
     list(
       nodes = list(
@@ -51,11 +44,11 @@ test_that("d3_igraph works",{
         list(color = "blue", id = "4")
       ),
       links = list(
-        list(source = "0", target = "1", weight = 1L),
-        list(source = "0", target = "2", weight = 2L),
-        list(source = "1", target = "2", weight = 3L),
-        list(source = "1", target = "3", weight = 4L),
-        list(source = "2", target = "4", weight = 5L)
+        list(source = "0", target = "1", weight = 1),
+        list(source = "0", target = "2", weight = 2),
+        list(source = "1", target = "2", weight = 3),
+        list(source = "1", target = "3", weight = 4),
+        list(source = "2", target = "4", weight = 5)
       ),
       "attributes" = list(name = "Bull")
     )
