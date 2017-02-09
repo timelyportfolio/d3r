@@ -2,7 +2,8 @@
 #'
 #' @param ... arguments passed to \code{v8()}
 #'
-#' @return \code{v8} context with d3.js sourced
+#' @return \code{v8} context with d3.js loaded and available as d3
+#' @example inst/examples/example_d3_v8.R
 #' @export
 
 d3_v8 <- function(...) {
@@ -12,7 +13,7 @@ d3_v8 <- function(...) {
 
   d3dep <- d3_dep_v4()
 
-  ctx <- v8(...)
+  ctx <- V8::v8(...)
   ctx$source(
     file.path(
       d3dep$src,
