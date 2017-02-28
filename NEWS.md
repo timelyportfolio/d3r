@@ -2,7 +2,7 @@
 
 ### Updates
 
-* update d3v4 to [`4.4.4`](https://github.com/d3/d3/releases/tag/v4.4.4)
+* update d3v4 to [`4.6.0`](https://github.com/d3/d3/releases/tag/v4.6.0)
 * add `d3_v8()` convenience function to return `V8` context with d3.js loaded
 
 # d3r 0.6.1
