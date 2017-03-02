@@ -7,3 +7,4 @@
 docs
 ^codecov\.yml$
 ^cran-comments\.md$
+.V8history
