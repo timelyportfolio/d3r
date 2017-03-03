@@ -71,7 +71,6 @@ par(opar)
 # d3.quadtree example
 
 library(d3r)
-library(purrr)
 
 x = runif(100)
 y = runif(100)
@@ -97,8 +96,16 @@ ctx$eval(
 
 nodes <- ctx$get("nodes(d3q)", simplifyVector = FALSE)
 # draw points
+opar <- par(no.readonly=TRUE)
+# make it square
+par(pty="s")
 plot(y~x)
 # draw quadtree rects
-map(nodes,~rect(.x$x0,.x$y0,.x$x1,.x$y1))
-
+rect(
+  lapply(nodes,function(x){x$x0}),
+  lapply(nodes,function(x){x$y0}),
+  lapply(nodes,function(x){x$x1}),
+  lapply(nodes,function(x){x$y1})
+)
+par(opar)
 }
