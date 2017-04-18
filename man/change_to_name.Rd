@@ -18,4 +18,3 @@ as \code{tibble}}
 \description{
 Change Column Name in Children to "name"
 }
-

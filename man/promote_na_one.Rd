@@ -15,4 +15,3 @@ promote_na_one(x)
 \description{
 Promote NA to Top Level
 }
-

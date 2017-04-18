@@ -22,4 +22,3 @@ library(htmltools)
 
 attachDependencies(tagList(),d3_dep_v4())
 }
-

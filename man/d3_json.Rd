@@ -18,4 +18,3 @@ for hierarchies from \code{d3_nest}}
 \description{
 Create 'JSON' that 'd3.js' Expects
 }
-

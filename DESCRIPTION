@@ -22,7 +22,7 @@ BugReports: https://github.com/timelyportfolio/d3r/issues
 Description: Helper functions for using 'd3.js' in R.
 License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
-Imports:  dplyr,
+Imports: dplyr,
           htmltools,
           tidyr
 Suggests: jsonlite,
@@ -35,4 +35,4 @@ Enhances: igraph,
           treemap,
           V8
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

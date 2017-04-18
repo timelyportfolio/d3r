@@ -15,4 +15,3 @@ promote_na(x)
 \description{
 Apply `promote_na` to All Rows
 }
-

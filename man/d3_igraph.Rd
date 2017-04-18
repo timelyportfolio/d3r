@@ -40,4 +40,3 @@ data("kite",package="igraphdata")
 listviewer::jsonedit(d3_igraph(kite))
 }
 }
-

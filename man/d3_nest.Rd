@@ -70,4 +70,3 @@ tit_tb \%>\%
     d3_nest(value_cols = c("color", "vSize"))
 }
 }
-
