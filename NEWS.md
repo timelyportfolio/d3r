@@ -1,3 +1,10 @@
+# d3r 0.6.3
+
+### Updates
+
+* update d3v4 to [`4.8.0`](https://github.com/d3/d3/releases/tag/v4.8.0)
+* test with development `dplyr`
+
 # d3r 0.6.2
 
 ### Updates

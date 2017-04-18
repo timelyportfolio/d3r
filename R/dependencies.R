@@ -13,12 +13,12 @@ d3_dep_v4 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v4/dist", package="d3r"))
   } else {
-    src <- c(href="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.0/")
+    src <- c(href="https://cdnjs.cloudflare.com/ajax/libs/d3/4.8.0/")
   }
 
   htmltools::htmlDependency(
     name = "d3",
-    version = "4.7.0",
+    version = "4.8.0",
     src = src,
     script = "d3.min.js"
   )
