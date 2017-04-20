@@ -82,7 +82,7 @@ As another example, let's go from `treemap` to `d3.js`.
 
 ### Todo
 
-I have a whole lot of ideas. Please let me know yours, and let's make this package great.
+I have a whole lot of ideas. Please let me know yours, and let's make this package Great Again!
 
 ### Code of Conduct
 
