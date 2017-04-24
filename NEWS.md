@@ -1,3 +1,9 @@
+# d3r 0.6.4
+
+### Bug Fix
+
+* d3_nest would fail with certain hierarchies that had multiple NA level; fix only takes first na_child since non-first children will be duplicates (see [commit](https://github.com/timelyportfolio/d3r/commit/1529acad5230207e3b4711202509bc5e9411076b))
+
 # d3r 0.6.3
 
 ### Updates
