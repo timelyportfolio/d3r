@@ -50,3 +50,24 @@ colname = "lvl3"), .Names = c("name", "size", "colname"
 -1L), class = c("tbl_df", "tbl", "data.frame"))
   )
 })
+
+
+test_that("d3_nest works with multiple NA levels", {
+
+  skip_on_cran()
+  skip_on_travis()
+
+  hier2 <- data.frame(
+    i1 = "A",
+    i2 = NA,
+    i3 = NA,
+    size = 20,
+    stringsAsFactors = FALSE
+  )
+
+  # default as json
+  expect_identical(
+    unclass(d3_nest(hier2, value_cols="size")),
+    '{"children":[{"name":"A","children":[],"size":20,"colname":"i1"}],"name":"root"}'
+  )
+})
