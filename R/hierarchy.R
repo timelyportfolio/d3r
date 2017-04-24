@@ -33,7 +33,7 @@ promote_na_one <- function(x){
     na_child <- x$children[[1]][na_child_loc,]
     x <- dplyr::bind_cols(
       x,
-      na_child[,setdiff(colnames(na_child),c("name","children","colname"))]
+      na_child[1,setdiff(colnames(na_child),c("name","children","colname"))]
     )
 
     # eliminate na child
