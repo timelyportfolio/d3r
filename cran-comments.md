@@ -1,5 +1,8 @@
 ## Comments
 
+-- resubmission
+changed `ORGANIZATION` to match author
+
 bug fix
 
 `ORGANIZATION` not required for BSD_3_clause LICENSE and intentionally left out of `LICENSE` file.  BSD_3_clause chosen to match the license of d3.js on which the package is based.  Research suggests not including `ORGANIZATION` or leaving `ORGANIZATION` is acceptable when it does not apply.
