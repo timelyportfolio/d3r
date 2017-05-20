@@ -8,7 +8,7 @@ I tried to explain the purpose of `d3r` in this Building Widgets blog post [Why 
 
 ### Installing d3r
 
-`d3r` is not on CRAN, so install with `devtools`.
+`d3r` is on CRAN, so install with `install.packages("d3r")` or for the absolute latest use `devtools`.
 
     devtools::install_github("timelyportfolio/d3r")
 
@@ -23,6 +23,14 @@ I tried to explain the purpose of `d3r` in this Building Widgets blog post [Why 
     browsable(
       attachDependencies(
         tagList(),
+        d3_dep_v4()
+      )
+    )
+
+    # or include directly in a taglist
+    browsable(
+      tagList(
+        h1("I have d3"),
         d3_dep_v4()
       )
     )
