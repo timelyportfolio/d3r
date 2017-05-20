@@ -1,3 +1,9 @@
+# d3r 0.6.5
+
+### Updates
+
+* update d3v4 to [`4.9.1`](https://github.com/d3/d3/releases/tag/v4.9.1)
+
 # d3r 0.6.4
 
 ### Bug Fix
