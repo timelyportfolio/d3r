@@ -15,8 +15,14 @@ d3_table(tB = NULL, vars = NULL, agg = "Freq")
 }
 \value{
 \code{list} of two \code{data.frames} - one for nodes and
-          one for links of the network
+          one for links of the network.  This structure is helpful
+          when working with \code{networkD3} and \code{visNetwork}.
 }
 \description{
 Converts Table to 'd3' Nodes and Links
+}
+\examples{
+library(d3r)
+d3_table(Titanic, c("Class","Sex"))
+
 }

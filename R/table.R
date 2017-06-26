@@ -83,7 +83,12 @@ links_transform <- function(links=NULL, nodes=NULL, vars=NULL, agg=NULL, tB=NULL
 #' @param agg \code{character} column name of aggregated value
 #'
 #' @return \code{list} of two \code{data.frames} - one for nodes and
-#'           one for links of the network
+#'           one for links of the network.  This structure is helpful
+#'           when working with \code{networkD3} and \code{visNetwork}.
+#' @examples
+#' library(d3r)
+#' d3_table(Titanic, c("Class","Sex"))
+#'
 #' @export
 d3_table <- function( tB = NULL, vars = NULL, agg = "Freq" ) {
   stopifnot(!is.null(tB), inherits(tB, "table"))
