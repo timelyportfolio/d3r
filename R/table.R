@@ -26,13 +26,13 @@ links_get <- function(tB, vars=NULL, agg="Freq") {
       function(f){
         structure(
           data.frame(stats::xtabs(paste0(agg,"~",f),tB)),
-          names = c("source","target","weight")
+          names = c("source","target","value")
         )
       }
     )
   )
 
-  colnames(vars_df) <- c("source","target","weight")
+  colnames(vars_df) <- c("source","target","value")
   vars_df
 }
 
@@ -50,14 +50,14 @@ links_transform <- function(links=NULL, nodes=NULL, vars=NULL, agg=NULL, tB=NULL
     )
 
     links <- data.frame(links, stringsAsFactors = F)
-    colnames(links) <- c("source","target","weight")
+    colnames(links) <- c("source","target","value")
   }
 
   links_tail <- data.frame(
     utils::tail(nodes,1),
     stats::xtabs(paste0(agg,"~",vars[1]),tB)
   )
-  colnames(links_tail) <- c("source","target","weight")
+  colnames(links_tail) <- c("source","target","value")
 
   links <- rbind(
     links,
@@ -125,7 +125,7 @@ d3_table <- function( tB = NULL, vars = NULL, agg = "Freq" ) {
 
   nodes_df <- data.frame(
     name = names(unlist(nodes_df)),
-    weight = as.vector(unlist(nodes_df)),
+    value = as.vector(unlist(nodes_df)),
     stringsAsFactors = F
   )
 
@@ -133,7 +133,7 @@ d3_table <- function( tB = NULL, vars = NULL, agg = "Freq" ) {
     nodes_df,
     data.frame(
       name = utils::tail(nodes,1),
-      weight = sum(tB)
+      value = sum(tB)
     )
   )
   # not sure if this is necessary any more
