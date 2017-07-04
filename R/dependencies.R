@@ -13,7 +13,7 @@ d3_dep_v4 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v4/dist", package="d3r"))
   } else {
-    src <- c(href="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/")
+    src <- c(href="https://unpkg.com/d3@4.9.1/build/")
   }
 
   htmltools::htmlDependency(
@@ -39,7 +39,7 @@ d3_dep_v3 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v3/dist", package="d3r"))
   } else {
-    src <- c(href="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/")
+    src <- c(href="https://unpkg.com/d3@3.5.17/")
   }
   htmltools::htmlDependency(
     name = "d3",
