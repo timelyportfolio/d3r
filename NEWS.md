@@ -2,7 +2,7 @@
 
 ### API Changes
 
-* **(BREAKING)** d3_table weight column is now named value to be consistent with the newest d3-sankey plugin [commit]().
+* **(BREAKING)** d3_table weight column is now named value to be consistent with the newest d3-sankey plugin [commit](https://github.com/timelyportfolio/d3r/commit/65b913322f1a6c71db21496f158bb0bed645a1f6).
 
 # d3r 0.6.6
 
