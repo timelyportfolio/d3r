@@ -48,3 +48,26 @@ d3_dep_v3 <- function(offline=TRUE){
     script = "d3.min.js"
   )
 }
+
+#' 'd3.js' Dependency for Version 4
+#'
+#' @param offline \code{logical} to specify whether to use
+#'         a local copy of d3.js (\code{TRUE}) or use cdn (\code{FALSE})
+#' @return \code{htmltools::htmlDependency}
+#' @export
+#' @examples
+#' library(d3r)
+#' library(htmltools)
+#'
+#' attachDependencies(tagList(),d3_dep_v4())
+d3_dep_jetpack <- function(offline=TRUE){
+  
+  src = c(file=system.file("www/d3/d3-jetpack/dist", package="d3r"))
+  
+  htmltools::htmlDependency(
+    name = "d3-jetpack",
+    version = "0.0",
+    src = src,
+    script = "d3v4+jetpack.js"
+  )
+}
