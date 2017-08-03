@@ -16370,7 +16370,7 @@ var at = function(name, value) {
 
 function f(){
   var functions = arguments;
-  
+
   //convert all string arguments into field accessors
   var i = 0, l = functions.length;
   while (i < l) {
@@ -16421,7 +16421,7 @@ var st = function(name, value) {
     }
 
     return sel;
-  } 
+  }
 
   function addPx(d){ return d.match ? d : d + 'px'; }
   function wrapPx(fn){
@@ -16542,7 +16542,7 @@ var conventions = function(c){
         .attr('class', 'y axis')
         .call(c.yAxis);
   };
-  
+
   return c;
 };
 
@@ -16555,7 +16555,7 @@ var attachTooltip = function(sel, tooltipSel, fieldFns){
 
   tooltipSel = tooltipSel || select('.tooltip');
 
-  sel 
+  sel
       .on('mouseover.attachTooltip', ttDisplay)
       .on('mousemove.attachTooltip', ttMove)
       .on('mouseout.attachTooltip',  ttHide)
@@ -16604,7 +16604,7 @@ var attachTooltip = function(sel, tooltipSel, fieldFns){
 
 var loadData = function(){
   var q = queue();
-  
+
   var args = [].slice.call(arguments);
   var files = args.slice(0, args.length - 1);
   var cb = args[args.length - 1];
@@ -17102,4 +17102,3 @@ exports.zoomIdentity = identity$8;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-
