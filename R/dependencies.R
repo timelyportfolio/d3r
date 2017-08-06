@@ -51,7 +51,7 @@ d3_dep_v3 <- function(offline=TRUE){
 
 #' 'd3.js' Dependency for Version 4 Jetpack
 #' 
-#' d3-jetpack is a set of nifty convenience wrappers that speed up your daily work with d3.js. 
+#' d3-jetpack is a set of nifty convenience wrappers that speed up your daily work with d3.js. Must be included after `d3_dep_v4()`
 #' Learn more by reading https://github.com/gka/d3-jetpack or by watching https://www.youtube.com/watch?v=_5ky0AYq_Dg&t=4s
 #' 
 #' @param there are none
@@ -82,7 +82,7 @@ d3_dep_v3 <- function(offline=TRUE){
   #'         stroke: 'purple'
   #'     });
   #' "
-#' ))), d3_dep_jetpack())
+#' ))), d3_dep_v4(), d3_dep_jetpack())
 #' browsable(t)
 #' 
 #'
@@ -105,7 +105,7 @@ d3_dep_v3 <- function(offline=TRUE){
 #'          stroke: 'blue'
 #'      });
 #'  "
-#' ))), d3_dep_jetpack())
+#' ))), d3_dep_v4(), d3_dep_jetpack())
 #' browsable(t)
 #' 
 d3_dep_jetpack <- function(offline=TRUE){
@@ -116,10 +116,10 @@ d3_dep_jetpack <- function(offline=TRUE){
     src <- c(href="https://unpkg.com/d3-jetpack@2.0.7/build/")
   }
   
-  htmltools::htmlDependency(
+htmltools::htmlDependency(
     name = "d3-jetpack",
     version = "2.0.7",
     src = src,
-    script = "d3v4+jetpack.js"
+    script = "d3-jetpack.js"
   )
 }

@@ -4,7 +4,7 @@
 \alias{d3_dep_jetpack}
 \title{'d3.js' Dependency for Version 4 Jetpack}
 \usage{
-d3_dep_jetpack()
+d3_dep_jetpack(offline = TRUE)
 }
 \arguments{
 \item{there}{are none}
@@ -13,7 +13,7 @@ d3_dep_jetpack()
 \code{htmltools::htmlDependency}
 }
 \description{
-d3-jetpack is a set of nifty convenience wrappers that speed up your daily work with d3.js. 
+d3-jetpack is a set of nifty convenience wrappers that speed up your daily work with d3.js. Must be included after `d3_dep_v4()`
 Learn more by reading https://github.com/gka/d3-jetpack or by watching https://www.youtube.com/watch?v=_5ky0AYq_Dg&t=4s
 }
 \examples{
@@ -41,7 +41,7 @@ svg.append('rect')
         stroke: 'purple'
     });
 "
-))), d3_dep_jetpack())
+))), d3_dep_v4(), d3_dep_jetpack())
 browsable(t)
 
 
@@ -64,7 +64,7 @@ t <- tagList(tags$script(HTML(sprintf(
          stroke: 'blue'
      });
  "
-))), d3_dep_jetpack())
+))), d3_dep_v4(), d3_dep_jetpack())
 browsable(t)
 
 }
