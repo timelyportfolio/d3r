@@ -7,7 +7,8 @@
 d3_dep_jetpack(offline = TRUE)
 }
 \arguments{
-\item{there}{are none}
+\item{offline}{\code{logical} to specify whether to use
+a local copy of d3.js (\code{TRUE}) or use cdn (\code{FALSE})}
 }
 \value{
 \code{htmltools::htmlDependency}
@@ -50,9 +51,9 @@ t <- tagList(tags$script(HTML(sprintf(
  "
  var svg = d3.select('body')
      .append('svg');
- 
+
  test_data = [{x: 250, y: 250}, {x: 300, y: 300}, {x: 300, y: 100}];
- 
+
  svg.appendMany(test_data, 'circle')
      .at({
          cx: function(d){return d.x},
