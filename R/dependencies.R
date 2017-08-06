@@ -108,9 +108,13 @@ d3_dep_v3 <- function(offline=TRUE){
 #' ))), d3_dep_jetpack())
 #' browsable(t)
 #' 
-d3_dep_jetpack <- function(){
+d3_dep_jetpack <- function(offline=TRUE){
   
-  src = c(file=system.file("www/d3/d3-jetpack/dist", package="d3r"))
+  if(offline) {
+    src <- c(file=system.file("www/d3/d3-jetpack/dist", package="d3r"))
+  } else {
+    src <- c(href="https://unpkg.com/d3-jetpack@2.0.7/build/")
+  }
   
   htmltools::htmlDependency(
     name = "d3-jetpack",
