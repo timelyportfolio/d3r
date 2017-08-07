@@ -14,16 +14,18 @@ a local copy of d3.js (\code{TRUE}) or use cdn (\code{FALSE})}
 \code{htmltools::htmlDependency}
 }
 \description{
-d3-jetpack is a set of nifty convenience wrappers that speed up your daily work with d3.js. Must be included after `d3_dep_v4()`
-Learn more by reading https://github.com/gka/d3-jetpack or by watching https://www.youtube.com/watch?v=_5ky0AYq_Dg&t=4s
+d3-jetpack is a set of nifty convenience wrappers that speed up
+your daily work with d3.js. Must be included after \code{d3_dep_v4()}.
+Learn more by reading \href{https://github.com/gka/d3-jetpack}{d3-jetpack}
+or by watching this \href{https://www.youtube.com/watch?v=_5ky0AYq_Dg&t=4s}{YouTube}.
 }
 \examples{
-
+\dontrun{
 
 library(d3r)
 library(htmltools)
 
-t <- tagList(tags$script(HTML(sprintf(
+tl <- tagList(tags$script(HTML(sprintf(
 "
 var x = 5;
 
@@ -43,11 +45,11 @@ svg.append('rect')
     });
 "
 ))), d3_dep_v4(), d3_dep_jetpack())
-browsable(t)
+browsable(tl)
 
 
 
-t <- tagList(tags$script(HTML(sprintf(
+tl <- tagList(tags$script(HTML(sprintf(
  "
  var svg = d3.select('body')
      .append('svg');
@@ -66,6 +68,8 @@ t <- tagList(tags$script(HTML(sprintf(
      });
  "
 ))), d3_dep_v4(), d3_dep_jetpack())
-browsable(t)
 
+browsable(tl)
+
+}
 }
