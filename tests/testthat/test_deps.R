@@ -39,3 +39,14 @@ test_that("d3_dep_v4 on latest d3 release", {
     github::get.latest.release("d3","d3")$content$tag_name
   )
 })
+
+test_that("d3-jetpack on latest release", {
+  skip_on_cran()
+
+  expect_identical(
+    jetpack$version,
+    jsonlite::fromJSON(
+      "https://unpkg.com/d3-jetpack/package.json"
+    )$version
+  )
+})
