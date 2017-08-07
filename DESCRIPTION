@@ -2,7 +2,7 @@ Package: d3r
 Type: Package
 Title: 'd3.js' Utilities for R
 Version: 0.6.8
-Date: 2017-08-03
+Date: 2017-08-07
 Authors@R: c(
       person(
         "Mike", "Bostock"
@@ -24,6 +24,10 @@ Authors@R: c(
         "Adam", "Pearce"
         , role = c("aut")
         , comment = "core contributor to d3-jetpack"
+      ),
+      person(
+        "Ben", "Ortiz"
+        , role = c("ctb")
       )
     )
 Maintainer: Kent Russell <kent.russell@timelyportfolio.com>
