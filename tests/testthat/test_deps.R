@@ -42,6 +42,7 @@ test_that("d3_dep_v4 on latest d3 release", {
 
 test_that("d3-jetpack on latest release", {
   skip_on_cran()
+  skip_on_travis()
 
   expect_identical(
     jetpack$version,
