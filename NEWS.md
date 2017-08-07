@@ -1,3 +1,9 @@
+# d3r 0.6.8
+
+### Updates
+
+d3_dep_jetpack() added. Essentially the same as d3_dep_v4(), but with a number of convenience functions added. Learn more by checking out the [d3-jetpack github page](https://github.com/gka/d3-jetpack). 
+
 # d3r 0.6.7
 
 ### API Changes
