@@ -1,3 +1,9 @@
+# d3r 0.6.9
+
+### Updates
+
+* modify `d3_nest()` to work with new tidyr.
+
 # d3r 0.6.8
 
 ### Updates

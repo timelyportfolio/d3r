@@ -82,15 +82,18 @@ d3_nest <- function(
   stopifnot(!is.null(data), inherits(data, "data.frame"))
   nonnest_cols <- dplyr::setdiff(colnames(data),value_cols)
 
+  # looks like new tidyr requires tibble to nest correctly
+  data <- dplyr::as_tibble(data)
+
   # convert factor to character
   data <- dplyr::mutate_if(data, is.factor, as.character)
 
   data_nested <- dplyr::bind_rows(promote_na(
     change_to_name(
-      tidyr::nest_(
+      tidyr::nest(
         data=data,
-        nest_cols=c(nonnest_cols[length(nonnest_cols)], value_cols),
-        key_col="children"
+        dplyr::one_of(c(nonnest_cols[length(nonnest_cols)], value_cols)),
+        .key="children"
       )
     )
   ))
@@ -102,10 +105,10 @@ d3_nest <- function(
   )){
     data_nested <- dplyr::bind_rows(promote_na(
       change_to_name(
-        tidyr::nest_(
+        tidyr::nest(
           data_nested,
-          nest_cols = colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)],
-          key_col = "children"
+          dplyr::one_of(colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)]),
+          .key = "children"
         )
       )
     ))
