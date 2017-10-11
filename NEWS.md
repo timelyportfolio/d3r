@@ -1,3 +1,8 @@
+# d3r 0.7.0
+
+* update d3v4 to [`4.11.0`](https://github.com/d3/d3/releases/tag/v4.11.0)
+* update d3-jetpack to 2.0.9
+
 # d3r 0.6.9
 
 ### Updates

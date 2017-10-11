@@ -46,8 +46,6 @@ test_that("d3-jetpack on latest release", {
 
   expect_identical(
     jetpack$version,
-    jsonlite::fromJSON(
-      "https://unpkg.com/d3-jetpack/package.json"
-    )$version
+    github::get.latest.release("gka","d3-jetpack")$content$tag_name
   )
 })
