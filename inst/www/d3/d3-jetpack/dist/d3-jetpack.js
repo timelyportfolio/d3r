@@ -1,14 +1,22 @@
-// https://github.com/gka/d3-jetpack#readme Version 2.0.7. Copyright 2017 Gregor Aisch.
+// https://github.com/gka/d3-jetpack#readme Version 2.0.8. Copyright 2017 Gregor Aisch.
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-selection'), require('d3-transition'), require('d3-array'), require('d3-axis'), require('d3-scale'), require('d3-collection'), require('d3-queue'), require('d3-request')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'd3-selection', 'd3-transition', 'd3-array', 'd3-axis', 'd3-scale', 'd3-collection', 'd3-queue', 'd3-request'], factory) :
 	(factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3,global.d3,global.d3,global.d3,global.d3,global.d3));
 }(this, (function (exports,d3Selection,d3Transition,d3Array,d3Axis,d3Scale,d3Collection,d3Queue,d3Request) { 'use strict';
 
-var translateSelection = function(xy) {
-  return this.attr('transform', function(d,i) {
-    return 'translate('+[typeof xy == 'function' ? xy.call(this, d,i) : xy]+')';
-  });
+var translateSelection = function(xy, dim) {
+  return this.node().getBBox ?
+    this.attr('transform', function(d,i) {
+      var p = typeof xy == 'function' ? xy.call(this, d,i) : xy;
+      if (dim === 0) p = [p, 0]; else if (dim === 1) p = [0, p];
+      return 'translate(' + p[0] +','+ p[1]+')';
+    }) :
+    this.style('transform', function(d,i) {
+      var p = typeof xy == 'function' ? xy.call(this, d,i) : xy;
+      if (dim === 0) p = [p, 0]; else if (dim === 1) p = [0, p];
+      return 'translate(' + p[0] +'px,'+ p[1]+'px)';
+    });
 };
 
 var parseAttributes = function(name) {
@@ -115,7 +123,7 @@ var at = function(name, value) {
 
 function f(){
   var functions = arguments;
-
+  
   //convert all string arguments into field accessors
   var i = 0, l = functions.length;
   while (i < l) {
@@ -166,7 +174,7 @@ var st = function(name, value) {
     }
 
     return sel;
-  }
+  } 
 
   function addPx(d){ return d.match ? d : d + 'px'; }
   function wrapPx(fn){
@@ -287,7 +295,7 @@ var conventions = function(c){
         .attr('class', 'y axis')
         .call(c.yAxis);
   };
-
+  
   return c;
 };
 
@@ -300,7 +308,7 @@ var attachTooltip = function(sel, tooltipSel, fieldFns){
 
   tooltipSel = tooltipSel || d3Selection.select('.tooltip');
 
-  sel
+  sel 
       .on('mouseover.attachTooltip', ttDisplay)
       .on('mousemove.attachTooltip', ttMove)
       .on('mouseout.attachTooltip',  ttHide)
@@ -333,7 +341,7 @@ var attachTooltip = function(sel, tooltipSel, fieldFns){
         y = e.clientY,
         bb = tooltipSel.node().getBoundingClientRect(),
         left = clamp(20, (x-bb.width/2), window.innerWidth - bb.width - 20),
-        top = innerHeight - y > 200 ? y + 20 : y - bb.height - 20;
+        top = innerHeight > y + 20 + bb.height ? y + 20 : y - bb.height - 20;
 
     tooltipSel
       .style('left', left +'px')
@@ -349,7 +357,7 @@ var attachTooltip = function(sel, tooltipSel, fieldFns){
 
 var loadData = function(){
   var q = d3Queue.queue();
-
+  
   var args = [].slice.call(arguments);
   var files = args.slice(0, args.length - 1);
   var cb = args[args.length - 1];
@@ -377,7 +385,7 @@ var round = function(n, p) {
 
 // Clips the specified subject polygon to the specified clip polygon;
 // requires the clip polygon to be counterclockwise and convex.
-// https://en.wikipedia.org/wiki/Sutherlandâ€“Hodgman_algorithm
+// https://en.wikipedia.org/wiki/Sutherland–Hodgman_algorithm
 var polygonClip = function(clip, subject) {
   var input,
       closed = polygonClosed(subject),
