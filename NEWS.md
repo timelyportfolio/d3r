@@ -1,3 +1,7 @@
+# d3r 0.7.1
+
+* update d3v4 to [`4.12.0`](https://github.com/d3/d3/releases/tag/v4.12.0)
+
 # d3r 0.7.0
 
 * update d3v4 to [`4.11.0`](https://github.com/d3/d3/releases/tag/v4.11.0)

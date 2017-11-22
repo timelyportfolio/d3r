@@ -46,6 +46,10 @@ test_that("d3-jetpack on latest release", {
 
   expect_identical(
     jetpack$version,
-    github::get.latest.release("gka","d3-jetpack")$content$tag_name
+    gsub(
+      x=github::get.latest.release("gka","d3-jetpack")$content$tag_name,
+      pattern="v",
+      replacement=""
+    )
   )
 })
