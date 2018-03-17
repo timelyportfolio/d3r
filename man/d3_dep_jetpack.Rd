@@ -73,3 +73,7 @@ browsable(tl)
 
 }
 }
+\seealso{
+Other 'd3' dependency functions: \code{\link{d3_dep_v3}},
+  \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v5}}
+}

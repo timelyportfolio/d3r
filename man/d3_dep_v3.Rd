@@ -20,5 +20,12 @@ a local copy of d3.js (\code{TRUE}) or use cdn (\code{FALSE})}
 library(d3r)
 library(htmltools)
 
-attachDependencies(tagList(),d3_dep_v3())
+tagList(d3_dep_v3())
+}
+\seealso{
+\code{\link{d3_dep_v5}}, \code{\link{d3_dep_v4}},
+  and \code{\link{d3_dep_jetpack}}.
+
+Other 'd3' dependency functions: \code{\link{d3_dep_jetpack}},
+  \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v5}}
 }
