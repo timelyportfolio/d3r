@@ -38,11 +38,11 @@ test_that("d3_dep-* src file is a valid file", {
   expect_true(file.exists(file.path(jetpack$src$file, jetpack$script)))
 })
 
-test_that("d3_dep_v4 on latest d3 release", {
+test_that("d3_dep_v5 on latest d3 release", {
   skip_if_not_installed("github")
 
   expect_identical(
-    sprintf("v%s",v4$version),
+    sprintf("v%s",v5$version),
     github::get.latest.release("d3","d3")$content$tag_name
   )
 })
