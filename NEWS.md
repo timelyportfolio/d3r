@@ -1,3 +1,7 @@
+# d3r 0.8.1
+
+* add d3v5 for d3 [`5.1.0`](https://github.com/d3/d3/releases/tag/v5.1.0)
+
 # d3r 0.8.0
 
 * add d3v5 for d3 [`5.0.0-rc4`](https://github.com/d3/d3/releases/tag/v5.0.0)

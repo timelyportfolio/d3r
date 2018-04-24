@@ -1,6 +1,6 @@
 # D3 API Reference
 
-D3 is a [collection of modules](https://github.com/d3) that are designed to work together; you can use the modules independently, or you can use them together as part of the default build. The source and documentation for each module is available in its repository. Follow the links below to learn more. For changes between 3.x and 4.0, see [CHANGES](https://github.com/d3/d3/blob/master/CHANGES.md); see also the [release notes](https://github.com/d3/d3/releases) and the [3.x reference](https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md).
+D3 is a [collection of modules](https://github.com/d3) that are designed to work together; you can use the modules independently, or you can use them together as part of the default build. The source and documentation for each module is available in its repository. Follow the links below to learn more. For changes between major versions, see [CHANGES](https://github.com/d3/d3/blob/master/CHANGES.md); see also the [release notes](https://github.com/d3/d3/releases) and the [3.x reference](https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md).
 
 * [Arrays](#arrays-d3-array) ([Statistics](#statistics), [Search](#search), [Transformations](#transformations), [Histograms](#histograms))
 * [Axes](#axes-d3-axis)
@@ -218,6 +218,8 @@ Color manipulation and color space conversion.
 * [d3.hsl](https://github.com/d3/d3-color/blob/master/README.md#hsl) - create a new HSL color.
 * [d3.lab](https://github.com/d3/d3-color/blob/master/README.md#lab) - create a new Lab color.
 * [d3.hcl](https://github.com/d3/d3-color/blob/master/README.md#hcl) - create a new HCL color.
+* [d3.lch](https://github.com/d3/d3-color/blob/master/README.md#lch) - create a new HCL color.
+* [d3.gray](https://github.com/d3/d3-color/blob/master/README.md#gray) - create a new Lab gray.
 * [d3.cubehelix](https://github.com/d3/d3-color/blob/master/README.md#cubehelix) - create a new Cubehelix color.
 
 ## [Color Schemes (d3-scale-chromatic)](https://github.com/d3/d3-scale-chromatic)
@@ -517,6 +519,7 @@ Geographic projections, shapes and math.
 * [*projection*.stream](https://github.com/d3/d3-geo/blob/master/README.md#projection_stream) - wrap the specified stream to project geometry.
 * [*projection*.clipAngle](https://github.com/d3/d3-geo/blob/master/README.md#projection_clipAngle) - set the radius of the clip circle.
 * [*projection*.clipExtent](https://github.com/d3/d3-geo/blob/master/README.md#projection_clipExtent) - set the viewport clip extent, in pixels.
+* [*projection*.angle](https://github.com/d3/d3-geo/blob/master/README.md#projection_angle) - set the post-projection rotation.
 * [*projection*.scale](https://github.com/d3/d3-geo/blob/master/README.md#projection_scale) - set the scale factor.
 * [*projection*.translate](https://github.com/d3/d3-geo/blob/master/README.md#projection_translate) - set the translation offset.
 * [*projection*.fitExtent](https://github.com/d3/d3-geo/blob/master/README.md#projection_fitExtent) - set the scale and translate to fit a GeoJSON object.
