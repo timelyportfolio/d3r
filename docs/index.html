@@ -29,6 +29,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
+  <a href="index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li>
@@ -63,18 +69,18 @@
 <div id="why-d3r" class="section level3">
 <h3 class="hasAnchor">
 <a href="#why-d3r" class="anchor"></a>Why d3r?</h3>
-<p>I tried to explain the purpose of <code>d3r</code> in this Building Widgets blog post <a href="http://www.buildingwidgets.com/blog/2016/8/28/why-d3r">Why d3r?</a>.</p>
+<p>Please see this Building Widgets blog post <a href="http://www.buildingwidgets.com/blog/2016/8/28/why-d3r">Why d3r?</a>.</p>
 </div>
 <div id="installing-d3r" class="section level3">
 <h3 class="hasAnchor">
 <a href="#installing-d3r" class="anchor"></a>Installing d3r</h3>
 <p><code>d3r</code> is on CRAN, so install with <code>install.packages("d3r")</code> or for the absolute latest use <code>devtools</code>.</p>
-<pre><code>devtools::install_github("timelyportfolio/d3r")</code></pre>
+<pre><code><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">devtools::install_github("timelyportfolio/d3r")</a></code></pre>
 </div>
 <div id="d3-dependency-functions" class="section level3">
 <h3 class="hasAnchor">
 <a href="#d3-dependency-functions" class="anchor"></a>d3 Dependency Functions</h3>
-<p><code>d3r</code> makes <code>d3.js</code> dependency injection in R easy with two functions <code><a href="reference/d3_dep_v3.html">d3_dep_v3()</a></code> and <code><a href="reference/d3_dep_v4.html">d3_dep_v4()</a></code>. These functions work well with <code>htmltools::tags</code>.</p>
+<p><code>d3r</code> makes <code>d3.js</code> dependency injection in R easy with <code><a href="reference/d3_dep_v3.html">d3_dep_v3()</a></code>, <code><a href="reference/d3_dep_v4.html">d3_dep_v4()</a></code>, and <code><a href="reference/d3_dep_v5.html">d3_dep_v5()</a></code>. These functions work well with <code><a href="http://www.rdocumentation.org/packages/htmltools/topics/builder">htmltools::tags</a></code>.</p>
 <pre><code>library(htmltools)
 library(d3r)
 
@@ -82,15 +88,16 @@ library(d3r)
 browsable(
   attachDependencies(
     tagList(),
-    d3_dep_v4()
+    d3_dep_v5()
   )
 )
 
-# or include directly in a taglist
+# or include directly in a taglist; I prefer this methode
 browsable(
   tagList(
-    h1("I have d3"),
-    d3_dep_v4()
+    h1("I have d3 version ", span(id="version")),
+    tags$script("d3.select('#version').text(d3.version)"),
+    d3_dep_v5()
   )
 )</code></pre>
 <p>Also, I will commit to keeping <code>d3r</code> up-to-date with <code>d3.js</code>, so you’ll no longer need multiple copies of <code>d3.js</code> for your <code>htmlwidgets</code>. If you are a <code>htmlwidget</code> author, you will no longer need to worry every time <code>d3.js</code> gets a new release. See <code>treebar</code> <a href="https://github.com/timelyportfolio/treebar/blob/master/R/treebar.R#L66-L74">lines</a> for an example of using <code>d3r</code> with your <code>htmlwidget</code>.</p>
@@ -98,7 +105,7 @@ browsable(
 <div id="d3-hierarchy-from-data-frame" class="section level3">
 <h3 class="hasAnchor">
 <a href="#d3-hierarchy-from-data-frame" class="anchor"></a>d3 Hierarchy from data.frame</h3>
-<p>Building <code>d3.js</code> hierarchies can be very difficult. <code>d3r::d3_nest()</code> will convert <code>table</code> and <code>data.frame</code> to a nested <code>d3.js</code> hierarchy ready for work with the <a href="https://github.com/d3/d3-hierarchy"><code>d3-hierarchy</code></a>.</p>
+<p>Building <code>d3.js</code> hierarchies can be very difficult. <code><a href="http://www.rdocumentation.org/packages/d3r/topics/d3_nest">d3r::d3_nest()</a></code> will convert <code>table</code> and <code>data.frame</code> to a nested <code>d3.js</code> hierarchy ready for work with <a href="https://github.com/d3/d3-hierarchy"><code>d3-hierarchy</code></a>.</p>
 <pre><code><a href="reference/d3_nest.html">d3_nest(as.data.frame(Titanic))</a></code></pre>
 <p>As another example, let’s go from <code>treemap</code> to <code>d3.js</code>.</p>
 <pre><code>library(treemap)
@@ -138,7 +145,7 @@ d3tree2(
 <div id="d3-network-from-igraph" class="section level3">
 <h3 class="hasAnchor">
 <a href="#d3-network-from-igraph" class="anchor"></a>d3 Network from igraph</h3>
-<p><code>igraph</code> to <code>d3.js</code> network of <code>nodes</code> and <code>links</code> is a very common conversion. <code>d3r::d3_igraph</code> will do this for you.</p>
+<p><code>igraph</code> to <code>d3.js</code> network of <code>nodes</code> and <code>links</code> is a very common conversion. <code><a href="http://www.rdocumentation.org/packages/d3r/topics/d3_igraph">d3r::d3_igraph</a></code> will do this for you.</p>
 <pre><code>library(igraph)
 library(d3r)
 
@@ -172,11 +179,11 @@ d3_igraph(igraph::watts.strogatz.game(1, 50, 4, 0.05))</code></pre>
 <p><a href="https://opensource.org/licenses/BSD-3-Clause">BSD_3_clause</a> + file <a href="LICENSE.html">LICENSE</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Mike Bostock <br><small class="roles"> Author, copyright holder </small> <br><small>(d3.js library in htmlwidgets/lib, http://d3js.org)</small>
+<li>Mike Bostock <br><small class="roles"> Author, copyright holder </small> <br><small>(d3.js library in htmlwidgets/lib, http://d3js.org)</small>
 </li>
 <li>Kent Russell <br><small class="roles"> Author, maintainer </small> <br><small>(R interface)</small>
 </li>
-<li>Gregor Aisch <br><small class="roles"> Author, copyright holder </small> <br><small>(d3-jetpack creator, https://github.com/gka/d3-jetpack)</small>
+<li>Gregor Aisch <br><small class="roles"> Author, copyright holder </small> <br><small>(d3-jetpack creator, https://github.com/gka/d3-jetpack)</small>
 </li>
 <li>Adam Pearce <br><small class="roles"> Author </small> <br><small>(core contributor to d3-jetpack)</small>
 </li>
@@ -198,7 +205,7 @@ d3_igraph(igraph::watts.strogatz.game(1, 50, 4, 0.05))</code></pre>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>

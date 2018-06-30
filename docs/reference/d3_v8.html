@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -101,117 +107,116 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>not_run</span>({
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='co'># to do this all in R, please see ggraph</span>
+<span class='co'># https://github.com/thomasp85/ggraph</span>
+<span class='co'># by Thomas Lin Pedersen</span>
+<span class='fu'>library</span>(<span class='no'>d3r</span>)
 
-  <span class='co'># to do this all in R, please see ggraph</span>
-  <span class='co'># https://github.com/thomasp85/ggraph</span>
-  <span class='co'># by Thomas Lin Pedersen</span>
-  <span class='fu'>library</span>(<span class='no'>d3r</span>)
+<span class='co'># make a simple data.frame of US state data</span>
+<span class='no'>states</span> <span class='kw'>&lt;-</span> <span class='fu'>data.frame</span>(
+  <span class='kw'>region</span> <span class='kw'>=</span> <span class='fu'>as.character</span>(<span class='no'>state.region</span>),
+  <span class='kw'>state</span> <span class='kw'>=</span> <span class='fu'>as.character</span>(<span class='no'>state.abb</span>),
+  <span class='kw'>population</span> <span class='kw'>=</span> <span class='no'>state.x77</span>[,<span class='st'>"Population"</span>],
+  <span class='kw'>stringsAsFactors</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
+)
 
-  <span class='co'># make a simple data.frame of US state data</span>
-  <span class='no'>states</span> <span class='kw'>&lt;-</span> <span class='fu'>data.frame</span>(
-    <span class='kw'>region</span> <span class='kw'>=</span> <span class='fu'>as.character</span>(<span class='no'>state.region</span>),
-    <span class='kw'>state</span> <span class='kw'>=</span> <span class='fu'>as.character</span>(<span class='no'>state.abb</span>),
-    <span class='kw'>population</span> <span class='kw'>=</span> <span class='no'>state.x77</span>[,<span class='st'>"Population"</span>],
-    <span class='kw'>stringsAsFactors</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-  )
+<span class='co'># use d3_nest to get the data.frame in a d3 hierarchy</span>
+<span class='no'>state_hier</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='d3_nest.html'>d3_nest</a></span>(
+  <span class='no'>states</span>,
+  <span class='kw'>value_cols</span> <span class='kw'>=</span> <span class='st'>"population"</span>
+)
 
-  <span class='co'># use d3_nest to get the data.frame in a d3 hierarchy</span>
-  <span class='no'>state_hier</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='d3_nest.html'>d3_nest</a></span>(
-    <span class='no'>states</span>,
-    <span class='kw'>value_cols</span> <span class='kw'>=</span> <span class='st'>"population"</span>
-  )
+<span class='co'># use d3_v8 to do something useful with d3 and, our state data</span>
+<span class='no'>ctx</span> <span class='kw'>&lt;-</span> <span class='fu'>d3_v8</span>()
+<span class='no'>ctx</span>$<span class='fu'>eval</span>(<span class='fu'>sprintf</span>(
+  <span class='st'>" var states = %s"</span>,
+  <span class='no'>state_hier</span>
+))
+<span class='no'>ctx</span>$<span class='fu'>eval</span>(
+<span class='st'>"
+// we assigned the variable states above
+//  so now make it a real d3 hierarchy
+var root = d3.hierarchy(states);
 
-  <span class='co'># use d3_v8 to do something useful with d3 and, our state data</span>
-  <span class='no'>ctx</span> <span class='kw'>&lt;-</span> <span class='fu'>d3_v8</span>()
-  <span class='no'>ctx</span>$<span class='fu'>eval</span>(<span class='fu'>sprintf</span>(
-    <span class='st'>" var states = %s"</span>,
-    <span class='no'>state_hier</span>
-  ))
-  <span class='no'>ctx</span>$<span class='fu'>eval</span>(
-  <span class='st'>"
-  // we assigned the variable states above
-  //  so now make it a real d3 hierarchy
-  var root = d3.hierarchy(states);
-  
-  // sum on population
-  root.sum(function(d) {return d.population ? d.population : 0});
-  
-  
-  // use d3 to circle pack or state hierarchy
-  d3.pack()(root);
-  
-  // get something we can convert into a data.frame in R
-  var states_packed = [];
-  root.each(function(d) {
-    states_packed.push({
-      name: d.data.name,
-      radius: d.r,
-      x: d.x,
-      y: d.y
-    });
+// sum on population
+root.sum(function(d) {return d.population ? d.population : 0});
+
+
+// use d3 to circle pack or state hierarchy
+d3.pack()(root);
+
+// get something we can convert into a data.frame in R
+var states_packed = [];
+root.each(function(d) {
+  states_packed.push({
+    name: d.data.name,
+    radius: d.r,
+    x: d.x,
+    y: d.y
   });
+});
+"</span>
+)
+
+<span class='co'># now get states_packed from our context</span>
+<span class='co'>#  to plot in R</span>
+<span class='no'>states_packed</span> <span class='kw'>&lt;-</span> <span class='no'>ctx</span>$<span class='fu'>get</span>(<span class='st'>"states_packed"</span>)
+<span class='no'>opar</span> <span class='kw'>&lt;-</span> <span class='fu'>par</span>(<span class='kw'>no.readonly</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='co'># make it square</span>
+<span class='fu'>par</span>(<span class='kw'>pty</span><span class='kw'>=</span><span class='st'>"s"</span>)
+<span class='fu'>symbols</span>(
+  <span class='no'>states_packed</span>$<span class='no'>x</span>,
+  <span class='no'>states_packed</span>$<span class='no'>y</span>,
+  <span class='no'>states_packed</span>$<span class='no'>radius</span>,
+  <span class='kw'>inches</span><span class='kw'>=</span><span class='fl'>FALSE</span>,
+  <span class='kw'>asp</span><span class='kw'>=</span><span class='fl'>1</span>
+)
+<span class='fu'>text</span>(<span class='no'>y</span>~<span class='no'>x</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>states_packed</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='no'>states_packed</span>$<span class='no'>name</span>)
+<span class='co'># return to original par before we made it square</span>
+<span class='fu'>par</span>(<span class='no'>opar</span>)
+
+<span class='co'># d3.quadtree example</span>
+
+<span class='fu'>library</span>(<span class='no'>d3r</span>)
+
+<span class='no'>x</span> <span class='kw'>=</span> <span class='fu'>runif</span>(<span class='fl'>100</span>)
+<span class='no'>y</span> <span class='kw'>=</span> <span class='fu'>runif</span>(<span class='fl'>100</span>)
+
+<span class='no'>ctx</span> <span class='kw'>&lt;-</span> <span class='fu'>d3_v8</span>()
+<span class='co'># assign pts as array of pts in V8</span>
+<span class='no'>ctx</span>$<span class='fu'>assign</span>(<span class='st'>"pts"</span>, <span class='fu'>matrix</span>(<span class='fu'>c</span>(<span class='no'>x</span>,<span class='no'>y</span>),<span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>TRUE</span>))
+<span class='co'># use d3.quadtree() to plot rects</span>
+<span class='no'>ctx</span>$<span class='fu'>eval</span>(
+  <span class='st'>"
+  var d3q = d3.quadtree()
+  .addAll(pts);
+  // nodes function from https://bl.ocks.org/mbostock/4343214
+  function nodes(quadtree) {
+  var nodes = [];
+  quadtree.visit(function(node, x0, y0, x1, y1) {
+  nodes.push({x0:x0, y0:y0, x1: x1, y1: y1})
+  });
+  return nodes;
+  }
   "</span>
-  )
+)
 
-  <span class='co'># now get states_packed from our context</span>
-  <span class='co'>#  to plot in R</span>
-  <span class='no'>states_packed</span> <span class='kw'>&lt;-</span> <span class='no'>ctx</span>$<span class='fu'>get</span>(<span class='st'>"states_packed"</span>)
-  <span class='no'>opar</span> <span class='kw'>&lt;-</span> <span class='fu'>par</span>(<span class='kw'>no.readonly</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-  <span class='co'># make it square</span>
-  <span class='fu'>par</span>(<span class='kw'>pty</span><span class='kw'>=</span><span class='st'>"s"</span>)
-  <span class='fu'>symbols</span>(
-    <span class='no'>states_packed</span>$<span class='no'>x</span>,
-    <span class='no'>states_packed</span>$<span class='no'>y</span>,
-    <span class='no'>states_packed</span>$<span class='no'>radius</span>,
-    <span class='kw'>inches</span><span class='kw'>=</span><span class='fl'>FALSE</span>,
-    <span class='kw'>asp</span><span class='kw'>=</span><span class='fl'>1</span>
-  )
-  <span class='fu'>text</span>(<span class='no'>y</span>~<span class='no'>x</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>states_packed</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='no'>states_packed</span>$<span class='no'>name</span>)
-  <span class='co'># return to original par before we made it square</span>
-  <span class='fu'>par</span>(<span class='no'>opar</span>)
-
-  <span class='co'># d3.quadtree example</span>
-
-  <span class='fu'>library</span>(<span class='no'>d3r</span>)
-
-  <span class='no'>x</span> <span class='kw'>=</span> <span class='fu'>runif</span>(<span class='fl'>100</span>)
-  <span class='no'>y</span> <span class='kw'>=</span> <span class='fu'>runif</span>(<span class='fl'>100</span>)
-
-  <span class='no'>ctx</span> <span class='kw'>&lt;-</span> <span class='fu'>d3_v8</span>()
-  <span class='co'># assign pts as array of pts in V8</span>
-  <span class='no'>ctx</span>$<span class='fu'>assign</span>(<span class='st'>"pts"</span>, <span class='fu'>matrix</span>(<span class='fu'>c</span>(<span class='no'>x</span>,<span class='no'>y</span>),<span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>TRUE</span>))
-  <span class='co'># use d3.quadtree() to plot rects</span>
-  <span class='no'>ctx</span>$<span class='fu'>eval</span>(
-    <span class='st'>"
-    var d3q = d3.quadtree()
-    .addAll(pts);
-    // nodes function from https://bl.ocks.org/mbostock/4343214
-    function nodes(quadtree) {
-    var nodes = [];
-    quadtree.visit(function(node, x0, y0, x1, y1) {
-    nodes.push({x0:x0, y0:y0, x1: x1, y1: y1})
-    });
-    return nodes;
-    }
-    "</span>
-  )
-
-  <span class='no'>nodes</span> <span class='kw'>&lt;-</span> <span class='no'>ctx</span>$<span class='fu'>get</span>(<span class='st'>"nodes(d3q)"</span>, <span class='kw'>simplifyVector</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
-  <span class='co'># draw points</span>
-  <span class='no'>opar</span> <span class='kw'>&lt;-</span> <span class='fu'>par</span>(<span class='kw'>no.readonly</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-  <span class='co'># make it square</span>
-  <span class='fu'>par</span>(<span class='kw'>pty</span><span class='kw'>=</span><span class='st'>"s"</span>)
-  <span class='fu'>plot</span>(<span class='no'>y</span>~<span class='no'>x</span>)
-  <span class='co'># draw quadtree rects</span>
-  <span class='fu'>rect</span>(
-    <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>x0</span>}),
-    <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>y0</span>}),
-    <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>x1</span>}),
-    <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>y1</span>})
-  )
-  <span class='fu'>par</span>(<span class='no'>opar</span>)
-})</div></pre>
+<span class='no'>nodes</span> <span class='kw'>&lt;-</span> <span class='no'>ctx</span>$<span class='fu'>get</span>(<span class='st'>"nodes(d3q)"</span>, <span class='kw'>simplifyVector</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+<span class='co'># draw points</span>
+<span class='no'>opar</span> <span class='kw'>&lt;-</span> <span class='fu'>par</span>(<span class='kw'>no.readonly</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='co'># make it square</span>
+<span class='fu'>par</span>(<span class='kw'>pty</span><span class='kw'>=</span><span class='st'>"s"</span>)
+<span class='fu'>plot</span>(<span class='no'>y</span>~<span class='no'>x</span>)
+<span class='co'># draw quadtree rects</span>
+<span class='fu'>rect</span>(
+  <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>x0</span>}),
+  <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>y0</span>}),
+  <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>x1</span>}),
+  <span class='fu'>lapply</span>(<span class='no'>nodes</span>,<span class='kw'>function</span>(<span class='no'>x</span>){<span class='no'>x</span>$<span class='no'>y1</span>})
+)
+<span class='fu'>par</span>(<span class='no'>opar</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -232,7 +237,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>

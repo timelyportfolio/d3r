@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -98,14 +104,21 @@ a local copy of d3.js (<code>TRUE</code>) or use cdn (<code>FALSE</code>)</p></t
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><code>htmltools::htmlDependency</code></p>
+    <p><code><a href='http://www.rdocumentation.org/packages/htmltools/topics/htmlDependency'>htmltools::htmlDependency</a></code></p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <p><code><a href='d3_dep_v5.html'>d3_dep_v5</a></code>, <code><a href='d3_dep_v4.html'>d3_dep_v4</a></code>,
+  and <code><a href='d3_dep_jetpack.html'>d3_dep_jetpack</a></code>.</p>
+<p>Other 'd3' dependency functions: <code><a href='d3_dep_jetpack.html'>d3_dep_jetpack</a></code>,
+  <code><a href='d3_dep_v4.html'>d3_dep_v4</a></code>, <code><a href='d3_dep_v5.html'>d3_dep_v5</a></code></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>d3r</span>)
 <span class='fu'>library</span>(<span class='no'>htmltools</span>)
 
-<span class='fu'>attachDependencies</span>(<span class='fu'>tagList</span>(),<span class='fu'>d3_dep_v3</span>())</div><div class='output co'>#&gt; </div></pre>
+<span class='fu'><a href='http://www.rdocumentation.org/packages/htmltools/topics/tag'>tagList</a></span>(<span class='fu'>d3_dep_v3</span>())</div><div class='output co'>#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -113,6 +126,8 @@ a local copy of d3.js (<code>TRUE</code>) or use cdn (<code>FALSE</code>)</p></t
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
@@ -126,7 +141,7 @@ a local copy of d3.js (<code>TRUE</code>) or use cdn (<code>FALSE</code>)</p></t
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>

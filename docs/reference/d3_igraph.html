@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -105,27 +111,27 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>igraph</span>)
-  <span class='fu'>library</span>(<span class='no'>igraphdata</span>)
-  <span class='fu'>library</span>(<span class='no'>d3r</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>igraph</span>)
+<span class='fu'>library</span>(<span class='no'>igraphdata</span>)
+<span class='fu'>library</span>(<span class='no'>d3r</span>)
 
-  <span class='co'># with random graph</span>
-  <span class='kw'>d3r</span><span class='kw'>::</span><span class='fu'>d3_igraph</span>(<span class='kw'>igraph</span><span class='kw'>::</span><span class='fu'>sample_pa</span>(<span class='fl'>100</span>))
+<span class='co'># with random graph</span>
+<span class='kw pkg'>d3r</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/d3r/topics/d3_igraph'>d3_igraph</a></span>(<span class='kw pkg'>igraph</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/igraph/topics/sample_pa'>sample_pa</a></span>(<span class='fl'>100</span>))
 
-  <span class='co'># check case where vertices 0 cols</span>
-  <span class='fu'>d3_igraph</span>(<span class='kw'>igraph</span><span class='kw'>::</span><span class='fu'>watts.strogatz.game</span>(<span class='fl'>1</span>, <span class='fl'>50</span>, <span class='fl'>4</span>, <span class='fl'>0.05</span>))
+<span class='co'># check case where vertices 0 cols</span>
+<span class='fu'>d3_igraph</span>(<span class='kw pkg'>igraph</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/igraph/topics/sample_smallworld'>watts.strogatz.game</a></span>(<span class='fl'>1</span>, <span class='fl'>50</span>, <span class='fl'>4</span>, <span class='fl'>0.05</span>))
 
-  <span class='co'># with karate from igraphdata</span>
-  <span class='co'>#  notice graph attributes are added</span>
-  <span class='fu'>data</span>(<span class='st'>"karate"</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>"igraphdata"</span>)
-  (<span class='no'>karate_d3</span> <span class='kw'>&lt;-</span> <span class='kw'>d3r</span><span class='kw'>::</span><span class='fu'>d3_igraph</span>(<span class='no'>karate</span>))
+<span class='co'># with karate from igraphdata</span>
+<span class='co'>#  notice graph attributes are added</span>
+<span class='fu'>data</span>(<span class='st'>"karate"</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>"igraphdata"</span>)
+(<span class='no'>karate_d3</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>d3r</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/d3r/topics/d3_igraph'>d3_igraph</a></span>(<span class='no'>karate</span>))
 
-  <span class='kw'>listviewer</span><span class='kw'>::</span><span class='fu'>jsonedit</span>(<span class='no'>karate_d3</span>)
+<span class='kw pkg'>listviewer</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/listviewer/topics/jsonedit'>jsonedit</a></span>(<span class='no'>karate_d3</span>)
 
-  <span class='fu'>data</span>(<span class='st'>"kite"</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>"igraphdata"</span>)
-  <span class='kw'>listviewer</span><span class='kw'>::</span><span class='fu'>jsonedit</span>(<span class='fu'>d3_igraph</span>(<span class='no'>kite</span>))
-})</div></pre>
+<span class='fu'>data</span>(<span class='st'>"kite"</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>"igraphdata"</span>)
+<span class='kw pkg'>listviewer</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/listviewer/topics/jsonedit'>jsonedit</a></span>(<span class='fu'>d3_igraph</span>(<span class='no'>kite</span>))
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -146,7 +152,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
