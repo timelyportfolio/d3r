@@ -1,3 +1,8 @@
+# d3r 0.8.2
+
+* update d3v5 to [`5.5.0`](https://github.com/d3/d3/releases/tag/v5.5.0)
+* add httr to Suggests to resolve CRAN issue
+
 # d3r 0.8.1
 
 * add d3v5 for d3 [`5.1.0`](https://github.com/d3/d3/releases/tag/v5.1.0)
