@@ -36,7 +36,7 @@ absolute latest use `devtools`.
       )
     )
     
-    # or include directly in a taglist; I prefer this methode
+    # or include directly in a taglist; I prefer this method.
     browsable(
       tagList(
         h1("I have d3 version ", span(id="version")),

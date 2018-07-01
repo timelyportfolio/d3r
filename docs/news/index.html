@@ -88,6 +88,175 @@
     </div>
 
     <div class="contents">
+    <div class="section level1">
+<h1>d3r 0.8.2</h1>
+<ul>
+<li>update d3v5 to <a href="https://github.com/d3/d3/releases/tag/v5.5.0"><code>5.5.0</code></a>
+</li>
+<li>add httr to Suggests to resolve CRAN issue</li>
+</ul>
+</div>
+    <div class="section level1">
+<h1>d3r 0.8.1</h1>
+<ul>
+<li>add d3v5 for d3 <a href="https://github.com/d3/d3/releases/tag/v5.1.0"><code>5.1.0</code></a>
+</li>
+</ul>
+</div>
+    <div class="section level1">
+<h1>d3r 0.8.0</h1>
+<ul>
+<li>add d3v5 for d3 <a href="https://github.com/d3/d3/releases/tag/v5.0.0"><code>5.0.0-rc4</code></a>
+</li>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.13.0"><code>4.13.0</code></a>
+</li>
+</ul>
+</div>
+    <div class="section level1">
+<h1>d3r 0.7.1</h1>
+<ul>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.12.0"><code>4.12.0</code></a>
+</li>
+</ul>
+</div>
+    <div class="section level1">
+<h1>d3r 0.7.0</h1>
+<ul>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.11.0"><code>4.11.0</code></a>
+</li>
+<li>update d3-jetpack to 2.0.9</li>
+</ul>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.9</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>modify <code><a href="../reference/d3_nest.html">d3_nest()</a></code> to work with new tidyr.</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.8</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li><p><code><a href="../reference/d3_dep_jetpack.html">d3_dep_jetpack()</a></code> added. Essentially the same as d3_dep_v4(), but with a number of convenience functions added. Learn more by checking out the <a href="https://github.com/gka/d3-jetpack">d3-jetpack github page</a>.</p></li>
+<li><p>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.10.0"><code>4.10.0</code></a></p></li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.7</h1>
+<div class="section level3">
+<h3>API Changes</h3>
+<ul>
+<li><p><strong>(BREAKING)</strong> d3_table weight column is now named value to be consistent with the newest d3-sankey plugin <a href="https://github.com/timelyportfolio/d3r/commit/65b913322f1a6c71db21496f158bb0bed645a1f6">commit</a>.</p></li>
+<li><p>Use unpkg.com for online dependencies</p></li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.6</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>add d3_table() function to convert R table into list of a nodes data.frame and a links data.frame modelled after <a href="https://gist.github.com/timelyportfolio/3616869996703d48a981">example</a>
+</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.5</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.9.1"><code>4.9.1</code></a>
+</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.4</h1>
+<div class="section level3">
+<h3>Bug Fix</h3>
+<ul>
+<li>d3_nest would fail with certain hierarchies that had multiple NA level; fix only takes first na_child since non-first children will be duplicates (see <a href="https://github.com/timelyportfolio/d3r/commit/1529acad5230207e3b4711202509bc5e9411076b">commit</a>)</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.3</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.8.0"><code>4.8.0</code></a>
+</li>
+<li>test with development <code>dplyr</code>
+</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.2</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.6.0"><code>4.6.0</code></a>
+</li>
+<li>add <code><a href="../reference/d3_v8.html">d3_v8()</a></code> convenience function to return <code>V8</code> context with d3.js loaded</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.1</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>update d3v4 to <a href="https://github.com/d3/d3/releases/tag/v4.4.4"><code>4.4.4</code></a>
+</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.6.0</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li><p>add <code>colname</code> to return value (see <a href="https://github.com/timelyportfolio/d3r/commit/5787e03a6b59c89b367a88f16e9c5a899482a8d3">commit</a>)</p></li>
+<li><p>improve <code>NA</code> child promotion for deeply nested hierarchies</p></li>
+</ul>
+</div>
+<div class="section level3">
+<h3>API Changes</h3>
+<ul>
+<li>
+<strong>(BREAKING)</strong> change <code>id</code> to <code>name</code> (see <a href="https://github.com/timelyportfolio/d3r/issues/10">issue</a>)</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.5.0</h1>
+<div class="section level3">
+<h3>Updates</h3>
+<ul>
+<li>update d3 to <a href="https://github.com/d3/d3/releases/tag/v4.4.0">4.4.0</a>
+</li>
+</ul>
+</div>
+<div class="section level3">
+<h3>API Changes</h3>
+<ul>
+<li>(non-breaking) add offline argument to d3_dep_v3 and d3_dep_v4</li>
+</ul>
+</div>
+</div>
+    <div class="section level1">
+<h1>d3r 0.4.2</h1>
+<ul>
+<li>CRAN release</li>
+</ul>
+</div>
     </div>
   </div>
 
@@ -95,6 +264,23 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#NA">0.8.2</a></li>
+        <li><a href="#NA">0.8.1</a></li>
+        <li><a href="#NA">0.8.0</a></li>
+        <li><a href="#NA">0.7.1</a></li>
+        <li><a href="#NA">0.7.0</a></li>
+        <li><a href="#NA">0.6.9</a></li>
+        <li><a href="#NA">0.6.8</a></li>
+        <li><a href="#NA">0.6.7</a></li>
+        <li><a href="#NA">0.6.6</a></li>
+        <li><a href="#NA">0.6.5</a></li>
+        <li><a href="#NA">0.6.4</a></li>
+        <li><a href="#NA">0.6.3</a></li>
+        <li><a href="#NA">0.6.2</a></li>
+        <li><a href="#NA">0.6.1</a></li>
+        <li><a href="#NA">0.6.0</a></li>
+        <li><a href="#NA">0.5.0</a></li>
+        <li><a href="#NA">0.4.2</a></li>
       </ul>
     </div>
   </div>
