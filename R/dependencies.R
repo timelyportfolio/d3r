@@ -16,7 +16,7 @@ d3_dep_v5 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v5/dist", package="d3r"))
   } else {
-    src <- c(href="https://unpkg.com/d3@5.5.0/dist/")
+    src <- c(href="https://unpkg.com/d3@5.5.0/dist")
   }
 
   htmltools::htmlDependency(
@@ -46,7 +46,7 @@ d3_dep_v4 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v4/dist", package="d3r"))
   } else {
-    src <- c(href="https://unpkg.com/d3@4.13.0/build/")
+    src <- c(href="https://unpkg.com/d3@4.13.0/build")
   }
 
   htmltools::htmlDependency(
@@ -75,7 +75,7 @@ d3_dep_v3 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v3/dist", package="d3r"))
   } else {
-    src <- c(href="https://unpkg.com/d3@3.5.17/")
+    src <- c(href="https://unpkg.com/d3@3.5.17")
   }
   htmltools::htmlDependency(
     name = "d3",
@@ -103,7 +103,7 @@ d3_dep_jetpack <- function(offline=TRUE){
   if(offline) {
     src <- c(file=system.file("www/d3/d3-jetpack/dist", package="d3r"))
   } else {
-    src <- c(href="https://unpkg.com/d3-jetpack@2.0.9/build/")
+    src <- c(href="https://unpkg.com/d3-jetpack@2.0.9/build")
   }
 
 htmltools::htmlDependency(

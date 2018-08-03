@@ -1,8 +1,8 @@
 Package: d3r
 Type: Package
 Title: 'd3.js' Utilities for R
-Version: 0.8.2
-Date: 2018-06-30
+Version: 0.8.3
+Date: 2018-08-02
 Authors@R: c(
       person(
         "Mike", "Bostock"
@@ -33,7 +33,10 @@ Authors@R: c(
 Maintainer: Kent Russell <kent.russell@timelyportfolio.com>
 URL: https://github.com/timelyportfolio/d3r
 BugReports: https://github.com/timelyportfolio/d3r/issues
-Description: Helper functions for using 'd3.js' in R.
+Description: Provides a suite of functions to help ease the use of 'd3.js' in R.
+              These helpers include 'htmltools::htmlDependency' functions, hierarchy
+              builders, and conversion tools for 'partykit', 'igraph,' 'table',
+              and 'data.frame' R objects into the 'JSON' that 'd3.js' expects.
 License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: dplyr,
