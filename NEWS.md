@@ -1,3 +1,7 @@
+# d3r 0.8.4
+
+* update d3v5 to [`5.7.0`](https://github.com/d3/d3/releases/tag/v5.7.0)
+
 # d3r 0.8.3
 
 * fix extra slash in offline dependencies
