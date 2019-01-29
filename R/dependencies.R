@@ -16,12 +16,12 @@ d3_dep_v5 <- function(offline=TRUE){
   if(offline) {
     src = c(file=system.file("www/d3/v5/dist", package="d3r"))
   } else {
-    src <- c(href="https://unpkg.com/d3@5.7.0/dist")
+    src <- c(href="https://unpkg.com/d3@5.8.0/dist")
   }
 
   htmltools::htmlDependency(
     name = "d3",
-    version = "5.7.0",
+    version = "5.8.0",
     src = src,
     script = "d3.min.js"
   )
