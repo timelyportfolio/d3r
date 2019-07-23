@@ -91,7 +91,7 @@ d3_nest <- function(
   data_nested <- dplyr::bind_rows(promote_na(
     change_to_name(
       tidyr::nest(
-        .data=data,
+        .data = data,
         children = dplyr::one_of(c(nonnest_cols[length(nonnest_cols)], value_cols))
       )
     )
