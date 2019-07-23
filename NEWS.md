@@ -1,7 +1,6 @@
 # d3r 0.8.6
 
 * update d3v5 to [`5.9.7`](https://github.com/d3/d3/releases/tag/v5.9.7)
-* fix to work with newest version of `tidyr`
 
 # d3r 0.8.5
 
