@@ -1,7 +1,7 @@
 context("V8context")
 
 test_that("d3_v8 has d3", {
-
+  skip_if_not_installed("V8")
   skip_on_cran()
   skip_on_travis()
 
