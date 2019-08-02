@@ -41,7 +41,7 @@ License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: dplyr,
           htmltools,
-          tidyr (>= 0.8.3)
+          tidyr (>= 0.8.3.9000)
 Suggests: httr,
           jsonlite,
           listviewer,
@@ -54,3 +54,5 @@ Enhances: igraph,
           V8
 LazyData: true
 RoxygenNote: 6.1.1
+Remotes:  
+    tidyverse/tidyr
