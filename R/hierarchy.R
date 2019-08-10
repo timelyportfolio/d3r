@@ -89,7 +89,7 @@ d3_nest <- function(
   data <- dplyr::mutate_if(data, is.factor, as.character)
 
   # syntax changed in tidyr > 0.8.3
-  if(packageVersion("tidyr") > "0.8.3") {
+  if(utils::packageVersion("tidyr") > "0.8.3") {
     data_nested <- dplyr::bind_rows(promote_na(
       change_to_name(
         tidyr::nest(
@@ -115,7 +115,7 @@ d3_nest <- function(
       -which(colnames(data_nested) %in% c("children","colname",value_cols))
     ]
   )){
-    if(packageVersion("tidyr") > "0.8.3") {
+    if(utils::packageVersion("tidyr") > "0.8.3") {
       data_nested <- dplyr::bind_rows(promote_na(
         change_to_name(
           tidyr::nest(
