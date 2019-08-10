@@ -88,30 +88,53 @@ d3_nest <- function(
   # convert factor to character
   data <- dplyr::mutate_if(data, is.factor, as.character)
 
-  data_nested <- dplyr::bind_rows(promote_na(
-    change_to_name(
-      tidyr::nest(
-        data=data,
-        dplyr::one_of(c(nonnest_cols[length(nonnest_cols)], value_cols)),
-        .key="children"
+  # syntax changed in tidyr > 0.8.3
+  if(packageVersion("tidyr") > "0.8.3") {
+    data_nested <- dplyr::bind_rows(promote_na(
+      change_to_name(
+        tidyr::nest(
+          .data=data,
+          children = dplyr::one_of(c(nonnest_cols[length(nonnest_cols)], value_cols))
+        )
       )
-    )
-  ))
+    ))
+  } else {
+    data_nested <- dplyr::bind_rows(promote_na(
+      change_to_name(
+        tidyr::nest(
+          data=data,
+          dplyr::one_of(c(nonnest_cols[length(nonnest_cols)], value_cols)),
+          .key="children"
+        )
+      )
+    ))
+  }
 
   for(x in rev(
     colnames(data_nested)[
       -which(colnames(data_nested) %in% c("children","colname",value_cols))
     ]
   )){
-    data_nested <- dplyr::bind_rows(promote_na(
-      change_to_name(
-        tidyr::nest(
-          data_nested,
-          dplyr::one_of(colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)]),
-          .key = "children"
+    if(packageVersion("tidyr") > "0.8.3") {
+      data_nested <- dplyr::bind_rows(promote_na(
+        change_to_name(
+          tidyr::nest(
+            .data = data_nested,
+            children = dplyr::one_of(colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)])
+          )
         )
-      )
-    ))
+      ))
+    } else {
+      data_nested <- dplyr::bind_rows(promote_na(
+        change_to_name(
+          tidyr::nest(
+            data_nested,
+            dplyr::one_of(colnames(data_nested)[colnames(data_nested) %in% c(x,"children",value_cols)]),
+            .key = "children"
+          )
+        )
+      ))
+    }
   }
   data_nested$name = root
   if(json){
