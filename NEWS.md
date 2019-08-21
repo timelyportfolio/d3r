@@ -1,3 +1,8 @@
+# d3r 0.8.7
+
+* work with new and old `tidyr` syntax
+* upgrade d3v5 to [`5.10.0`](https://github.com/d3/d3/releases/tag/v5.10.0)
+
 # d3r 0.8.6
 
 * update d3v5 to [`5.9.7`](https://github.com/d3/d3/releases/tag/v5.9.7)

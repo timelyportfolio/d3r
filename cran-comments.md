@@ -25,7 +25,7 @@ I believe this has nothing to do with this package but rather a `pillar` install
 ```
 * checking package dependencies ... NOTE
 Packages which this enhances but not available for checking:
-  ‘igraph’ ‘partykit’ ‘rpart’ ‘treemap’
+  'igraph', 'partykit', 'treemap', 'V8'
 ```
 
 R CMD check succeeded
