@@ -96,7 +96,7 @@ d3_party = function (tree=NULL, json=TRUE) {
   )
   colnames(counts) <- c("fitted", "response", "freq")
   counts$fitted = as.numeric(as.character(counts$fitted))
-  counts <- tidyr::nest_(counts, nest_cols=c("response", "freq"), key_col="size")
+  counts <- tidyr::nest(counts, data=c(response, freq))
   # would use dplyr join here, but nested data.frame
   #   flattened on join;  this does not happen with nested
   #   tibble, but don't want to add another depedency
