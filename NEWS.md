@@ -1,3 +1,8 @@
+# d3r 0.9.0
+
+* remove use of `nest_` in `d3_party` 
+* upgrade d3v5 to [`5.16.0`](https://github.com/d3/d3/releases/tag/v5.16.0)
+
 # d3r 0.8.7
 
 * work with new and old `tidyr` syntax

@@ -1,8 +1,8 @@
 Package: d3r
 Type: Package
 Title: 'd3.js' Utilities for R
-Version: 0.8.7
-Date: 2019-08-20
+Version: 0.9.0
+Date: 2020-05-24
 Authors@R: c(
       person(
         "Mike", "Bostock"
@@ -11,7 +11,7 @@ Authors@R: c(
       ),
       person(
         "Kent", "Russell"
-        , role = c("aut", "cre")
+        , role = c("aut", "cre", "cph")
         , comment = "R interface"
         , email = "kent.russell@timelyportfolio.com"
       ),
@@ -41,7 +41,7 @@ License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: dplyr,
           htmltools,
-          tidyr (>= 0.7.0)
+          tidyr (>= 0.8.3)
 Suggests: httr,
           jsonlite,
           listviewer,
