@@ -4,8 +4,7 @@
 \alias{d3_nest}
 \title{Convert a \code{data.frame} to a 'd3.js' Hierarchy}
 \usage{
-d3_nest(data = NULL, value_cols = character(), root = "root",
-  json = TRUE)
+d3_nest(data = NULL, value_cols = character(), root = "root", json = TRUE)
 }
 \arguments{
 \item{data}{\code{data.frame} or \code{data.frame} derivative, such

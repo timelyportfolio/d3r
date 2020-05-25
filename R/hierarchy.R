@@ -10,7 +10,7 @@ change_to_name <- function(x, column=1){
     x$children,
     function(y) {
       y <- dplyr::mutate(y, "colname" = colnames(y)[column])
-      dplyr::rename_(y,"name"=colnames(y)[column])
+      dplyr::rename(y,"name" = colnames(y)[column])
     }
   )
   dplyr::mutate(x, children = child_list)

@@ -41,6 +41,7 @@ License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: dplyr,
           htmltools,
+          rlang,
           tidyr (>= 0.8.3)
 Suggests: httr,
           jsonlite,
@@ -53,4 +54,4 @@ Enhances: igraph,
           treemap,
           V8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
