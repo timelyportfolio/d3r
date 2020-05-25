@@ -96,7 +96,7 @@ d3_party = function (tree=NULL, json=TRUE) {
   )
   colnames(counts) <- c("fitted", "response", "freq")
   counts$fitted = as.numeric(as.character(counts$fitted))
-  counts <- tidyr::nest(counts, data=c(response, freq))
+  counts <- tidyr::nest(counts, data=c(rlang::.data$response, rlang::.data$freq))
   # would use dplyr join here, but nested data.frame
   #   flattened on join;  this does not happen with nested
   #   tibble, but don't want to add another depedency
@@ -110,7 +110,7 @@ d3_party = function (tree=NULL, json=TRUE) {
     l$size <- counts[which(counts$fitted==l$id),]
     if(!("n" %in% names(tree_text))){
       if(nrow(l$size) > 0){
-        l$n <- sum(l$size$size[[1]]$freq)
+        l$n <- sum(l$size$freq)
       }
     }
     l
