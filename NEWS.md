@@ -1,3 +1,7 @@
+# d3r 0.9.1
+
+* add d3 version 6 [`6.2.0`](https://github.com/d3/d3/releases/tag/v6.2.0) dependency functions
+
 # d3r 0.9.0
 
 * remove use of `nest_` in `d3_party` 

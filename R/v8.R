@@ -11,7 +11,7 @@ d3_v8 <- function(...) {
     stop("The V8 package must be installed for this function.  Please install.packages('V8').")
   }
 
-  d3dep <- d3_dep_v5()
+  d3dep <- d3_dep_v6()
 
   ctx <- V8::v8(...)
   ctx$source(
