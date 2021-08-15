@@ -1,3 +1,8 @@
+# d3r 1.0.0
+
+* add d3 version [`7.0.0`](https://github.com/d3/d3/releases/tag/v7.0.0) dependency function `d3_dep_v7()`
+* update d3 version [`6.7.0`](https://github.com/d3/d3/releases/tag/v6.7.0) in dependency function `d3_dep_v6()`
+
 # d3r 0.9.1
 
 * add d3 version [`6.2.0`](https://github.com/d3/d3/releases/tag/v6.2.0) dependency function `d3_dep_v6()`

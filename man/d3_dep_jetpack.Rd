@@ -78,6 +78,7 @@ Other 'd3' dependency functions:
 \code{\link{d3_dep_v3}()},
 \code{\link{d3_dep_v4}()},
 \code{\link{d3_dep_v5}()},
-\code{\link{d3_dep_v6}()}
+\code{\link{d3_dep_v6}()},
+\code{\link{d3_dep_v7}()}
 }
 \concept{'d3' dependency functions}

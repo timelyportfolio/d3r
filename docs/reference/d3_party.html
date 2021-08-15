@@ -9,22 +9,26 @@
 <title>Convert partykit to d3.js hierarchy — d3_party • d3r</title>
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -36,7 +40,8 @@
 
 <meta property="og:description" content="This thing is not even close to being done, so please help
 with ideas and contributions." />
-<meta name="twitter:card" content="summary" />
+
+
 
 
 
@@ -53,7 +58,7 @@ with ideas and contributions." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -67,7 +72,7 @@ with ideas and contributions." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">d3r</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -75,7 +80,7 @@ with ideas and contributions." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -89,8 +94,8 @@ with ideas and contributions." />
       
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/timelyportfolio/d3r">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/timelyportfolio/d3r/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -119,7 +124,7 @@ with ideas and contributions.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>d3_party</span>(<span class='kw'>tree</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>json</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>d3_party</span><span class='op'>(</span>tree <span class='op'>=</span> <span class='cn'>NULL</span>, json <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,50 +145,45 @@ with ideas and contributions.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>d3r</span>)
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/timelyportfolio/d3r'>d3r</a></span><span class='op'>)</span>
   <span class='co'># from ?rpart</span>
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"kyphosis"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"rpart"</span>)
-  <span class='fu'>d3_party</span>(
-    <span class='kw pkg'>rpart</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span>(<span class='no'>Kyphosis</span> ~ <span class='no'>Age</span> + <span class='no'>Number</span> + <span class='no'>Start</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>kyphosis</span>)
-  )
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"kyphosis"</span>, package<span class='op'>=</span><span class='st'>"rpart"</span><span class='op'>)</span>
+  <span class='fu'>d3_party</span><span class='op'>(</span>
+    <span class='fu'>rpart</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span><span class='op'>(</span><span class='va'>Kyphosis</span> <span class='op'>~</span> <span class='va'>Age</span> <span class='op'>+</span> <span class='va'>Number</span> <span class='op'>+</span> <span class='va'>Start</span>, data <span class='op'>=</span> <span class='va'>kyphosis</span><span class='op'>)</span>
+  <span class='op'>)</span>
 
   <span class='co'># if you want the list instead of json</span>
-  <span class='fu'>d3_party</span>(
-    <span class='kw pkg'>rpart</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span>(<span class='no'>Kyphosis</span> ~ <span class='no'>Age</span> + <span class='no'>Number</span> + <span class='no'>Start</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>kyphosis</span>),
-    <span class='kw'>json</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-  )
+  <span class='fu'>d3_party</span><span class='op'>(</span>
+    <span class='fu'>rpart</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span><span class='op'>(</span><span class='va'>Kyphosis</span> <span class='op'>~</span> <span class='va'>Age</span> <span class='op'>+</span> <span class='va'>Number</span> <span class='op'>+</span> <span class='va'>Start</span>, data <span class='op'>=</span> <span class='va'>kyphosis</span><span class='op'>)</span>,
+    json <span class='op'>=</span> <span class='cn'>FALSE</span>
+  <span class='op'>)</span>
 
   <span class='co'># with ctree instead of rpart</span>
   <span class='co'>#  using example from ?ctree</span>
-  <span class='fu'>d3_party</span>(<span class='kw pkg'>partykit</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/partykit/man/ctree.html'>ctree</a></span>(<span class='no'>Species</span> ~ <span class='no'>.</span>,<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>iris</span>))
+  <span class='fu'>d3_party</span><span class='op'>(</span><span class='fu'>partykit</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/partykit/man/ctree.html'>ctree</a></span><span class='op'>(</span><span class='va'>Species</span> <span class='op'>~</span> <span class='va'>.</span>,data <span class='op'>=</span> <span class='va'>iris</span><span class='op'>)</span><span class='op'>)</span>
 
 
   <span class='co'>#devtools::install_github("timelyportfolio/d3treeR")</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>d3treeR</span>)
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>d3treeR</span><span class='op'>)</span>
 
-  <span class='fu'><a href='https://rdrr.io/pkg/d3treeR/man/d3tree2.html'>d3tree2</a></span>(
-    <span class='fu'>d3_party</span>(
-      <span class='kw pkg'>rpart</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span>(<span class='no'>Kyphosis</span> ~ <span class='no'>Age</span> + <span class='no'>Number</span> + <span class='no'>Start</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>kyphosis</span>)
-    ),
-    <span class='kw'>celltext</span> <span class='kw'>=</span> <span class='st'>"rule"</span>,
-    <span class='kw'>valueField</span> <span class='kw'>=</span> <span class='st'>"n"</span>
-  )
+  <span class='fu'><a href='https://rdrr.io/pkg/d3treeR/man/d3tree2.html'>d3tree2</a></span><span class='op'>(</span>
+    <span class='fu'>d3_party</span><span class='op'>(</span>
+      <span class='fu'>rpart</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rpart/man/rpart.html'>rpart</a></span><span class='op'>(</span><span class='va'>Kyphosis</span> <span class='op'>~</span> <span class='va'>Age</span> <span class='op'>+</span> <span class='va'>Number</span> <span class='op'>+</span> <span class='va'>Start</span>, data <span class='op'>=</span> <span class='va'>kyphosis</span><span class='op'>)</span>
+    <span class='op'>)</span>,
+    celltext <span class='op'>=</span> <span class='st'>"rule"</span>,
+    valueField <span class='op'>=</span> <span class='st'>"n"</span>
+  <span class='op'>)</span>
 
-}</div></pre>
+<span class='op'>}</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -194,7 +194,7 @@ with ideas and contributions.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -22,8 +22,8 @@ absolute latest use `devtools`.
 ### d3 Dependency Functions
 
 `d3r` makes `d3.js` dependency injection in R easy with `d3_dep_v3()`,
-`d3_dep_v4()`, `d3_dep_v5()`, and the newest `d3_dep_v6()`. These
-functions work well with `htmltools::tags`.
+`d3_dep_v4()`, `d3_dep_v5()`, `d3_dep_v6()`, and the newest
+`d3_dep_v7()`. These functions work well with `htmltools::tags`.
 
     library(htmltools)
     library(d3r)
@@ -32,7 +32,7 @@ functions work well with `htmltools::tags`.
     browsable(
       attachDependencies(
         tagList(),
-        d3_dep_v6()
+        d3_dep_v7()
       )
     )
     
@@ -41,7 +41,7 @@ functions work well with `htmltools::tags`.
       tagList(
         h1("I have d3 version ", span(id="version")),
         tags$script("d3.select('#version').text(d3.version)"),
-        d3_dep_v6()
+        d3_dep_v7()
       )
     )
 
