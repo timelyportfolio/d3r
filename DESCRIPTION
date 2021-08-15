@@ -53,5 +53,4 @@ Enhances: igraph,
           rpart,
           treemap,
           V8
-LazyData: true
 RoxygenNote: 7.1.1
