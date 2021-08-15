@@ -1,3 +1,32 @@
+#' 'd3.js' Dependency for Version 7
+#'
+#' @param offline \code{logical} to specify whether to use
+#'         a local copy of d3.js (\code{TRUE}) or use cdn (\code{FALSE})
+#' @return \code{htmltools::htmlDependency}
+#' @export
+#' @examples
+#' library(d3r)
+#' library(htmltools)
+#'
+#' tagList(d3_dep_v7())
+#' @family 'd3' dependency functions
+#' @seealso \code{\link{d3_dep_v6}}, \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v3}},
+#'   and \code{\link{d3_dep_jetpack}}.
+d3_dep_v7 <- function(offline=TRUE){
+  if(offline) {
+    src = c(file=system.file("www/d3/v7/dist", package="d3r"))
+  } else {
+    src <- c(href="https://unpkg.com/d3@7.0.0/dist")
+  }
+
+  htmltools::htmlDependency(
+    name = "d3",
+    version = "7.0.0",
+    src = src,
+    script = "d3.min.js"
+  )
+}
+
 #' 'd3.js' Dependency for Version 6
 #'
 #' @param offline \code{logical} to specify whether to use
@@ -10,7 +39,7 @@
 #'
 #' tagList(d3_dep_v6())
 #' @family 'd3' dependency functions
-#' @seealso \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v3}},
+#' @seealso \code{\link{d3_dep_v7}}, \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v3}},
 #'   and \code{\link{d3_dep_jetpack}}.
 d3_dep_v6 <- function(offline=TRUE){
   if(offline) {
@@ -39,7 +68,7 @@ d3_dep_v6 <- function(offline=TRUE){
 #'
 #' tagList(d3_dep_v5())
 #' @family 'd3' dependency functions
-#' @seealso \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v3}},
+#' @seealso \code{\link{d3_dep_v7}}, \code{\link{d3_dep_v6}}, \code{\link{d3_dep_v4}}, \code{\link{d3_dep_v3}},
 #'   and \code{\link{d3_dep_jetpack}}.
 d3_dep_v5 <- function(offline=TRUE){
   if(offline) {
@@ -68,7 +97,7 @@ d3_dep_v5 <- function(offline=TRUE){
 #'
 #' tagList(d3_dep_v4())
 #' @family 'd3' dependency functions
-#' @seealso \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v3}},
+#' @seealso \code{\link{d3_dep_v7}}, \code{\link{d3_dep_v6}}, \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v3}},
 #'   and \code{\link{d3_dep_jetpack}}.
 d3_dep_v4 <- function(offline=TRUE){
   if(offline) {
@@ -97,7 +126,7 @@ d3_dep_v4 <- function(offline=TRUE){
 #'
 #' tagList(d3_dep_v3())
 #' @family 'd3' dependency functions
-#' @seealso \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v4}},
+#' @seealso \code{\link{d3_dep_v7}}, \code{\link{d3_dep_v6}}, \code{\link{d3_dep_v5}}, \code{\link{d3_dep_v4}},
 #'   and \code{\link{d3_dep_jetpack}}.
 d3_dep_v3 <- function(offline=TRUE){
   if(offline) {
