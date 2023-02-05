@@ -17,10 +17,6 @@ knitr::opts_chunk$set(
 [![Travis-CI Build Status](https://travis-ci.org/timelyportfolio/d3r.svg?branch=master)](https://travis-ci.org/timelyportfolio/d3r)
 [![Coverage Status](https://img.shields.io/codecov/c/github/NA/NA/master.svg)](https://codecov.io/github/timelyportfolio/d3r?branch=master)
 
-### Why d3r?
-
-Please see this Building Widgets blog post [Why d3r?](http://www.buildingwidgets.com/blog/2016/8/28/why-d3r).
-
 ### Installing d3r
 
 `d3r` is on CRAN, so install with `install.packages("d3r")` or for the absolute latest use `devtools`.

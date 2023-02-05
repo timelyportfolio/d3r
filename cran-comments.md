@@ -3,8 +3,8 @@
 
 ## Test environments
 * local Windows 10 install, R 3.4.0
+* Github actions standard package check
 * winbuilder
-* ubuntu 14.04.5 LTS (on travis-ci), R 3.5.0
 * rhub check_for_cran
 
 ## R CMD check results

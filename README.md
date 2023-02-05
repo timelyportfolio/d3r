@@ -1,16 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/d3r)](https://cran.r-project.org/package=d3r)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/d3r)](https://cran.r-project.org/package=d3r)
 [![Travis-CI Build
 Status](https://travis-ci.org/timelyportfolio/d3r.svg?branch=master)](https://travis-ci.org/timelyportfolio/d3r)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/NA/NA/master.svg)](https://codecov.io/github/timelyportfolio/d3r?branch=master)
-
-### Why d3r?
-
-Please see this Building Widgets blog post [Why
-d3r?](http://www.buildingwidgets.com/blog/2016/8/28/why-d3r).
 
 ### Installing d3r
 
@@ -27,7 +22,7 @@ absolute latest use `devtools`.
 
     library(htmltools)
     library(d3r)
-    
+
     # check web developer tools to see d3 is available
     browsable(
       attachDependencies(
@@ -35,7 +30,7 @@ absolute latest use `devtools`.
         d3_dep_v7()
       )
     )
-    
+
     # or include directly in a taglist; I prefer this method.
     browsable(
       tagList(
@@ -65,7 +60,7 @@ As another example, let’s go from `treemap` to `d3.js`.
 
     library(treemap)
     library(d3r)
-    
+
     d3_nest(
       treemap::random.hierarchical.data(),
       value_cols = "x"
@@ -78,20 +73,20 @@ make perfect subjects for `d3` hierarchical layouts. `d3_party` helps
 convert these objects for easy usage with `d3.js`.
 
     #devtools::install_github("timelyportfolio/d3treeR")
-    
+
     library(d3treeR)
     library(d3r)
-    
+
     # example from ?rpart
     data("kyphosis", package="rpart")
     rp <-  rpart::rpart(
       Kyphosis ~ Age + Number + Start,
       data = kyphosis
     )
-    
+
     # get the json hierarchy
     d3_party(tree=rp)
-    
+
     # interactive plot with d3treeR
     d3tree2(
       d3_party(tree=rp),
@@ -106,7 +101,7 @@ conversion. `d3r::d3_igraph` will do this for you.
 
     library(igraph)
     library(d3r)
-    
+
     d3_igraph(igraph::watts.strogatz.game(1, 50, 4, 0.05))
 
 ### Todo
