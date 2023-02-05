@@ -22,6 +22,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -34,18 +36,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">d3r</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.1</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -55,7 +51,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/timelyportfolio/d3r/">
+  <a href="https://github.com/timelyportfolio/d3r/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -74,157 +70,158 @@
   <div class="contents col-md-9">
 
 
-<div id="why-d3r" class="section level3">
-<h3 class="hasAnchor">
-<a href="#why-d3r" class="anchor"></a>Why d3r?</h3>
-<p>Please see this Building Widgets blog post <a href="http://www.buildingwidgets.com/blog/2016/8/28/why-d3r">Why d3r?</a>.</p>
+<div class="section level3">
+<h3 id="installing-d3r">Installing d3r<a class="anchor" aria-label="anchor" href="#installing-d3r"></a>
+</h3>
+<p><code>d3r</code> is on CRAN, so install with <code>install.packages("d3r")</code> or for the absolute latest use <code>devtools</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"timelyportfolio/d3r"</span>)</span></code></pre></div>
 </div>
-<div id="installing-d3r" class="section level3">
-<h3 class="hasAnchor">
-<a href="#installing-d3r" class="anchor"></a>Installing d3r</h3>
-<p><code>d3r</code> is on CRAN, so install with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("d3r")</a></code> or for the absolute latest use <code>devtools</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"timelyportfolio/d3r"</span>)</span></code></pre></div>
+<div class="section level3">
+<h3 id="d3-dependency-functions">d3 Dependency Functions<a class="anchor" aria-label="anchor" href="#d3-dependency-functions"></a>
+</h3>
+<p><code>d3r</code> makes <code>d3.js</code> dependency injection in R easy with <code><a href="reference/d3_dep_v3.html">d3_dep_v3()</a></code>, <code><a href="reference/d3_dep_v4.html">d3_dep_v4()</a></code>, <code><a href="reference/d3_dep_v5.html">d3_dep_v5()</a></code>, <code><a href="reference/d3_dep_v6.html">d3_dep_v6()</a></code>, and the newest <code><a href="reference/d3_dep_v7.html">d3_dep_v7()</a></code>. These functions work well with <code><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">htmltools::tags</a></code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># check web developer tools to see d3 is available</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">browsable</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">attachDependencies</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tagList</span>(),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">d3_dep_v7</span>()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># or include directly in a taglist; I prefer this method.</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">browsable</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">h1</span>(<span class="st">"I have d3 version "</span>, <span class="fu">span</span>(<span class="at">id=</span><span class="st">"version"</span>)),</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    tags<span class="sc">$</span><span class="fu">script</span>(<span class="st">"d3.select('#version').text(d3.version)"</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">d3_dep_v7</span>()</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>Also, I will commit to keeping <code>d3r</code> up-to-date with <code>d3.js</code>, so you’ll no longer need multiple copies of <code>d3.js</code> for your <code>htmlwidgets</code>. If you are a <code>htmlwidget</code> author, you will no longer need to worry every time <code>d3.js</code> gets a new release. See <code>treebar</code> <a href="https://github.com/timelyportfolio/treebar/blob/master/R/treebar.R#L66-L74" class="external-link">lines</a> for an example of using <code>d3r</code> with your <code>htmlwidget</code>.</p>
 </div>
-<div id="d3-dependency-functions" class="section level3">
-<h3 class="hasAnchor">
-<a href="#d3-dependency-functions" class="anchor"></a>d3 Dependency Functions</h3>
-<p><code>d3r</code> makes <code>d3.js</code> dependency injection in R easy with <code><a href="reference/d3_dep_v3.html">d3_dep_v3()</a></code>, <code><a href="reference/d3_dep_v4.html">d3_dep_v4()</a></code>, <code><a href="reference/d3_dep_v5.html">d3_dep_v5()</a></code>, <code><a href="reference/d3_dep_v6.html">d3_dep_v6()</a></code>, and the newest <code><a href="reference/d3_dep_v7.html">d3_dep_v7()</a></code>. These functions work well with <code><a href="https://rdrr.io/pkg/htmltools/man/builder.html">htmltools::tags</a></code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(htmltools)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">library</span>(d3r)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># check web developer tools to see d3 is available</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="kw">browsable</span>(</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="kw">attachDependencies</span>(</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="kw">tagList</span>(),</span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="kw">d3_dep_v7</span>()</span>
-<span id="cb2-9"><a href="#cb2-9"></a>  )</span>
-<span id="cb2-10"><a href="#cb2-10"></a>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co"># or include directly in a taglist; I prefer this method.</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="kw">browsable</span>(</span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="kw">tagList</span>(</span>
-<span id="cb2-15"><a href="#cb2-15"></a>    <span class="kw">h1</span>(<span class="st">"I have d3 version "</span>, <span class="kw">span</span>(<span class="dt">id=</span><span class="st">"version"</span>)),</span>
-<span id="cb2-16"><a href="#cb2-16"></a>    tags<span class="op">$</span><span class="kw">script</span>(<span class="st">"d3.select('#version').text(d3.version)"</span>),</span>
-<span id="cb2-17"><a href="#cb2-17"></a>    <span class="kw">d3_dep_v7</span>()</span>
-<span id="cb2-18"><a href="#cb2-18"></a>  )</span>
-<span id="cb2-19"><a href="#cb2-19"></a>)</span></code></pre></div>
-<p>Also, I will commit to keeping <code>d3r</code> up-to-date with <code>d3.js</code>, so you’ll no longer need multiple copies of <code>d3.js</code> for your <code>htmlwidgets</code>. If you are a <code>htmlwidget</code> author, you will no longer need to worry every time <code>d3.js</code> gets a new release. See <code>treebar</code> <a href="https://github.com/timelyportfolio/treebar/blob/master/R/treebar.R#L66-L74">lines</a> for an example of using <code>d3r</code> with your <code>htmlwidget</code>.</p>
-</div>
-<div id="d3-hierarchy-from-dataframe" class="section level3">
-<h3 class="hasAnchor">
-<a href="#d3-hierarchy-from-dataframe" class="anchor"></a>d3 Hierarchy from data.frame</h3>
-<p>Building <code>d3.js</code> hierarchies can be very difficult. <code><a href="reference/d3_nest.html">d3r::d3_nest()</a></code> will convert <code>table</code> and <code>data.frame</code> to a nested <code>d3.js</code> hierarchy ready for work with <a href="https://github.com/d3/d3-hierarchy"><code>d3-hierarchy</code></a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">d3_nest</span>(<span class="kw">as.data.frame</span>(Titanic))</span></code></pre></div>
+<div class="section level3">
+<h3 id="d3-hierarchy-from-dataframe">d3 Hierarchy from data.frame<a class="anchor" aria-label="anchor" href="#d3-hierarchy-from-dataframe"></a>
+</h3>
+<p>Building <code>d3.js</code> hierarchies can be very difficult. <code><a href="reference/d3_nest.html">d3r::d3_nest()</a></code> will convert <code>table</code> and <code>data.frame</code> to a nested <code>d3.js</code> hierarchy ready for work with <a href="https://github.com/d3/d3-hierarchy" class="external-link"><code>d3-hierarchy</code></a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_nest</span>(<span class="fu">as.data.frame</span>(Titanic))</span></code></pre></div>
 <p>As another example, let’s go from <code>treemap</code> to <code>d3.js</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">library</span>(treemap)</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">library</span>(d3r)</span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">d3_nest</span>(</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  treemap<span class="op">::</span><span class="kw">random.hierarchical.data</span>(),</span>
-<span id="cb4-6"><a href="#cb4-6"></a>  <span class="dt">value_cols =</span> <span class="st">"x"</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemap)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_nest</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  treemap<span class="sc">::</span><span class="fu">random.hierarchical.data</span>(),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">value_cols =</span> <span class="st">"x"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="d3-hierarchy-from-partykit--rpart" class="section level3">
-<h3 class="hasAnchor">
-<a href="#d3-hierarchy-from-partykit--rpart" class="anchor"></a>d3 Hierarchy from partykit / rpart</h3>
+<div class="section level3">
+<h3 id="d3-hierarchy-from-partykit--rpart">d3 Hierarchy from partykit / rpart<a class="anchor" aria-label="anchor" href="#d3-hierarchy-from-partykit--rpart"></a>
+</h3>
 <p><code>rpart</code> and similar objects in <code>R</code> are very difficult to convert but make perfect subjects for <code>d3</code> hierarchical layouts. <code>d3_party</code> helps convert these objects for easy usage with <code>d3.js</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">#devtools::install_github("timelyportfolio/d3treeR")</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="kw">library</span>(d3treeR)</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="kw">library</span>(d3r)</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># example from ?rpart</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="kw">data</span>(<span class="st">"kyphosis"</span>, <span class="dt">package=</span><span class="st">"rpart"</span>)</span>
-<span id="cb5-8"><a href="#cb5-8"></a>rp &lt;-<span class="st">  </span>rpart<span class="op">::</span><span class="kw">rpart</span>(</span>
-<span id="cb5-9"><a href="#cb5-9"></a>  Kyphosis <span class="op">~</span><span class="st"> </span>Age <span class="op">+</span><span class="st"> </span>Number <span class="op">+</span><span class="st"> </span>Start,</span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="dt">data =</span> kyphosis</span>
-<span id="cb5-11"><a href="#cb5-11"></a>)</span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="co"># get the json hierarchy</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="kw">d3_party</span>(<span class="dt">tree=</span>rp)</span>
-<span id="cb5-15"><a href="#cb5-15"></a></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="co"># interactive plot with d3treeR</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="kw">d3tree2</span>(</span>
-<span id="cb5-18"><a href="#cb5-18"></a>  <span class="kw">d3_party</span>(<span class="dt">tree=</span>rp),</span>
-<span id="cb5-19"><a href="#cb5-19"></a>  <span class="dt">celltext=</span><span class="st">"description"</span>,</span>
-<span id="cb5-20"><a href="#cb5-20"></a>  <span class="dt">valueField=</span><span class="st">"n"</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github("timelyportfolio/d3treeR")</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3treeR)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># example from ?rpart</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"kyphosis"</span>, <span class="at">package=</span><span class="st">"rpart"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">&lt;-</span>  rpart<span class="sc">::</span><span class="fu">rpart</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  Kyphosis <span class="sc">~</span> Age <span class="sc">+</span> Number <span class="sc">+</span> Start,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kyphosis</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># get the json hierarchy</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_party</span>(<span class="at">tree=</span>rp)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># interactive plot with d3treeR</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="fu">d3tree2</span>(</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">d3_party</span>(<span class="at">tree=</span>rp),</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">celltext=</span><span class="st">"description"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">valueField=</span><span class="st">"n"</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="d3-network-from-igraph" class="section level3">
-<h3 class="hasAnchor">
-<a href="#d3-network-from-igraph" class="anchor"></a>d3 Network from igraph</h3>
+<div class="section level3">
+<h3 id="d3-network-from-igraph">d3 Network from igraph<a class="anchor" aria-label="anchor" href="#d3-network-from-igraph"></a>
+</h3>
 <p><code>igraph</code> to <code>d3.js</code> network of <code>nodes</code> and <code>links</code> is a very common conversion. <code><a href="reference/d3_igraph.html">d3r::d3_igraph</a></code> will do this for you.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">library</span>(igraph)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">library</span>(d3r)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="kw">d3_igraph</span>(igraph<span class="op">::</span><span class="kw">watts.strogatz.game</span>(<span class="dv">1</span>, <span class="dv">50</span>, <span class="dv">4</span>, <span class="fl">0.05</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_igraph</span>(igraph<span class="sc">::</span><span class="fu">watts.strogatz.game</span>(<span class="dv">1</span>, <span class="dv">50</span>, <span class="dv">4</span>, <span class="fl">0.05</span>))</span></code></pre></div>
 </div>
-<div id="todo" class="section level3">
-<h3 class="hasAnchor">
-<a href="#todo" class="anchor"></a>Todo</h3>
+<div class="section level3">
+<h3 id="todo">Todo<a class="anchor" aria-label="anchor" href="#todo"></a>
+</h3>
 <p>I have a whole lot of ideas. Please let me know yours, and let’s make this package great.</p>
 </div>
-<div id="code-of-conduct" class="section level3">
-<h3 class="hasAnchor">
-<a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h3>
-<p>Please note that this project is released with a <a href="https://github.com/timelyportfolio/d3r/blob/master/CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+<div class="section level3">
+<h3 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+</h3>
+<p>Please note that this project is released with a <a href="https://github.com/timelyportfolio/d3r/blob/master/CONDUCT.md" class="external-link">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
 </div>
 
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=d3r">https://​cloud.r-project.org/​package=d3r</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/timelyportfolio/d3r/">https://​github.com/​timelyportfolio/​d3r/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/timelyportfolio/d3r/issues">https://​github.com/​timelyportfolio/​d3r/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://opensource.org/licenses/BSD-3-Clause">BSD_3_clause</a> + file <a href="LICENSE-text.html">LICENSE</a>
-</li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>Mike Bostock <br><small class="roles"> Author, copyright holder </small>  <br><small>(d3.js library in htmlwidgets/lib, http://d3js.org)</small>
-</li>
-<li>Kent Russell <br><small class="roles"> Author, maintainer, copyright holder </small>  <br><small>(R interface)</small>
-</li>
-<li>Gregor Aisch <br><small class="roles"> Author, copyright holder </small>  <br><small>(d3-jetpack creator, https://github.com/gka/d3-jetpack)</small>
-</li>
-<li>Adam Pearce <br><small class="roles"> Author </small>  <br><small>(core contributor to d3-jetpack)</small>
-</li>
-<li><a href="authors.html">All authors...</a></li>
+<li><a href="https://cloud.r-project.org/package=d3r" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/timelyportfolio/d3r/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/timelyportfolio/d3r/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=d3r"><img src="http://www.r-pkg.org/badges/version/d3r" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://travis-ci.org/timelyportfolio/d3r"><img src="https://travis-ci.org/timelyportfolio/d3r.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="https://codecov.io/github/timelyportfolio/d3r?branch=master"><img src="https://img.shields.io/codecov/c/github/NA/NA/master.svg" alt="Coverage Status"></a></li>
+<li>
+<a href="https://opensource.org/licenses/BSD-3-Clause" class="external-link">BSD_3_clause</a> + file <a href="LICENSE-text.html">LICENSE</a>
+</li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing d3r</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Mike Bostock <br><small class="roles"> Author, copyright holder </small>  </li>
+<li>Kent Russell <br><small class="roles"> Author, maintainer, copyright holder </small>  </li>
+<li>Gregor Aisch <br><small class="roles"> Author, copyright holder </small>  </li>
+<li>Adam Pearce <br><small class="roles"> Author </small>  </li>
+<li><a href="authors.html">More about authors...</a></li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=d3r" class="external-link"><img src="http://www.r-pkg.org/badges/version/d3r" alt="CRAN_Status_Badge"></a></li>
+<li><a href="https://travis-ci.org/timelyportfolio/d3r" class="external-link"><img src="https://travis-ci.org/timelyportfolio/d3r.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="https://codecov.io/github/timelyportfolio/d3r?branch=master" class="external-link"><img src="https://img.shields.io/codecov/c/github/NA/NA/master.svg" alt="Coverage Status"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Mike Bostock, Kent Russell, Gregor Aisch, Adam Pearce.</p>
+  <p></p>
+<p>Developed by Mike Bostock, Kent Russell, Gregor Aisch, Adam Pearce.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -232,6 +229,8 @@
 
   
 
+
+  
 
   </body>
 </html>

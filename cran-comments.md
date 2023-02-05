@@ -1,10 +1,11 @@
 # Comments
 
+fix CRAN errors notified by email
 
 ## Test environments
-* local Windows 10 install, R 3.4.0
+* local Windows 10 install, R 4.1.1
 * Github actions standard package check
-* winbuilder
+* winbuilder devel, release, and old release
 * rhub check_for_cran
 
 ## R CMD check results
