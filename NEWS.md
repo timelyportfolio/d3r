@@ -1,3 +1,8 @@
+# d3r 1.0.1
+
+* update d3 version [`7.8.2`](https://github.com/d3/d3/releases/tag/v7.8.2) dependency function `d3_dep_v7()`
+* fix CRAN test errors
+
 # d3r 1.0.0
 
 * add d3 version [`7.0.0`](https://github.com/d3/d3/releases/tag/v7.0.0) dependency function `d3_dep_v7()`

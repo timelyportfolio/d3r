@@ -7,19 +7,19 @@
 ## Resources
 
 * [Introduction](https://observablehq.com/@d3/learn-d3)
-* [API Reference](https://github.com/d3/d3/blob/master/API.md)
+* [API Reference](https://github.com/d3/d3/blob/main/API.md)
 * [Releases](https://github.com/d3/d3/releases)
 * [Examples](https://observablehq.com/@d3/gallery)
 * [Wiki](https://github.com/d3/d3/wiki)
 
 ## Installing
 
-If you use npm, `npm install d3`. You can also download the [latest release on GitHub](https://github.com/d3/d3/releases/latest). For vanilla HTML in modern browsers, import D3 from Skypack:
+If you use npm, `npm install d3`. You can also download the [latest release on GitHub](https://github.com/d3/d3/releases/latest). For vanilla HTML in modern browsers, import D3 from jsDelivr:
 
 ```html
 <script type="module">
 
-import * as d3 from "https://cdn.skypack.dev/d3@7";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const div = d3.selectAll("div");
 
@@ -42,7 +42,7 @@ You can also use the standalone D3 microlibraries. For example, [d3-selection](h
 ```html
 <script type="module">
 
-import {selectAll} from "https://cdn.skypack.dev/d3-selection@3";
+import {selectAll} from "https://cdn.jsdelivr.net/npm/d3-selection@3/+esm";
 
 const div = selectAll("div");
 
@@ -61,14 +61,18 @@ Or import everything into a namespace (here, `d3`):
 import * as d3 from "d3";
 ```
 
-In Node:
+Or using dynamic import:
 
 ```js
-const d3 = require("d3");
+const d3 = await import("d3");
 ```
 
-You can also require individual modules and combine them into a `d3` object using [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign):
+You can also import individual modules and combine them into a `d3` object using [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign):
 
 ```js
-const d3 = Object.assign({}, require("d3-format"), require("d3-geo"), require("d3-geo-projection"));
+const d3 = await Promise.all([
+  import("d3-format"),
+  import("d3-geo"),
+  import("d3-geo-projection")
+]).then(d3 => Object.assign({}, ...d3));
 ```

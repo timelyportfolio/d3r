@@ -35,118 +35,124 @@ D3 is a [collection of modules](https://github.com/d3) that are designed to work
 
 D3 uses [semantic versioning](http://semver.org/). The current version is exposed as d3.version.
 
-## [Arrays (d3-array)](https://github.com/d3/d3-array/tree/v3.0.1)
+## [Arrays (d3-array)](https://github.com/d3/d3-array/tree/v3.2.2)
 
 Array manipulation, ordering, searching, summarizing, etc.
 
-### [Statistics](https://github.com/d3/d3-array/blob/v3.0.1/README.md#statistics)
+### [Statistics](https://github.com/d3/d3-array/blob/v3.2.2/README.md#statistics)
 
 Methods for computing basic summary statistics.
 
-* [d3.min](https://github.com/d3/d3-array/blob/v3.0.1/README.md#min) - compute the minimum value in an iterable.
-* [d3.minIndex](https://github.com/d3/d3-array/blob/v3.0.1/README.md#minIndex) - compute the index of the minimum value in an iterable.
-* [d3.max](https://github.com/d3/d3-array/blob/v3.0.1/README.md#max) - compute the maximum value in an iterable.
-* [d3.maxIndex](https://github.com/d3/d3-array/blob/v3.0.1/README.md#maxIndex) - compute the index of the maximum value in an iterable.
-* [d3.extent](https://github.com/d3/d3-array/blob/v3.0.1/README.md#extent) - compute the minimum and maximum value in an iterable.
-* [d3.sum](https://github.com/d3/d3-array/blob/v3.0.1/README.md#sum) - compute the sum of an iterable of numbers.
-* [d3.mean](https://github.com/d3/d3-array/blob/v3.0.1/README.md#mean) - compute the arithmetic mean of an iterable of numbers.
-* [d3.median](https://github.com/d3/d3-array/blob/v3.0.1/README.md#median) - compute the median of an iterable of numbers (the 0.5-quantile).
-* [d3.mode](https://github.com/d3/d3-array/blob/v3.0.1/README.md#mode) - compute the mode (the most common value) of an iterable of numbers.
-* [d3.cumsum](https://github.com/d3/d3-array/blob/v3.0.1/README.md#cumsum) - compute the cumulative sum of an iterable.
-* [d3.quantile](https://github.com/d3/d3-array/blob/v3.0.1/README.md#quantile) - compute a quantile for an iterable of numbers.
-* [d3.quantileSorted](https://github.com/d3/d3-array/blob/v3.0.1/README.md#quantileSorted) - compute a quantile for a sorted array of numbers.
-* [d3.variance](https://github.com/d3/d3-array/blob/v3.0.1/README.md#variance) - compute the variance of an iterable of numbers.
-* [d3.deviation](https://github.com/d3/d3-array/blob/v3.0.1/README.md#deviation) - compute the standard deviation of an iterable of numbers.
-* [d3.fcumsum](https://github.com/d3/d3-array/blob/v3.0.1/README.md#fcumsum) - compute a full precision cumulative summation of numbers.
-* [d3.fsum](https://github.com/d3/d3-array/blob/v3.0.1/README.md#fsum) - compute a full precision summation of an iterable of numbers.
-* [new d3.Adder](https://github.com/d3/d3-array/blob/v3.0.1/README.md#adder) - creates a full precision adder.
-* [*adder*.add](https://github.com/d3/d3-array/blob/v3.0.1/README.md#adder_add) - add a value to an adder.
-* [*adder*.valueOf](https://github.com/d3/d3-array/blob/v3.0.1/README.md#adder_valueOf) - returns a double precision representation of an adder’s value.
+* [d3.min](https://github.com/d3/d3-array/blob/v3.2.2/README.md#min) - compute the minimum value in an iterable.
+* [d3.minIndex](https://github.com/d3/d3-array/blob/v3.2.2/README.md#minIndex) - compute the index of the minimum value in an iterable.
+* [d3.max](https://github.com/d3/d3-array/blob/v3.2.2/README.md#max) - compute the maximum value in an iterable.
+* [d3.maxIndex](https://github.com/d3/d3-array/blob/v3.2.2/README.md#maxIndex) - compute the index of the maximum value in an iterable.
+* [d3.extent](https://github.com/d3/d3-array/blob/v3.2.2/README.md#extent) - compute the minimum and maximum value in an iterable.
+* [d3.sum](https://github.com/d3/d3-array/blob/v3.2.2/README.md#sum) - compute the sum of an iterable of numbers.
+* [d3.mean](https://github.com/d3/d3-array/blob/v3.2.2/README.md#mean) - compute the arithmetic mean of an iterable of numbers.
+* [d3.median](https://github.com/d3/d3-array/blob/v3.2.2/README.md#median) - compute the median of an iterable of numbers (the 0.5-quantile).
+* [d3.medianIndex](https://github.com/d3/d3-array/blob/v3.2.2/README.md#median) - compute the median index of an iterable of numbers (the 0.5-quantile).
+* [d3.mode](https://github.com/d3/d3-array/blob/v3.2.2/README.md#mode) - compute the mode (the most common value) of an iterable of numbers.
+* [d3.cumsum](https://github.com/d3/d3-array/blob/v3.2.2/README.md#cumsum) - compute the cumulative sum of an iterable.
+* [d3.rank](https://github.com/d3/d3-array/blob/v3.2.2/README.md#rank) - compute the rank order of an iterable.
+* [d3.quantile](https://github.com/d3/d3-array/blob/v3.2.2/README.md#quantile) - compute a quantile for an iterable of numbers.
+* [d3.quantileIndex](https://github.com/d3/d3-array/blob/v3.2.2/README.md#quantileIndex) - compute a quantile index for an iterable of numbers.
+* [d3.quantileSorted](https://github.com/d3/d3-array/blob/v3.2.2/README.md#quantileSorted) - compute a quantile for a sorted array of numbers.
+* [d3.variance](https://github.com/d3/d3-array/blob/v3.2.2/README.md#variance) - compute the variance of an iterable of numbers.
+* [d3.deviation](https://github.com/d3/d3-array/blob/v3.2.2/README.md#deviation) - compute the standard deviation of an iterable of numbers.
+* [d3.fcumsum](https://github.com/d3/d3-array/blob/v3.2.2/README.md#fcumsum) - compute a full precision cumulative summation of numbers.
+* [d3.fsum](https://github.com/d3/d3-array/blob/v3.2.2/README.md#fsum) - compute a full precision summation of an iterable of numbers.
+* [new d3.Adder](https://github.com/d3/d3-array/blob/v3.2.2/README.md#adder) - creates a full precision adder.
+* [*adder*.add](https://github.com/d3/d3-array/blob/v3.2.2/README.md#adder_add) - add a value to an adder.
+* [*adder*.valueOf](https://github.com/d3/d3-array/blob/v3.2.2/README.md#adder_valueOf) - returns a double precision representation of an adder’s value.
+* [d3.blur](https://github.com/d3/d3-array/blob/v3.2.2/README.md#blur) - blur an array of numbers in place.
+* [d3.blur2](https://github.com/d3/d3-array/blob/v3.2.2/README.md#blur2) - blur a two-dimensional array of numbers in place.
+* [d3.blurImage](https://github.com/d3/d3-array/blob/v3.2.2/README.md#blurImage) - blur an RGBA ImageData in place.
 
-### [Search](https://github.com/d3/d3-array/blob/v3.0.1/README.md#search)
+### [Search](https://github.com/d3/d3-array/blob/v3.2.2/README.md#search)
 
 Methods for searching arrays for a specific element.
 
-* [d3.least](https://github.com/d3/d3-array/blob/v3.0.1/README.md#least) - returns the least element of an iterable.
-* [d3.leastIndex](https://github.com/d3/d3-array/blob/v3.0.1/README.md#leastIndex) - returns the index of the least element of an iterable.
-* [d3.greatest](https://github.com/d3/d3-array/blob/v3.0.1/README.md#greatest) - returns the greatest element of an iterable.
-* [d3.greatestIndex](https://github.com/d3/d3-array/blob/v3.0.1/README.md#greatestIndex) - returns the index of the greatest element of an iterable.
-* [d3.bisectCenter](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisectCenter) - binary search for a value in a sorted array.
-* [d3.bisectLeft](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisectLeft) - binary search for a value in a sorted array.
-* [d3.bisect](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisect) - binary search for a value in a sorted array.
-* [d3.bisectRight](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisectRight) - binary search for a value in a sorted array.
-* [d3.bisector](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisector) - bisect using an accessor or comparator.
-* [*bisector*.center](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisector_center) - binary search for a value in a sorted array.
-* [*bisector*.left](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisector_left) - bisectLeft, with the given comparator.
-* [*bisector*.right](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bisector_right) - bisectRight, with the given comparator.
-* [d3.quickselect](https://github.com/d3/d3-array/blob/v3.0.1/README.md#quickselect) - reorder an array of numbers.
-* [d3.ascending](https://github.com/d3/d3-array/blob/v3.0.1/README.md#ascending) - compute the natural order of two values.
-* [d3.descending](https://github.com/d3/d3-array/blob/v3.0.1/README.md#descending) - compute the natural order of two values.
+* [d3.least](https://github.com/d3/d3-array/blob/v3.2.2/README.md#least) - returns the least element of an iterable.
+* [d3.leastIndex](https://github.com/d3/d3-array/blob/v3.2.2/README.md#leastIndex) - returns the index of the least element of an iterable.
+* [d3.greatest](https://github.com/d3/d3-array/blob/v3.2.2/README.md#greatest) - returns the greatest element of an iterable.
+* [d3.greatestIndex](https://github.com/d3/d3-array/blob/v3.2.2/README.md#greatestIndex) - returns the index of the greatest element of an iterable.
+* [d3.bisectCenter](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisectCenter) - binary search for a value in a sorted array.
+* [d3.bisectLeft](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisectLeft) - binary search for a value in a sorted array.
+* [d3.bisect](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisect) - binary search for a value in a sorted array.
+* [d3.bisectRight](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisectRight) - binary search for a value in a sorted array.
+* [d3.bisector](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisector) - bisect using an accessor or comparator.
+* [*bisector*.center](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisector_center) - binary search for a value in a sorted array.
+* [*bisector*.left](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisector_left) - bisectLeft, with the given comparator.
+* [*bisector*.right](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bisector_right) - bisectRight, with the given comparator.
+* [d3.quickselect](https://github.com/d3/d3-array/blob/v3.2.2/README.md#quickselect) - reorder an array of numbers.
+* [d3.ascending](https://github.com/d3/d3-array/blob/v3.2.2/README.md#ascending) - compute the natural order of two values.
+* [d3.descending](https://github.com/d3/d3-array/blob/v3.2.2/README.md#descending) - compute the natural order of two values.
 
-### [Transformations](https://github.com/d3/d3-array/blob/v3.0.1/README.md#transformations)
+### [Transformations](https://github.com/d3/d3-array/blob/v3.2.2/README.md#transformations)
 
 Methods for transforming arrays and for generating new arrays.
 
-* [d3.flatGroup](https://github.com/d3/d3-array/blob/v3.0.1/README.md#flatGroup) - group an iterable into a flat array.
-* [d3.flatRollup](https://github.com/d3/d3-array/blob/v3.0.1/README.md#flatRollup) - reduce an iterable into a flat array.
-* [d3.group](https://github.com/d3/d3-array/blob/v3.0.1/README.md#group) - group an iterable into a nested Map.
-* [d3.groups](https://github.com/d3/d3-array/blob/v3.0.1/README.md#groups) - group an iterable into a nested array.
-* [d3.groupSort](https://github.com/d3/d3-array/blob/v3.0.1/README.md#groupSort) - sort keys according to grouped values.
-* [d3.index](https://github.com/d3/d3-array/blob/v3.0.1/README.md#index) - index an iterable into a nested Map.
-* [d3.indexes](https://github.com/d3/d3-array/blob/v3.0.1/README.md#indexes) - index an iterable into a nested array.
-* [d3.rollup](https://github.com/d3/d3-array/blob/v3.0.1/README.md#rollup) - reduce an iterable into a nested Map.
-* [d3.rollups](https://github.com/d3/d3-array/blob/v3.0.1/README.md#rollups) - reduce an iterable into a nested array.
-* [d3.count](https://github.com/d3/d3-array/blob/v3.0.1/README.md#count) - count valid number values in an iterable.
-* [d3.cross](https://github.com/d3/d3-array/blob/v3.0.1/README.md#cross) - compute the Cartesian product of two iterables.
-* [d3.merge](https://github.com/d3/d3-array/blob/v3.0.1/README.md#merge) - merge multiple iterables into one array.
-* [d3.pairs](https://github.com/d3/d3-array/blob/v3.0.1/README.md#pairs) - create an array of adjacent pairs of elements.
-* [d3.permute](https://github.com/d3/d3-array/blob/v3.0.1/README.md#permute) - reorder an iterable of elements according to an iterable of indexes.
-* [d3.shuffle](https://github.com/d3/d3-array/blob/v3.0.1/README.md#shuffle) - randomize the order of an iterable.
-* [d3.shuffler](https://github.com/d3/d3-array/blob/v3.0.1/README.md#shuffler) - randomize the order of an iterable.
-* [d3.ticks](https://github.com/d3/d3-array/blob/v3.0.1/README.md#ticks) - generate representative values from a numeric interval.
-* [d3.tickIncrement](https://github.com/d3/d3-array/blob/v3.0.1/README.md#tickIncrement) - generate representative values from a numeric interval.
-* [d3.tickStep](https://github.com/d3/d3-array/blob/v3.0.1/README.md#tickStep) - generate representative values from a numeric interval.
-* [d3.nice](https://github.com/d3/d3-array/blob/v3.0.1/README.md#nice) - extend an interval to align with ticks.
-* [d3.range](https://github.com/d3/d3-array/blob/v3.0.1/README.md#range) - generate a range of numeric values.
-* [d3.transpose](https://github.com/d3/d3-array/blob/v3.0.1/README.md#transpose) - transpose an array of arrays.
-* [d3.zip](https://github.com/d3/d3-array/blob/v3.0.1/README.md#zip) - transpose a variable number of arrays.
+* [d3.flatGroup](https://github.com/d3/d3-array/blob/v3.2.2/README.md#flatGroup) - group an iterable into a flat array.
+* [d3.flatRollup](https://github.com/d3/d3-array/blob/v3.2.2/README.md#flatRollup) - reduce an iterable into a flat array.
+* [d3.group](https://github.com/d3/d3-array/blob/v3.2.2/README.md#group) - group an iterable into a nested Map.
+* [d3.groups](https://github.com/d3/d3-array/blob/v3.2.2/README.md#groups) - group an iterable into a nested array.
+* [d3.groupSort](https://github.com/d3/d3-array/blob/v3.2.2/README.md#groupSort) - sort keys according to grouped values.
+* [d3.index](https://github.com/d3/d3-array/blob/v3.2.2/README.md#index) - index an iterable into a nested Map.
+* [d3.indexes](https://github.com/d3/d3-array/blob/v3.2.2/README.md#indexes) - index an iterable into a nested array.
+* [d3.rollup](https://github.com/d3/d3-array/blob/v3.2.2/README.md#rollup) - reduce an iterable into a nested Map.
+* [d3.rollups](https://github.com/d3/d3-array/blob/v3.2.2/README.md#rollups) - reduce an iterable into a nested array.
+* [d3.count](https://github.com/d3/d3-array/blob/v3.2.2/README.md#count) - count valid number values in an iterable.
+* [d3.cross](https://github.com/d3/d3-array/blob/v3.2.2/README.md#cross) - compute the Cartesian product of two iterables.
+* [d3.merge](https://github.com/d3/d3-array/blob/v3.2.2/README.md#merge) - merge multiple iterables into one array.
+* [d3.pairs](https://github.com/d3/d3-array/blob/v3.2.2/README.md#pairs) - create an array of adjacent pairs of elements.
+* [d3.permute](https://github.com/d3/d3-array/blob/v3.2.2/README.md#permute) - reorder an iterable of elements according to an iterable of indexes.
+* [d3.shuffle](https://github.com/d3/d3-array/blob/v3.2.2/README.md#shuffle) - randomize the order of an iterable.
+* [d3.shuffler](https://github.com/d3/d3-array/blob/v3.2.2/README.md#shuffler) - randomize the order of an iterable.
+* [d3.ticks](https://github.com/d3/d3-array/blob/v3.2.2/README.md#ticks) - generate representative values from a numeric interval.
+* [d3.tickIncrement](https://github.com/d3/d3-array/blob/v3.2.2/README.md#tickIncrement) - generate representative values from a numeric interval.
+* [d3.tickStep](https://github.com/d3/d3-array/blob/v3.2.2/README.md#tickStep) - generate representative values from a numeric interval.
+* [d3.nice](https://github.com/d3/d3-array/blob/v3.2.2/README.md#nice) - extend an interval to align with ticks.
+* [d3.range](https://github.com/d3/d3-array/blob/v3.2.2/README.md#range) - generate a range of numeric values.
+* [d3.transpose](https://github.com/d3/d3-array/blob/v3.2.2/README.md#transpose) - transpose an array of arrays.
+* [d3.zip](https://github.com/d3/d3-array/blob/v3.2.2/README.md#zip) - transpose a variable number of arrays.
 
-### [Iterables](https://github.com/d3/d3-array/blob/v3.0.1/README.md#iterables)
+### [Iterables](https://github.com/d3/d3-array/blob/v3.2.2/README.md#iterables)
 
-* [d3.every](https://github.com/d3/d3-array/blob/v3.0.1/README.md#every) - test if all values satisfy a condition.
-* [d3.some](https://github.com/d3/d3-array/blob/v3.0.1/README.md#some) - test if any value satisfies a condition.
-* [d3.filter](https://github.com/d3/d3-array/blob/v3.0.1/README.md#filter) - filter values.
-* [d3.map](https://github.com/d3/d3-array/blob/v3.0.1/README.md#map) - map values.
-* [d3.reduce](https://github.com/d3/d3-array/blob/v3.0.1/README.md#reduce) - reduce values.
-* [d3.reverse](https://github.com/d3/d3-array/blob/v3.0.1/README.md#reverse) - reverse the order of values.
-* [d3.sort](https://github.com/d3/d3-array/blob/v3.0.1/README.md#sort) - sort values.
+* [d3.every](https://github.com/d3/d3-array/blob/v3.2.2/README.md#every) - test if all values satisfy a condition.
+* [d3.some](https://github.com/d3/d3-array/blob/v3.2.2/README.md#some) - test if any value satisfies a condition.
+* [d3.filter](https://github.com/d3/d3-array/blob/v3.2.2/README.md#filter) - filter values.
+* [d3.map](https://github.com/d3/d3-array/blob/v3.2.2/README.md#map) - map values.
+* [d3.reduce](https://github.com/d3/d3-array/blob/v3.2.2/README.md#reduce) - reduce values.
+* [d3.reverse](https://github.com/d3/d3-array/blob/v3.2.2/README.md#reverse) - reverse the order of values.
+* [d3.sort](https://github.com/d3/d3-array/blob/v3.2.2/README.md#sort) - sort values.
 
-### [Sets](https://github.com/d3/d3-array/blob/v3.0.1/README.md#sets)
+### [Sets](https://github.com/d3/d3-array/blob/v3.2.2/README.md#sets)
 
-* [d3.difference](https://github.com/d3/d3-array/blob/v3.0.1/README.md#difference) - compute a set difference.
-* [d3.disjoint](https://github.com/d3/d3-array/blob/v3.0.1/README.md#disjoint) - test whether two sets are disjoint.
-* [d3.intersection](https://github.com/d3/d3-array/blob/v3.0.1/README.md#intersection) - compute a set intersection.
-* [d3.superset](https://github.com/d3/d3-array/blob/v3.0.1/README.md#superset) - test whether a set is a superset of another.
-* [d3.subset](https://github.com/d3/d3-array/blob/v3.0.1/README.md#subset) - test whether a set is a subset of another.
-* [d3.union](https://github.com/d3/d3-array/blob/v3.0.1/README.md#union) - compute a set union.
+* [d3.difference](https://github.com/d3/d3-array/blob/v3.2.2/README.md#difference) - compute a set difference.
+* [d3.disjoint](https://github.com/d3/d3-array/blob/v3.2.2/README.md#disjoint) - test whether two sets are disjoint.
+* [d3.intersection](https://github.com/d3/d3-array/blob/v3.2.2/README.md#intersection) - compute a set intersection.
+* [d3.superset](https://github.com/d3/d3-array/blob/v3.2.2/README.md#superset) - test whether a set is a superset of another.
+* [d3.subset](https://github.com/d3/d3-array/blob/v3.2.2/README.md#subset) - test whether a set is a subset of another.
+* [d3.union](https://github.com/d3/d3-array/blob/v3.2.2/README.md#union) - compute a set union.
 
-### [Histograms](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bins)
+### [Histograms](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bins)
 
 Bin discrete samples into continuous, non-overlapping intervals.
 
-* [d3.bin](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bin) - create a new bin generator.
-* [*bin*](https://github.com/d3/d3-array/blob/v3.0.1/README.md#_bin) - bins a given array of samples.
-* [*bin*.value](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bin_value) - specify a value accessor for each sample.
-* [*bin*.domain](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bin_domain) - specify the interval of observable values.
-* [*bin*.thresholds](https://github.com/d3/d3-array/blob/v3.0.1/README.md#bin_thresholds) - specify how values are divided into bins.
-* [d3.thresholdFreedmanDiaconis](https://github.com/d3/d3-array/blob/v3.0.1/README.md#thresholdFreedmanDiaconis) - the Freedman–Diaconis binning rule.
-* [d3.thresholdScott](https://github.com/d3/d3-array/blob/v3.0.1/README.md#thresholdScott) - Scott’s normal reference binning rule.
-* [d3.thresholdSturges](https://github.com/d3/d3-array/blob/v3.0.1/README.md#thresholdSturges) - Sturges’ binning formula.
+* [d3.bin](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bin) - create a new bin generator.
+* [*bin*](https://github.com/d3/d3-array/blob/v3.2.2/README.md#_bin) - bins a given array of samples.
+* [*bin*.value](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bin_value) - specify a value accessor for each sample.
+* [*bin*.domain](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bin_domain) - specify the interval of observable values.
+* [*bin*.thresholds](https://github.com/d3/d3-array/blob/v3.2.2/README.md#bin_thresholds) - specify how values are divided into bins.
+* [d3.thresholdFreedmanDiaconis](https://github.com/d3/d3-array/blob/v3.2.2/README.md#thresholdFreedmanDiaconis) - the Freedman–Diaconis binning rule.
+* [d3.thresholdScott](https://github.com/d3/d3-array/blob/v3.2.2/README.md#thresholdScott) - Scott’s normal reference binning rule.
+* [d3.thresholdSturges](https://github.com/d3/d3-array/blob/v3.2.2/README.md#thresholdSturges) - Sturges’ binning formula.
 
-### [Interning](https://github.com/d3/d3-array/blob/v3.0.1/README.md#interning)
+### [Interning](https://github.com/d3/d3-array/blob/v3.2.2/README.md#interning)
 
-* [d3.InternMap](https://github.com/d3/d3-array/blob/v3.0.1/README.md#InternMap) - a key-interning Map.
-* [d3.InternSet](https://github.com/d3/d3-array/blob/v3.0.1/README.md#InternSet) - a value-interning Set.
+* [d3.InternMap](https://github.com/d3/d3-array/blob/v3.2.2/README.md#InternMap) - a key-interning Map.
+* [d3.InternSet](https://github.com/d3/d3-array/blob/v3.2.2/README.md#InternSet) - a value-interning Set.
 
 ## [Axes (d3-axis)](https://github.com/d3/d3-axis/tree/v3.0.0)
 
@@ -210,28 +216,31 @@ Select a one- or two-dimensional region using the mouse or touch.
 * [d3.ribbonArrow](https://github.com/d3/d3-chord/blob/v3.0.1/README.md#ribbonArrow) - create an arrow ribbon generator.
 * [*ribbonArrow*.headRadius](https://github.com/d3/d3-chord/blob/v3.0.1/README.md#ribbonArrow_headRadius) - set the arrowhead radius accessor.
 
-## [Colors (d3-color)](https://github.com/d3/d3-color/tree/v3.0.1)
+## [Colors (d3-color)](https://github.com/d3/d3-color/tree/v3.1.0)
 
 Color manipulation and color space conversion.
 
-* [d3.color](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color) - parse the given CSS color specifier.
-* [*color*.opacity](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_opacity) - the color’s opacity.
-* [*color*.rgb](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_rgb) - compute the RGB equivalent of this color.
-* [*color*.copy](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_copy) - return a copy of this color.
-* [*color*.brighter](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_brighter) - create a brighter copy of this color.
-* [*color*.darker](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_darker) - create a darker copy of this color.
-* [*color*.displayable](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_displayable) - returns true if the color is displayable on standard hardware.
-* [*color*.formatHex](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_formatHex) - returns the hexadecimal RGB string representation of this color.
-* [*color*.formatHsl](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_formatHsl) - returns the RGB string representation of this color.
-* [*color*.formatRgb](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_formatRgb) - returns the HSL string representation of this color.
-* [*color*.toString](https://github.com/d3/d3-color/blob/v3.0.1/README.md#color_toString) - returns the RGB string representation of this color.
-* [d3.rgb](https://github.com/d3/d3-color/blob/v3.0.1/README.md#rgb) - create a new RGB color.
-* [d3.hsl](https://github.com/d3/d3-color/blob/v3.0.1/README.md#hsl) - create a new HSL color.
-* [d3.lab](https://github.com/d3/d3-color/blob/v3.0.1/README.md#lab) - create a new Lab color.
-* [d3.gray](https://github.com/d3/d3-color/blob/v3.0.1/README.md#gray) - create a new Lab gray.
-* [d3.hcl](https://github.com/d3/d3-color/blob/v3.0.1/README.md#hcl) - create a new HCL color.
-* [d3.lch](https://github.com/d3/d3-color/blob/v3.0.1/README.md#lch) - create a new HCL color.
-* [d3.cubehelix](https://github.com/d3/d3-color/blob/v3.0.1/README.md#cubehelix) - create a new Cubehelix color.
+* [d3.color](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color) - parse the given CSS color specifier.
+* [*color*.opacity](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_opacity) - the color’s opacity.
+* [*color*.rgb](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_rgb) - compute the RGB equivalent of this color.
+* [*color*.copy](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_copy) - return a copy of this color.
+* [*color*.brighter](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_brighter) - create a brighter copy of this color.
+* [*color*.darker](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_darker) - create a darker copy of this color.
+* [*color*.displayable](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_displayable) - returns true if the color is displayable on standard hardware.
+* [*color*.formatHex](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_formatHex) - returns the hexadecimal RRGGBB string representation of this color.
+* [*color*.formatHex8](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_formatHex8) - returns the hexadecimal RRGGBBAA string representation of this color.
+* [*color*.formatHsl](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_formatHsl) - returns the RGB string representation of this color.
+* [*color*.formatRgb](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_formatRgb) - returns the HSL string representation of this color.
+* [*color*.toString](https://github.com/d3/d3-color/blob/v3.1.0/README.md#color_toString) - returns the RGB string representation of this color.
+* [d3.rgb](https://github.com/d3/d3-color/blob/v3.1.0/README.md#rgb) - create a new RGB color.
+* [*rgb*.clamp](https://github.com/d3/d3-color/blob/v3.1.0/README.md#rgb_clamp) - returns copy of this color clamped to the RGB color space.
+* [d3.hsl](https://github.com/d3/d3-color/blob/v3.1.0/README.md#hsl) - create a new HSL color.
+* [*hsl*.clamp](https://github.com/d3/d3-color/blob/v3.1.0/README.md#hsl_clamp) - returns copy of this color clamped to the HSL color space.
+* [d3.lab](https://github.com/d3/d3-color/blob/v3.1.0/README.md#lab) - create a new Lab color.
+* [d3.gray](https://github.com/d3/d3-color/blob/v3.1.0/README.md#gray) - create a new Lab gray.
+* [d3.hcl](https://github.com/d3/d3-color/blob/v3.1.0/README.md#hcl) - create a new HCL color.
+* [d3.lch](https://github.com/d3/d3-color/blob/v3.1.0/README.md#lch) - create a new HCL color.
+* [d3.cubehelix](https://github.com/d3/d3-color/blob/v3.1.0/README.md#cubehelix) - create a new Cubehelix color.
 
 ## [Color Schemes (d3-scale-chromatic)](https://github.com/d3/d3-scale-chromatic/tree/v3.0.0)
 
@@ -327,25 +336,26 @@ Color ramps and palettes for quantitative, ordinal and categorical scales.
 * [d3.interpolateRainbow](https://github.com/d3/d3-scale-chromatic/blob/v3.0.0/README.md#interpolateRainbow) - the “less-angry” rainbow
 * [d3.interpolateSinebow](https://github.com/d3/d3-scale-chromatic/blob/v3.0.0/README.md#interpolateSinebow) - the “sinebow” smooth rainbow
 
-## [Contours (d3-contour)](https://github.com/d3/d3-contour/tree/v3.0.1)
+## [Contours (d3-contour)](https://github.com/d3/d3-contour/tree/v4.0.2)
 
 Compute contour polygons using marching squares.
 
-* [d3.contours](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#contours) - create a new contour generator.
-* [*contours*](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#_contours) - compute the contours for a given grid of values.
-* [*contours*.contour](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#contours_contour) - compute a contour for a given value.
-* [*contours*.size](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#contours_size) - set the size of a contour generator.
-* [*contours*.smooth](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#contours_smooth) - set whether or not the generated contours are smoothed.
-* [*contours*.thresholds](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#contours_thresholds) - set the thresholds of a contour generator.
-* [d3.contourDensity](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#contourDensity) - create a new density estimator.
-* [*density*](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#_density) - estimate the density of a given array of samples.
-* [*density*.x](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_x) - set the *x* accessor of the density estimator.
-* [*density*.y](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_y) - set the *y* accessor of the density estimator.
-* [*density*.weight](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_weight) - set the *weight* accessor of the density estimator.
-* [*density*.size](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_size) - set the size of the density estimator.
-* [*density*.cellSize](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_cellSize) - set the cell size of the density estimator.
-* [*density*.thresholds](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_thresholds) - set the thresholds of the density estimator.
-* [*density*.bandwidth](https://github.com/d3/d3-contour/blob/v3.0.1/README.md#density_bandwidth) - set the bandwidth of the density estimator.
+* [d3.contours](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#contours) - create a new contour generator.
+* [*contours*](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#_contours) - compute the contours for a given grid of values.
+* [*contours*.contour](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#contours_contour) - compute a contour for a given value.
+* [*contours*.size](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#contours_size) - set the size of a contour generator.
+* [*contours*.smooth](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#contours_smooth) - set whether or not the generated contours are smoothed.
+* [*contours*.thresholds](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#contours_thresholds) - set the thresholds of a contour generator.
+* [d3.contourDensity](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#contourDensity) - create a new density estimator.
+* [*density*](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#_density) - estimate the density of a given array of samples.
+* [*density*.x](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_x) - set the *x* accessor of the density estimator.
+* [*density*.y](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_y) - set the *y* accessor of the density estimator.
+* [*density*.weight](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_weight) - set the *weight* accessor of the density estimator.
+* [*density*.size](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_size) - set the size of the density estimator.
+* [*density*.cellSize](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_cellSize) - set the cell size of the density estimator.
+* [*density*.thresholds](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_thresholds) - set the thresholds of the density estimator.
+* [*density*.bandwidth](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_bandwidth) - set the bandwidth of the density estimator.
+* [*density*.contours](https://github.com/d3/d3-contour/blob/v4.0.2/README.md#density_contours) - compute density contours.
 
 ## [Voronoi Diagrams (d3-delaunay)](https://github.com/d3/d3-delaunay/tree/v6.0.2)
 
@@ -553,218 +563,220 @@ Force-directed graph layout using velocity Verlet integration.
 * [*radial*.x](https://github.com/d3/d3-force/blob/v3.0.0/README.md#radial_x) - set the target center *x*-coordinate.
 * [*radial*.y](https://github.com/d3/d3-force/blob/v3.0.0/README.md#radial_y) - set the target center *y*-coordinate.
 
-## [Number Formats (d3-format)](https://github.com/d3/d3-format/tree/v3.0.1)
+## [Number Formats (d3-format)](https://github.com/d3/d3-format/tree/v3.1.0)
 
 Format numbers for human consumption.
 
-* [d3.format](https://github.com/d3/d3-format/blob/v3.0.1/README.md#format) - alias for *locale*.format on the default locale.
-* [d3.formatPrefix](https://github.com/d3/d3-format/blob/v3.0.1/README.md#formatPrefix) - alias for *locale*.formatPrefix on the default locale.
-* [*locale*.format](https://github.com/d3/d3-format/blob/v3.0.1/README.md#locale_format) - create a number format.
-* [*locale*.formatPrefix](https://github.com/d3/d3-format/blob/v3.0.1/README.md#locale_formatPrefix) - create a SI-prefix number format.
-* [d3.formatSpecifier](https://github.com/d3/d3-format/blob/v3.0.1/README.md#formatSpecifier) - parse a number format specifier.
-* [new d3.FormatSpecifier](https://github.com/d3/d3-format/blob/v3.0.1/README.md#FormatSpecifier) - augments a number format specifier object.
-* [d3.precisionFixed](https://github.com/d3/d3-format/blob/v3.0.1/README.md#precisionFixed) - compute decimal precision for fixed-point notation.
-* [d3.precisionPrefix](https://github.com/d3/d3-format/blob/v3.0.1/README.md#precisionPrefix) - compute decimal precision for SI-prefix notation.
-* [d3.precisionRound](https://github.com/d3/d3-format/blob/v3.0.1/README.md#precisionRound) - compute significant digits for rounded notation.
-* [d3.formatLocale](https://github.com/d3/d3-format/blob/v3.0.1/README.md#formatLocale) - define a custom locale.
-* [d3.formatDefaultLocale](https://github.com/d3/d3-format/blob/v3.0.1/README.md#formatDefaultLocale) - define the default locale.
+* [d3.format](https://github.com/d3/d3-format/blob/v3.1.0/README.md#format) - alias for *locale*.format on the default locale.
+* [d3.formatPrefix](https://github.com/d3/d3-format/blob/v3.1.0/README.md#formatPrefix) - alias for *locale*.formatPrefix on the default locale.
+* [*locale*.format](https://github.com/d3/d3-format/blob/v3.1.0/README.md#locale_format) - create a number format.
+* [*locale*.formatPrefix](https://github.com/d3/d3-format/blob/v3.1.0/README.md#locale_formatPrefix) - create a SI-prefix number format.
+* [d3.formatSpecifier](https://github.com/d3/d3-format/blob/v3.1.0/README.md#formatSpecifier) - parse a number format specifier.
+* [new d3.FormatSpecifier](https://github.com/d3/d3-format/blob/v3.1.0/README.md#FormatSpecifier) - augments a number format specifier object.
+* [d3.precisionFixed](https://github.com/d3/d3-format/blob/v3.1.0/README.md#precisionFixed) - compute decimal precision for fixed-point notation.
+* [d3.precisionPrefix](https://github.com/d3/d3-format/blob/v3.1.0/README.md#precisionPrefix) - compute decimal precision for SI-prefix notation.
+* [d3.precisionRound](https://github.com/d3/d3-format/blob/v3.1.0/README.md#precisionRound) - compute significant digits for rounded notation.
+* [d3.formatLocale](https://github.com/d3/d3-format/blob/v3.1.0/README.md#formatLocale) - define a custom locale.
+* [d3.formatDefaultLocale](https://github.com/d3/d3-format/blob/v3.1.0/README.md#formatDefaultLocale) - define the default locale.
 
-## [Geographies (d3-geo)](https://github.com/d3/d3-geo/tree/v3.0.1)
+## [Geographies (d3-geo)](https://github.com/d3/d3-geo/tree/v3.1.0)
 
 Geographic projections, shapes and math.
 
-### [Paths](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#paths)
+### [Paths](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#paths)
 
-* [d3.geoPath](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoPath) - create a new geographic path generator.
-* [*path*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#_path) - project and render the specified feature.
-* [*path*.area](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_area) - compute the projected planar area of a given feature.
-* [*path*.bounds](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_bounds) - compute the projected planar bounding box of a given feature.
-* [*path*.centroid](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_centroid) - compute the projected planar centroid of a given feature.
-* [*path*.measure](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_measure) - compute the projected planar length of a given feature.
-* [*path*.projection](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_projection) - set the geographic projection.
-* [*path*.context](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_context) - set the render context.
-* [*path*.pointRadius](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#path_pointRadius) - set the radius to display point features.
+* [d3.geoPath](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoPath) - create a new geographic path generator.
+* [*path*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#_path) - project and render the specified feature.
+* [*path*.area](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_area) - compute the projected planar area of a given feature.
+* [*path*.bounds](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_bounds) - compute the projected planar bounding box of a given feature.
+* [*path*.centroid](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_centroid) - compute the projected planar centroid of a given feature.
+* [*path*.measure](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_measure) - compute the projected planar length of a given feature.
+* [*path*.projection](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_projection) - set the geographic projection.
+* [*path*.context](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_context) - set the render context.
+* [*path*.digits](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_digits) - set the output precision.
+* [*path*.pointRadius](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#path_pointRadius) - set the radius to display point features.
 
-### [Projections](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projections)
+### [Projections](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projections)
 
-* [*projection*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#_projection) - project the specified point from the sphere to the plane.
-* [*projection*.invert](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_invert) - unproject the specified point from the plane to the sphere.
-* [*projection*.stream](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_stream) - wrap the specified stream to project geometry.
-* [*projection*.preclip](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_preclip) - set the projection’s spherical clipping function.
-* [*projection*.postclip](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_postclip) - set the projection’s cartesian clipping function.
-* [*projection*.clipAngle](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_clipAngle) - set the radius of the clip circle.
-* [*projection*.clipExtent](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_clipExtent) - set the viewport clip extent, in pixels.
-* [*projection*.scale](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_scale) - set the scale factor.
-* [*projection*.translate](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_translate) - set the translation offset.
-* [*projection*.center](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_center) - set the center point.
-* [*projection*.angle](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_angle) - set the post-projection rotation.
-* [*projection*.reflectX](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_reflectX) - reflect the *x*-dimension.
-* [*projection*.reflectY](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_reflectY) - reflect the *y*-dimension.
-* [*projection*.rotate](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_rotate) - set the three-axis spherical rotation angles.
-* [*projection*.precision](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_precision) - set the precision threshold for adaptive sampling.
-* [*projection*.fitExtent](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_fitExtent) - set the scale and translate to fit a GeoJSON object.
-* [*projection*.fitSize](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_fitSize) - set the scale and translate to fit a GeoJSON object.
-* [*projection*.fitWidth](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_fitWidth) - set the scale and translate to fit a GeoJSON object.
-* [*projection*.fitHeight](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#projection_fitHeight) - set the scale and translate to fit a GeoJSON object.
-* [d3.geoAzimuthalEqualArea](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoAzimuthalEqualArea) - the azimuthal equal-area projection.
-* [d3.geoAzimuthalEqualAreaRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoAzimuthalEqualAreaRaw) - the raw azimuthal equal-area projection.
-* [d3.geoAzimuthalEquidistant](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoAzimuthalEquidistant) - the azimuthal equidistant projection.
-* [d3.geoAzimuthalEquidistantRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoAzimuthalEquidistantRaw) - the raw azimuthal equidistant projection.
-* [d3.geoGnomonic](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoGnomonic) - the gnomonic projection.
-* [d3.geoGnomonicRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoGnomonicRaw) - the raw gnomonic projection.
-* [d3.geoOrthographic](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoOrthographic) - the azimuthal orthographic projection.
-* [d3.geoOrthographicRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoOrthographicRaw) - the raw azimuthal orthographic projection.
-* [d3.geoStereographic](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoStereographic) - the azimuthal stereographic projection.
-* [d3.geoStereographicRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoStereographicRaw) - the raw azimuthal stereographic projection.
-* [d3.geoEqualEarth](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoEqualEarth) - the Equal Earth projection.
-* [d3.geoEqualEarthRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoEqualEarthRaw) - the raw Equal Earth projection.
-* [d3.geoAlbersUsa](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoAlbersUsa) - a composite Albers projection for the United States.
-* [*conic*.parallels](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#conic_parallels) - set the two standard parallels.
-* [d3.geoAlbers](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoAlbers) - the Albers equal-area conic projection.
-* [d3.geoConicConformal](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoConicConformal) - the conic conformal projection.
-* [d3.geoConicConformalRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoConicConformalRaw) - the raw conic conformal projection.
-* [d3.geoConicEqualArea](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoConicEqualArea) - the conic equal-area (Albers) projection.
-* [d3.geoConicEqualAreaRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoConicEqualAreaRaw) - the raw conic equal-area (Albers) projection.
-* [d3.geoConicEquidistant](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoConicEquidistant) - the conic equidistant projection.
-* [d3.geoConicEquidistantRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoConicEquidistantRaw) - the raw conic equidistant projection.
-* [d3.geoEquirectangular](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoEquirectangular) - the equirectangular (plate carreé) projection.
-* [d3.geoEquirectangularRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoEquirectangularRaw) - the raw equirectangular (plate carreé) projection.
-* [d3.geoMercator](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoMercator) - the spherical Mercator projection.
-* [d3.geoMercatorRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoMercatorRaw) - the raw Mercator projection.
-* [d3.geoTransverseMercator](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoTransverseMercator) - the transverse spherical Mercator projection.
-* [d3.geoTransverseMercatorRaw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoTransverseMercatorRaw) - the raw transverse spherical Mercator projection.
-* [d3.geoNaturalEarth1](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoNaturalEarth1) - the Equal Earth projection, version 1.
-* [d3.geoNaturalEarth1Raw](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoNaturalEarth1Raw) - the raw Equal Earth projection, version 1
+* [*projection*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#_projection) - project the specified point from the sphere to the plane.
+* [*projection*.invert](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_invert) - unproject the specified point from the plane to the sphere.
+* [*projection*.stream](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_stream) - wrap the specified stream to project geometry.
+* [*projection*.preclip](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_preclip) - set the projection’s spherical clipping function.
+* [*projection*.postclip](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_postclip) - set the projection’s cartesian clipping function.
+* [*projection*.clipAngle](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_clipAngle) - set the radius of the clip circle.
+* [*projection*.clipExtent](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_clipExtent) - set the viewport clip extent, in pixels.
+* [*projection*.scale](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_scale) - set the scale factor.
+* [*projection*.translate](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_translate) - set the translation offset.
+* [*projection*.center](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_center) - set the center point.
+* [*projection*.angle](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_angle) - set the post-projection rotation.
+* [*projection*.reflectX](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_reflectX) - reflect the *x*-dimension.
+* [*projection*.reflectY](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_reflectY) - reflect the *y*-dimension.
+* [*projection*.rotate](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_rotate) - set the three-axis spherical rotation angles.
+* [*projection*.precision](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_precision) - set the precision threshold for adaptive sampling.
+* [*projection*.fitExtent](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_fitExtent) - set the scale and translate to fit a GeoJSON object.
+* [*projection*.fitSize](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_fitSize) - set the scale and translate to fit a GeoJSON object.
+* [*projection*.fitWidth](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_fitWidth) - set the scale and translate to fit a GeoJSON object.
+* [*projection*.fitHeight](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projection_fitHeight) - set the scale and translate to fit a GeoJSON object.
+* [d3.geoAzimuthalEqualArea](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoAzimuthalEqualArea) - the azimuthal equal-area projection.
+* [d3.geoAzimuthalEqualAreaRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoAzimuthalEqualAreaRaw) - the raw azimuthal equal-area projection.
+* [d3.geoAzimuthalEquidistant](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoAzimuthalEquidistant) - the azimuthal equidistant projection.
+* [d3.geoAzimuthalEquidistantRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoAzimuthalEquidistantRaw) - the raw azimuthal equidistant projection.
+* [d3.geoGnomonic](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoGnomonic) - the gnomonic projection.
+* [d3.geoGnomonicRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoGnomonicRaw) - the raw gnomonic projection.
+* [d3.geoOrthographic](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoOrthographic) - the azimuthal orthographic projection.
+* [d3.geoOrthographicRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoOrthographicRaw) - the raw azimuthal orthographic projection.
+* [d3.geoStereographic](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoStereographic) - the azimuthal stereographic projection.
+* [d3.geoStereographicRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoStereographicRaw) - the raw azimuthal stereographic projection.
+* [d3.geoEqualEarth](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoEqualEarth) - the Equal Earth projection.
+* [d3.geoEqualEarthRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoEqualEarthRaw) - the raw Equal Earth projection.
+* [d3.geoAlbersUsa](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoAlbersUsa) - a composite Albers projection for the United States.
+* [*conic*.parallels](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#conic_parallels) - set the two standard parallels.
+* [d3.geoAlbers](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoAlbers) - the Albers equal-area conic projection.
+* [d3.geoConicConformal](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoConicConformal) - the conic conformal projection.
+* [d3.geoConicConformalRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoConicConformalRaw) - the raw conic conformal projection.
+* [d3.geoConicEqualArea](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoConicEqualArea) - the conic equal-area (Albers) projection.
+* [d3.geoConicEqualAreaRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoConicEqualAreaRaw) - the raw conic equal-area (Albers) projection.
+* [d3.geoConicEquidistant](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoConicEquidistant) - the conic equidistant projection.
+* [d3.geoConicEquidistantRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoConicEquidistantRaw) - the raw conic equidistant projection.
+* [d3.geoEquirectangular](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoEquirectangular) - the equirectangular (plate carreé) projection.
+* [d3.geoEquirectangularRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoEquirectangularRaw) - the raw equirectangular (plate carreé) projection.
+* [d3.geoMercator](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoMercator) - the spherical Mercator projection.
+* [d3.geoMercatorRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoMercatorRaw) - the raw Mercator projection.
+* [d3.geoTransverseMercator](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoTransverseMercator) - the transverse spherical Mercator projection.
+* [d3.geoTransverseMercatorRaw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoTransverseMercatorRaw) - the raw transverse spherical Mercator projection.
+* [d3.geoNaturalEarth1](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoNaturalEarth1) - the Equal Earth projection, version 1.
+* [d3.geoNaturalEarth1Raw](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoNaturalEarth1Raw) - the raw Equal Earth projection, version 1
 
-### [Raw projections](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#raw-projections)
+### [Raw projections](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#raw-projections)
 
-* [*project*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#_project) - project the specified point from the sphere to the plane.
-* [*project*.invert](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#project_invert) - unproject the specified point from the plane to the sphere.
-* [d3.geoProjection](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoProjection) - create a custom projection.
-* [d3.geoProjectionMutator](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoProjectionMutator) - create a custom configurable projection.
+* [*project*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#_project) - project the specified point from the sphere to the plane.
+* [*project*.invert](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#project_invert) - unproject the specified point from the plane to the sphere.
+* [d3.geoProjection](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoProjection) - create a custom projection.
+* [d3.geoProjectionMutator](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoProjectionMutator) - create a custom configurable projection.
 
-### [Spherical Math](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#spherical-math)
+### [Spherical Math](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#spherical-math)
 
-* [d3.geoArea](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoArea) - compute the spherical area of a given feature.
-* [d3.geoBounds](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoBounds) - compute the latitude-longitude bounding box for a given feature.
-* [d3.geoCentroid](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoCentroid) - compute the spherical centroid of a given feature.
-* [d3.geoDistance](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoDistance) - compute the great-arc distance between two points.
-* [d3.geoLength](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoLength) - compute the length of a line string or the perimeter of a polygon.
-* [d3.geoInterpolate](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoInterpolate) - interpolate between two points along a great arc.
-* [d3.geoContains](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoContains) - test whether a point is inside a given feature.
-* [d3.geoRotation](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoRotation) - create a rotation function for the specified angles.
-* [*rotation*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#_rotation) - rotate the given point around the sphere.
-* [*rotation*.invert](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#rotation_invert) - unrotate the given point around the sphere.
+* [d3.geoArea](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoArea) - compute the spherical area of a given feature.
+* [d3.geoBounds](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoBounds) - compute the latitude-longitude bounding box for a given feature.
+* [d3.geoCentroid](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoCentroid) - compute the spherical centroid of a given feature.
+* [d3.geoDistance](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoDistance) - compute the great-arc distance between two points.
+* [d3.geoLength](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoLength) - compute the length of a line string or the perimeter of a polygon.
+* [d3.geoInterpolate](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoInterpolate) - interpolate between two points along a great arc.
+* [d3.geoContains](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoContains) - test whether a point is inside a given feature.
+* [d3.geoRotation](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoRotation) - create a rotation function for the specified angles.
+* [*rotation*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#_rotation) - rotate the given point around the sphere.
+* [*rotation*.invert](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#rotation_invert) - unrotate the given point around the sphere.
 
-### [Spherical Shapes](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#spherical-shapes)
+### [Spherical Shapes](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#spherical-shapes)
 
-* [d3.geoCircle](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoCircle) - create a circle generator.
-* [*circle*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#_circle) - generate a piecewise circle as a Polygon.
-* [*circle*.center](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#circle_center) - specify the circle center in latitude and longitude.
-* [*circle*.radius](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#circle_radius) - specify the angular radius in degrees.
-* [*circle*.precision](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#circle_precision) - specify the precision of the piecewise circle.
-* [d3.geoGraticule](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoGraticule) - create a graticule generator.
-* [*graticule*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#_graticule) - generate a MultiLineString of meridians and parallels.
-* [*graticule*.lines](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_lines) - generate an array of LineStrings of meridians and parallels.
-* [*graticule*.outline](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_outline) - generate a Polygon of the graticule’s extent.
-* [*graticule*.extent](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_extent) - get or set the major & minor extents.
-* [*graticule*.extentMajor](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_extentMajor) - get or set the major extent.
-* [*graticule*.extentMinor](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_extentMinor) - get or set the minor extent.
-* [*graticule*.step](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_step) - get or set the major & minor step intervals.
-* [*graticule*.stepMajor](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_stepMajor) - get or set the major step intervals.
-* [*graticule*.stepMinor](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_stepMinor) - get or set the minor step intervals.
-* [*graticule*.precision](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#graticule_precision) - get or set the latitudinal precision.
-* [d3.geoGraticule10](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoGraticule10) - generate the default 10° global graticule.
+* [d3.geoCircle](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoCircle) - create a circle generator.
+* [*circle*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#_circle) - generate a piecewise circle as a Polygon.
+* [*circle*.center](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#circle_center) - specify the circle center in latitude and longitude.
+* [*circle*.radius](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#circle_radius) - specify the angular radius in degrees.
+* [*circle*.precision](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#circle_precision) - specify the precision of the piecewise circle.
+* [d3.geoGraticule](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoGraticule) - create a graticule generator.
+* [*graticule*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#_graticule) - generate a MultiLineString of meridians and parallels.
+* [*graticule*.lines](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_lines) - generate an array of LineStrings of meridians and parallels.
+* [*graticule*.outline](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_outline) - generate a Polygon of the graticule’s extent.
+* [*graticule*.extent](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_extent) - get or set the major & minor extents.
+* [*graticule*.extentMajor](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_extentMajor) - get or set the major extent.
+* [*graticule*.extentMinor](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_extentMinor) - get or set the minor extent.
+* [*graticule*.step](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_step) - get or set the major & minor step intervals.
+* [*graticule*.stepMajor](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_stepMajor) - get or set the major step intervals.
+* [*graticule*.stepMinor](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_stepMinor) - get or set the minor step intervals.
+* [*graticule*.precision](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#graticule_precision) - get or set the latitudinal precision.
+* [d3.geoGraticule10](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoGraticule10) - generate the default 10° global graticule.
 
-### [Streams](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#streams)
+### [Streams](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#streams)
 
-* [d3.geoStream](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoStream) - convert a GeoJSON object to a geometry stream.
-* [*stream*.point](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#stream_point) - indicates a point with the specified coordinates.
-* [*stream*.lineStart](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#stream_lineStart) - indicates the start of a line or ring.
-* [*stream*.lineEnd](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#stream_lineEnd) - indicates the end of a line or ring.
-* [*stream*.polygonStart](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#stream_polygonStart) - indicates the start of a polygon.
-* [*stream*.polygonEnd](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#stream_polygonEnd) - indicates the end of a polygon.
-* [*stream*.sphere](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#stream_sphere) - indicates the sphere.
+* [d3.geoStream](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoStream) - convert a GeoJSON object to a geometry stream.
+* [*stream*.point](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#stream_point) - indicates a point with the specified coordinates.
+* [*stream*.lineStart](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#stream_lineStart) - indicates the start of a line or ring.
+* [*stream*.lineEnd](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#stream_lineEnd) - indicates the end of a line or ring.
+* [*stream*.polygonStart](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#stream_polygonStart) - indicates the start of a polygon.
+* [*stream*.polygonEnd](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#stream_polygonEnd) - indicates the end of a polygon.
+* [*stream*.sphere](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#stream_sphere) - indicates the sphere.
 
-### [Transforms](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#transforms)
+### [Transforms](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#transforms)
 
-* [d3.geoTransform](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoTransform) - define a custom geometry transform.
-* [d3.geoIdentity](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoIdentity) - scale, translate or clip planar geometry.
+* [d3.geoTransform](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoTransform) - define a custom geometry transform.
+* [d3.geoIdentity](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoIdentity) - scale, translate or clip planar geometry.
 
-### [Clipping](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#clipping)
+### [Clipping](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#clipping)
 
-* [*preclip*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#preclip) - pre-clipping in geographic coordinates.
-* [*postclip*](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#postclip) - post-clipping in planar coordinates.
-* [d3.geoClipAntimeridian](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoClipAntimeridian) - cuts spherical geometries that cross the antimeridian.
-* [d3.geoClipCircle](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoClipCircle) - clips spherical geometries to a small circle.
-* [d3.geoClipRectangle](https://github.com/d3/d3-geo/blob/v3.0.1/README.md#geoClipRectangle) - clips planar geometries to a rectangular viewport.
+* [*preclip*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#preclip) - pre-clipping in geographic coordinates.
+* [*postclip*](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#postclip) - post-clipping in planar coordinates.
+* [d3.geoClipAntimeridian](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoClipAntimeridian) - cuts spherical geometries that cross the antimeridian.
+* [d3.geoClipCircle](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoClipCircle) - clips spherical geometries to a small circle.
+* [d3.geoClipRectangle](https://github.com/d3/d3-geo/blob/v3.1.0/README.md#geoClipRectangle) - clips planar geometries to a rectangular viewport.
 
-## [Hierarchies (d3-hierarchy)](https://github.com/d3/d3-hierarchy/tree/v3.0.1)
+## [Hierarchies (d3-hierarchy)](https://github.com/d3/d3-hierarchy/tree/v3.1.2)
 
 Layout algorithms for visualizing hierarchical data.
 
-* [d3.hierarchy](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#hierarchy) - constructs a root node from hierarchical data.
-* [*node*.ancestors](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_ancestors) - generate an array of ancestors.
-* [*node*.descendants](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_descendants) - generate an array of descendants.
-* [*node*.leaves](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_leaves) - generate an array of leaves.
-* [*node*.find](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_find) - find a node in the hierarchy.
-* [*node*.path](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_path) - generate the shortest path to another node.
-* [*node*.links](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_links) - generate an array of links.
-* [*node*.sum](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_sum) - evaluate and aggregate quantitative values.
-* [*node*.count](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_count) - count the number of leaves.
-* [*node*.sort](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_sort) - sort all descendant siblings.
-* [*node*[Symbol.iterator]](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_iterator) - iterate on a hierarchy.
-* [*node*.each](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_each) - breadth-first traversal.
-* [*node*.eachAfter](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_eachAfter) - post-order traversal.
-* [*node*.eachBefore](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_eachBefore) - pre-order traversal.
-* [*node*.copy](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#node_copy) - copy a hierarchy.
-* [d3.stratify](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#stratify) - create a new stratify operator.
-* [*stratify*](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#_stratify) - construct a root node from tabular data.
-* [*stratify*.id](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#stratify_id) - set the node id accessor.
-* [*stratify*.parentId](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#stratify_parentId) - set the parent node id accessor.
-* [d3.cluster](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#cluster) - create a new cluster (dendrogram) layout.
-* [*cluster*](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#_cluster) - layout the specified hierarchy in a dendrogram.
-* [*cluster*.size](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#cluster_size) - set the layout size.
-* [*cluster*.nodeSize](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#cluster_nodeSize) - set the node size.
-* [*cluster*.separation](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#cluster_separation) - set the separation between leaves.
-* [d3.tree](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#tree) - create a new tidy tree layout.
-* [*tree*](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#_tree) - layout the specified hierarchy in a tidy tree.
-* [*tree*.size](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#tree_size) - set the layout size.
-* [*tree*.nodeSize](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#tree_nodeSize) - set the node size.
-* [*tree*.separation](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#tree_separation) - set the separation between nodes.
-* [d3.treemap](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap) - create a new treemap layout.
-* [*treemap*](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#_treemap) - layout the specified hierarchy as a treemap.
-* [*treemap*.tile](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_tile) - set the tiling method.
-* [*treemap*.size](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_size) - set the layout size.
-* [*treemap*.round](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_round) - set whether the output coordinates are rounded.
-* [*treemap*.padding](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_padding) - set the padding.
-* [*treemap*.paddingInner](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_paddingInner) - set the padding between siblings.
-* [*treemap*.paddingOuter](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_paddingOuter) - set the padding between parent and children.
-* [*treemap*.paddingTop](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_paddingTop) - set the padding between the parent’s top edge and children.
-* [*treemap*.paddingRight](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_paddingRight) - set the padding between the parent’s right edge and children.
-* [*treemap*.paddingBottom](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_paddingBottom) - set the padding between the parent’s bottom edge and children.
-* [*treemap*.paddingLeft](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemap_paddingLeft) - set the padding between the parent’s left edge and children.
-* [d3.treemapBinary](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemapBinary) - tile using a balanced binary tree.
-* [d3.treemapDice](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemapDice) - tile into a horizontal row.
-* [d3.treemapSlice](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemapSlice) - tile into a vertical column.
-* [d3.treemapSliceDice](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemapSliceDice) - alternate between slicing and dicing.
-* [d3.treemapSquarify](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemapSquarify) - tile using squarified rows per Bruls *et. al.*
-* [d3.treemapResquarify](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#treemapResquarify) - like d3.treemapSquarify, but performs stable updates.
-* [*squarify*.ratio](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#squarify_ratio) - set the desired rectangle aspect ratio.
-* [d3.partition](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#partition) - create a new partition (icicle or sunburst) layout.
-* [*partition*](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#_partition) - layout the specified hierarchy as a partition diagram.
-* [*partition*.size](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#partition_size) - set the layout size.
-* [*partition*.round](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#partition_round) - set whether the output coordinates are rounded.
-* [*partition*.padding](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#partition_padding) - set the padding.
-* [d3.pack](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#pack) - create a new circle-packing layout.
-* [*pack*](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#_pack) - layout the specified hierarchy using circle-packing.
-* [*pack*.radius](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#pack_radius) - set the radius accessor.
-* [*pack*.size](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#pack_size) - set the layout size.
-* [*pack*.padding](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#pack_padding) - set the padding.
-* [d3.packSiblings](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#packSiblings) - pack the specified array of circles.
-* [d3.packEnclose](https://github.com/d3/d3-hierarchy/blob/v3.0.1/README.md#packEnclose) - enclose the specified array of circles.
+* [d3.hierarchy](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#hierarchy) - constructs a root node from hierarchical data.
+* [*node*.ancestors](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_ancestors) - generate an array of ancestors.
+* [*node*.descendants](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_descendants) - generate an array of descendants.
+* [*node*.leaves](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_leaves) - generate an array of leaves.
+* [*node*.find](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_find) - find a node in the hierarchy.
+* [*node*.path](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_path) - generate the shortest path to another node.
+* [*node*.links](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_links) - generate an array of links.
+* [*node*.sum](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_sum) - evaluate and aggregate quantitative values.
+* [*node*.count](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_count) - count the number of leaves.
+* [*node*.sort](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_sort) - sort all descendant siblings.
+* [*node*[Symbol.iterator]](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_iterator) - iterate on a hierarchy.
+* [*node*.each](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_each) - breadth-first traversal.
+* [*node*.eachAfter](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_eachAfter) - post-order traversal.
+* [*node*.eachBefore](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_eachBefore) - pre-order traversal.
+* [*node*.copy](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#node_copy) - copy a hierarchy.
+* [d3.stratify](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#stratify) - create a new stratify operator.
+* [*stratify*](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#_stratify) - construct a root node from tabular data.
+* [*stratify*.id](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#stratify_id) - set the node id accessor.
+* [*stratify*.parentId](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#stratify_parentId) - set the parent node id accessor.
+* [*stratify*.path](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#stratify_path) - set the path accessor.
+* [d3.cluster](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#cluster) - create a new cluster (dendrogram) layout.
+* [*cluster*](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#_cluster) - layout the specified hierarchy in a dendrogram.
+* [*cluster*.size](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#cluster_size) - set the layout size.
+* [*cluster*.nodeSize](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#cluster_nodeSize) - set the node size.
+* [*cluster*.separation](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#cluster_separation) - set the separation between leaves.
+* [d3.tree](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#tree) - create a new tidy tree layout.
+* [*tree*](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#_tree) - layout the specified hierarchy in a tidy tree.
+* [*tree*.size](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#tree_size) - set the layout size.
+* [*tree*.nodeSize](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#tree_nodeSize) - set the node size.
+* [*tree*.separation](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#tree_separation) - set the separation between nodes.
+* [d3.treemap](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap) - create a new treemap layout.
+* [*treemap*](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#_treemap) - layout the specified hierarchy as a treemap.
+* [*treemap*.tile](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_tile) - set the tiling method.
+* [*treemap*.size](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_size) - set the layout size.
+* [*treemap*.round](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_round) - set whether the output coordinates are rounded.
+* [*treemap*.padding](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_padding) - set the padding.
+* [*treemap*.paddingInner](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_paddingInner) - set the padding between siblings.
+* [*treemap*.paddingOuter](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_paddingOuter) - set the padding between parent and children.
+* [*treemap*.paddingTop](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_paddingTop) - set the padding between the parent’s top edge and children.
+* [*treemap*.paddingRight](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_paddingRight) - set the padding between the parent’s right edge and children.
+* [*treemap*.paddingBottom](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_paddingBottom) - set the padding between the parent’s bottom edge and children.
+* [*treemap*.paddingLeft](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemap_paddingLeft) - set the padding between the parent’s left edge and children.
+* [d3.treemapBinary](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemapBinary) - tile using a balanced binary tree.
+* [d3.treemapDice](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemapDice) - tile into a horizontal row.
+* [d3.treemapSlice](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemapSlice) - tile into a vertical column.
+* [d3.treemapSliceDice](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemapSliceDice) - alternate between slicing and dicing.
+* [d3.treemapSquarify](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemapSquarify) - tile using squarified rows per Bruls *et. al.*
+* [d3.treemapResquarify](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#treemapResquarify) - like d3.treemapSquarify, but performs stable updates.
+* [*squarify*.ratio](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#squarify_ratio) - set the desired rectangle aspect ratio.
+* [d3.partition](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#partition) - create a new partition (icicle or sunburst) layout.
+* [*partition*](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#_partition) - layout the specified hierarchy as a partition diagram.
+* [*partition*.size](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#partition_size) - set the layout size.
+* [*partition*.round](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#partition_round) - set whether the output coordinates are rounded.
+* [*partition*.padding](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#partition_padding) - set the padding.
+* [d3.pack](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#pack) - create a new circle-packing layout.
+* [*pack*](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#_pack) - layout the specified hierarchy using circle-packing.
+* [*pack*.radius](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#pack_radius) - set the radius accessor.
+* [*pack*.size](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#pack_size) - set the layout size.
+* [*pack*.padding](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#pack_padding) - set the padding.
+* [d3.packSiblings](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#packSiblings) - pack the specified array of circles.
+* [d3.packEnclose](https://github.com/d3/d3-hierarchy/blob/v3.1.2/README.md#packEnclose) - enclose the specified array of circles.
 
-## [Interpolators (d3-interpolate)](https://github.com/d3/d3-interpolate/tree/v2.0.1)
+## [Interpolators (d3-interpolate)](https://github.com/d3/d3-interpolate/tree/v3.0.1)
 
 Interpolate numbers, colors, strings, arrays, objects, whatever!
 
@@ -798,20 +810,21 @@ Interpolate numbers, colors, strings, arrays, objects, whatever!
 * [d3.interpolateBasisClosed](https://github.com/d3/d3-interpolate/blob/v3.0.1/README.md#interpolateBasisClosed) - generate a closed B-spline through a set of values.
 * [d3.piecewise](https://github.com/d3/d3-interpolate/blob/v3.0.1/README.md#piecewise) - generate a piecewise linear interpolator from a set of values.
 
-## [Paths (d3-path)](https://github.com/d3/d3-path/tree/v3.0.1)
+## [Paths (d3-path)](https://github.com/d3/d3-path/tree/v3.1.0)
 
 Serialize Canvas path commands to SVG.
 
-* [d3.path](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path) - create a new path serializer.
-* [*path*.moveTo](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_moveTo) - move to the given point.
-* [*path*.closePath](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_closePath) - close the current subpath.
-* [*path*.lineTo](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_lineTo) - draw a straight line segment.
-* [*path*.quadraticCurveTo](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_quadraticCurveTo) - draw a quadratic Bézier segment.
-* [*path*.bezierCurveTo](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_bezierCurveTo) - draw a cubic Bézier segment.
-* [*path*.arcTo](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_arcTo) - draw a circular arc segment.
-* [*path*.arc](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_arc) - draw a circular arc segment.
-* [*path*.rect](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_rect) - draw a rectangle.
-* [*path*.toString](https://github.com/d3/d3-path/blob/v3.0.1/README.md#path_toString) - serialize to an SVG path data string.
+* [d3.path](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path) - create a new path serializer.
+* [*path*.moveTo](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_moveTo) - move to the given point.
+* [*path*.closePath](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_closePath) - close the current subpath.
+* [*path*.lineTo](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_lineTo) - draw a straight line segment.
+* [*path*.quadraticCurveTo](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_quadraticCurveTo) - draw a quadratic Bézier segment.
+* [*path*.bezierCurveTo](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_bezierCurveTo) - draw a cubic Bézier segment.
+* [*path*.arcTo](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_arcTo) - draw a circular arc segment.
+* [*path*.arc](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_arc) - draw a circular arc segment.
+* [*path*.rect](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_rect) - draw a rectangle.
+* [*path*.digits](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_digits) - set the output precision.
+* [*path*.toString](https://github.com/d3/d3-path/blob/v3.1.0/README.md#path_toString) - serialize to an SVG path data string.
 
 ## [Polygons (d3-polygon)](https://github.com/d3/d3-polygon/tree/v3.0.1)
 
@@ -868,173 +881,173 @@ Generate random numbers from various distributions.
 * [*random*.source](https://github.com/d3/d3-random/blob/v3.0.1/README.md#random_source) - set the source of randomness.
 * [d3.randomLcg](https://github.com/d3/d3-random/blob/v3.0.1/README.md#randomLcg) - a seeded pseudorandom number generator.
 
-## [Scales (d3-scale)](https://github.com/d3/d3-scale/tree/v4.0.0)
+## [Scales (d3-scale)](https://github.com/d3/d3-scale/tree/v4.0.2)
 
 Encodings that map abstract data to visual representation.
 
-### [Continuous Scales](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous-scales)
+### [Continuous Scales](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous-scales)
 
 Map a continuous, quantitative domain to a continuous range.
 
-* [*continuous*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_continuous) - compute the range value corresponding to a given domain value.
-* [*continuous*.invert](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_invert) - compute the domain value corresponding to a given range value.
-* [*continuous*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_domain) - set the input domain.
-* [*continuous*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_range) - set the output range.
-* [*continuous*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_rangeRound) - set the output range and enable rounding.
-* [*continuous*.clamp](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_clamp) - enable clamping to the domain or range.
-* [*continuous*.unknown](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_unknown) - set the output value for unknown inputs.
-* [*continuous*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_interpolate) - set the output interpolator.
-* [*continuous*.ticks](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_ticks) - compute representative values from the domain.
-* [*continuous*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_tickFormat) - format ticks for human consumption.
-* [*continuous*.nice](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_nice) - extend the domain to nice round numbers.
-* [*continuous*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#continuous_copy) - create a copy of this scale.
-* [d3.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#tickFormat) - format ticks for human consumption.
-* [d3.scaleLinear](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleLinear) - create a quantitative linear scale.
-* [d3.scalePow](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scalePow) - create a quantitative power scale.
-* [*pow*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_pow) - compute the range value corresponding to a given domain value.
-* [*pow*.invert](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_invert) - compute the domain value corresponding to a given range value.
-* [*pow*.exponent](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_exponent) - set the power exponent.
-* [*pow*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_domain) - set the input domain.
-* [*pow*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_range) - set the output range.
-* [*pow*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_rangeRound) - set the output range and enable rounding.
-* [*pow*.clamp](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_clamp) - enable clamping to the domain or range.
-* [*pow*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_interpolate) - set the output interpolator.
-* [*pow*.ticks](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_ticks) - compute representative values from the domain.
-* [*pow*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_tickFormat) - format ticks for human consumption.
-* [*pow*.nice](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_nice) - extend the domain to nice round numbers.
-* [*pow*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#pow_copy) - create a copy of this scale.
-* [d3.scaleSqrt](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSqrt) - create a quantitative power scale with exponent 0.5.
-* [d3.scaleLog](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleLog) - create a quantitative logarithmic scale.
-* [*log*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_log) - compute the range value corresponding to a given domain value.
-* [*log*.invert](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_invert) - compute the domain value corresponding to a given range value.
-* [*log*.base](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_base) - set the logarithm base.
-* [*log*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_domain) - set the input domain.
-* [*log*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_range) - set the output range.
-* [*log*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_rangeRound) - set the output range and enable rounding.
-* [*log*.clamp](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_clamp) - enable clamping to the domain or range.
-* [*log*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_interpolate) - set the output interpolator.
-* [*log*.ticks](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_ticks) - compute representative values from the domain.
-* [*log*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_tickFormat) - format ticks for human consumption.
-* [*log*.nice](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_nice) - extend the domain to nice round numbers.
-* [*log*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#log_copy) - create a copy of this scale.
-* [d3.scaleSymlog](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSymlog) - create a symmetric logarithmic scale.
-* [*symlog*.constant](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#symlog_constant) - set the constant of a symlog scale.
-* [d3.scaleIdentity](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleIdentity) - creates an identity scale.
-* [d3.scaleRadial](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleRadial) - creates a radial scale.
-* [d3.scaleTime](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleTime) - create a linear scale for time.
-* [*time*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_time) - compute the range value corresponding to a given domain value.
-* [*time*.invert](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_invert) - compute the domain value corresponding to a given range value.
-* [*time*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_domain) - set the input domain.
-* [*time*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_range) - set the output range.
-* [*time*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_rangeRound) - set the output range and enable rounding.
-* [*time*.clamp](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_clamp) - enable clamping to the domain or range.
-* [*time*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_interpolate) - set the output interpolator.
-* [*time*.ticks](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_ticks) - compute representative values from the domain.
-* [*time*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_tickFormat) - format ticks for human consumption.
-* [*time*.nice](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_nice) - extend the domain to nice round times.
-* [*time*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#time_copy) - create a copy of this scale.
-* [d3.scaleUtc](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleUtc) - create a linear scale for UTC.
+* [*continuous*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_continuous) - compute the range value corresponding to a given domain value.
+* [*continuous*.invert](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_invert) - compute the domain value corresponding to a given range value.
+* [*continuous*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_domain) - set the input domain.
+* [*continuous*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_range) - set the output range.
+* [*continuous*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_rangeRound) - set the output range and enable rounding.
+* [*continuous*.clamp](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_clamp) - enable clamping to the domain or range.
+* [*continuous*.unknown](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_unknown) - set the output value for unknown inputs.
+* [*continuous*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_interpolate) - set the output interpolator.
+* [*continuous*.ticks](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_ticks) - compute representative values from the domain.
+* [*continuous*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_tickFormat) - format ticks for human consumption.
+* [*continuous*.nice](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_nice) - extend the domain to nice round numbers.
+* [*continuous*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#continuous_copy) - create a copy of this scale.
+* [d3.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#tickFormat) - format ticks for human consumption.
+* [d3.scaleLinear](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleLinear) - create a quantitative linear scale.
+* [d3.scalePow](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scalePow) - create a quantitative power scale.
+* [*pow*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_pow) - compute the range value corresponding to a given domain value.
+* [*pow*.invert](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_invert) - compute the domain value corresponding to a given range value.
+* [*pow*.exponent](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_exponent) - set the power exponent.
+* [*pow*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_domain) - set the input domain.
+* [*pow*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_range) - set the output range.
+* [*pow*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_rangeRound) - set the output range and enable rounding.
+* [*pow*.clamp](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_clamp) - enable clamping to the domain or range.
+* [*pow*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_interpolate) - set the output interpolator.
+* [*pow*.ticks](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_ticks) - compute representative values from the domain.
+* [*pow*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_tickFormat) - format ticks for human consumption.
+* [*pow*.nice](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_nice) - extend the domain to nice round numbers.
+* [*pow*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#pow_copy) - create a copy of this scale.
+* [d3.scaleSqrt](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSqrt) - create a quantitative power scale with exponent 0.5.
+* [d3.scaleLog](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleLog) - create a quantitative logarithmic scale.
+* [*log*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_log) - compute the range value corresponding to a given domain value.
+* [*log*.invert](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_invert) - compute the domain value corresponding to a given range value.
+* [*log*.base](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_base) - set the logarithm base.
+* [*log*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_domain) - set the input domain.
+* [*log*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_range) - set the output range.
+* [*log*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_rangeRound) - set the output range and enable rounding.
+* [*log*.clamp](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_clamp) - enable clamping to the domain or range.
+* [*log*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_interpolate) - set the output interpolator.
+* [*log*.ticks](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_ticks) - compute representative values from the domain.
+* [*log*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_tickFormat) - format ticks for human consumption.
+* [*log*.nice](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_nice) - extend the domain to nice round numbers.
+* [*log*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#log_copy) - create a copy of this scale.
+* [d3.scaleSymlog](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSymlog) - create a symmetric logarithmic scale.
+* [*symlog*.constant](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#symlog_constant) - set the constant of a symlog scale.
+* [d3.scaleIdentity](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleIdentity) - creates an identity scale.
+* [d3.scaleRadial](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleRadial) - creates a radial scale.
+* [d3.scaleTime](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleTime) - create a linear scale for time.
+* [*time*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_time) - compute the range value corresponding to a given domain value.
+* [*time*.invert](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_invert) - compute the domain value corresponding to a given range value.
+* [*time*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_domain) - set the input domain.
+* [*time*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_range) - set the output range.
+* [*time*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_rangeRound) - set the output range and enable rounding.
+* [*time*.clamp](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_clamp) - enable clamping to the domain or range.
+* [*time*.interpolate](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_interpolate) - set the output interpolator.
+* [*time*.ticks](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_ticks) - compute representative values from the domain.
+* [*time*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_tickFormat) - format ticks for human consumption.
+* [*time*.nice](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_nice) - extend the domain to nice round times.
+* [*time*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#time_copy) - create a copy of this scale.
+* [d3.scaleUtc](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleUtc) - create a linear scale for UTC.
 
-### [Sequential Scales](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential-scales)
-
-Map a continuous, quantitative domain to a continuous, fixed interpolator.
-
-* [d3.scaleSequential](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSequential) - create a sequential scale.
-* [*sequential*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_sequential) - compute the range value corresponding to an input value.
-* [*sequential*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential_domain) - set the input domain.
-* [*sequential*.clamp](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential_clamp) - enable clamping to the domain.
-* [*sequential*.interpolator](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential_interpolator) - set the scale’s output interpolator.
-* [*sequential*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential_range) - set the output range.
-* [*sequential*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential_rangeRound) - set the output range and enable rounding.
-* [*sequential*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequential_copy) -  create a copy of this scale.
-* [d3.scaleSequentialLog](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSequentialLog) - create a logarithmic sequential scale.
-* [d3.scaleSequentialPow](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSequentialPow) - create a power sequential scale.
-* [d3.scaleSequentialSqrt](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSequentialSqrt) - create a power sequential scale with exponent 0.5.
-* [d3.scaleSequentialSymlog](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSequentialSymlog) - create a symmetric logarithmic sequential scale.
-* [d3.scaleSequentialQuantile](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleSequentialQuantile) - create a sequential scale using a *p*-quantile transform.
-* [*sequentialQuantile*.quantiles](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#sequentialQuantile_quantiles) - return the scale’s quantiles.
-
-### [Diverging Scales](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging-scales)
+### [Sequential Scales](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential-scales)
 
 Map a continuous, quantitative domain to a continuous, fixed interpolator.
 
-* [d3.scaleDiverging](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleDiverging) - create a diverging scale.
-* [*diverging*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_diverging) - compute the range value corresponding to an input value.
-* [*diverging*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_domain) - set the input domain.
-* [*diverging*.clamp](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_clamp) - enable clamping to the domain or range.
-* [*diverging*.interpolator](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_interpolator) - set the scale’s output interpolator.
-* [*diverging*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_range) - set the output range.
-* [*diverging*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_rangeRound) - set the output range and enable rounding.
-* [*diverging*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_copy) -  create a copy of this scale.
-* [*diverging*.unknown](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#diverging_unknown) - set the output value for unknown inputs.
-* [d3.scaleDivergingLog](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleDivergingLog) - create a diverging logarithmic scale.
-* [d3.scaleDivergingPow](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleDivergingPow) - create a diverging power scale.
-* [d3.scaleDivergingSqrt](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleDivergingSqrt) - create a diverging power scale with exponent 0.5.
-* [d3.scaleDivergingSymlog](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleDivergingSymlog) - create a diverging symmetric logarithmic scale.
+* [d3.scaleSequential](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSequential) - create a sequential scale.
+* [*sequential*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_sequential) - compute the range value corresponding to an input value.
+* [*sequential*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential_domain) - set the input domain.
+* [*sequential*.clamp](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential_clamp) - enable clamping to the domain.
+* [*sequential*.interpolator](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential_interpolator) - set the scale’s output interpolator.
+* [*sequential*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential_range) - set the output range.
+* [*sequential*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential_rangeRound) - set the output range and enable rounding.
+* [*sequential*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequential_copy) -  create a copy of this scale.
+* [d3.scaleSequentialLog](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSequentialLog) - create a logarithmic sequential scale.
+* [d3.scaleSequentialPow](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSequentialPow) - create a power sequential scale.
+* [d3.scaleSequentialSqrt](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSequentialSqrt) - create a power sequential scale with exponent 0.5.
+* [d3.scaleSequentialSymlog](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSequentialSymlog) - create a symmetric logarithmic sequential scale.
+* [d3.scaleSequentialQuantile](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleSequentialQuantile) - create a sequential scale using a *p*-quantile transform.
+* [*sequentialQuantile*.quantiles](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#sequentialQuantile_quantiles) - return the scale’s quantiles.
 
-### [Quantize Scales](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize-scales)
+### [Diverging Scales](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging-scales)
+
+Map a continuous, quantitative domain to a continuous, fixed interpolator.
+
+* [d3.scaleDiverging](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleDiverging) - create a diverging scale.
+* [*diverging*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_diverging) - compute the range value corresponding to an input value.
+* [*diverging*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_domain) - set the input domain.
+* [*diverging*.clamp](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_clamp) - enable clamping to the domain or range.
+* [*diverging*.interpolator](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_interpolator) - set the scale’s output interpolator.
+* [*diverging*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_range) - set the output range.
+* [*diverging*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_rangeRound) - set the output range and enable rounding.
+* [*diverging*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_copy) -  create a copy of this scale.
+* [*diverging*.unknown](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#diverging_unknown) - set the output value for unknown inputs.
+* [d3.scaleDivergingLog](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleDivergingLog) - create a diverging logarithmic scale.
+* [d3.scaleDivergingPow](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleDivergingPow) - create a diverging power scale.
+* [d3.scaleDivergingSqrt](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleDivergingSqrt) - create a diverging power scale with exponent 0.5.
+* [d3.scaleDivergingSymlog](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleDivergingSymlog) - create a diverging symmetric logarithmic scale.
+
+### [Quantize Scales](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize-scales)
 
 Map a continuous, quantitative domain to a discrete range.
 
-* [d3.scaleQuantize](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleQuantize) - create a uniform quantizing linear scale.
-* [*quantize*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_quantize) - compute the range value corresponding to a given domain value.
-* [*quantize*.invertExtent](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_invertExtent) - compute the domain values corresponding to a given range value.
-* [*quantize*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_domain) - set the input domain.
-* [*quantize*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_range) - set the output range.
-* [*quantize*.ticks](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_ticks) - compute representative values from the domain.
-* [*quantize*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_tickFormat) - format ticks for human consumption.
-* [*quantize*.nice](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_nice) - extend the domain to nice round numbers.
-* [*quantize*.thresholds](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_thresholds) - return the array of computed thresholds within the domain.
-* [*quantize*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantize_copy) - create a copy of this scale.
-* [d3.scaleQuantile](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleQuantile) - create a quantile quantizing linear scale.
-* [*quantile*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_quantile) - compute the range value corresponding to a given domain value.
-* [*quantile*.invertExtent](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantile_invertExtent) - compute the domain values corresponding to a given range value.
-* [*quantile*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantile_domain) - set the input domain.
-* [*quantile*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantile_range) - set the output range.
-* [*quantile*.quantiles](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantile_quantiles) - get the quantile thresholds.
-* [*quantile*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#quantile_copy) - create a copy of this scale.
-* [d3.scaleThreshold](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleThreshold) - create an arbitrary quantizing linear scale.
-* [*threshold*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_threshold) - compute the range value corresponding to a given domain value.
-* [*threshold*.invertExtent](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#threshold_invertExtent) - compute the domain values corresponding to a given range value.
-* [*threshold*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#threshold_domain) - set the input domain.
-* [*threshold*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#threshold_range) - set the output range.
-* [*threshold*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#threshold_copy) - create a copy of this scale.
+* [d3.scaleQuantize](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleQuantize) - create a uniform quantizing linear scale.
+* [*quantize*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_quantize) - compute the range value corresponding to a given domain value.
+* [*quantize*.invertExtent](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_invertExtent) - compute the domain values corresponding to a given range value.
+* [*quantize*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_domain) - set the input domain.
+* [*quantize*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_range) - set the output range.
+* [*quantize*.ticks](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_ticks) - compute representative values from the domain.
+* [*quantize*.tickFormat](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_tickFormat) - format ticks for human consumption.
+* [*quantize*.nice](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_nice) - extend the domain to nice round numbers.
+* [*quantize*.thresholds](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_thresholds) - return the array of computed thresholds within the domain.
+* [*quantize*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantize_copy) - create a copy of this scale.
+* [d3.scaleQuantile](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleQuantile) - create a quantile quantizing linear scale.
+* [*quantile*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_quantile) - compute the range value corresponding to a given domain value.
+* [*quantile*.invertExtent](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantile_invertExtent) - compute the domain values corresponding to a given range value.
+* [*quantile*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantile_domain) - set the input domain.
+* [*quantile*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantile_range) - set the output range.
+* [*quantile*.quantiles](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantile_quantiles) - get the quantile thresholds.
+* [*quantile*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#quantile_copy) - create a copy of this scale.
+* [d3.scaleThreshold](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleThreshold) - create an arbitrary quantizing linear scale.
+* [*threshold*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_threshold) - compute the range value corresponding to a given domain value.
+* [*threshold*.invertExtent](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#threshold_invertExtent) - compute the domain values corresponding to a given range value.
+* [*threshold*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#threshold_domain) - set the input domain.
+* [*threshold*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#threshold_range) - set the output range.
+* [*threshold*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#threshold_copy) - create a copy of this scale.
 
-### [Ordinal Scales](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#ordinal-scales)
+### [Ordinal Scales](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#ordinal-scales)
 
 Map a discrete domain to a discrete range.
 
-* [d3.scaleOrdinal](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleOrdinal) - create an ordinal scale.
-* [*ordinal*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_ordinal) - compute the range value corresponding to a given domain value.
-* [*ordinal*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#ordinal_domain) - set the input domain.
-* [*ordinal*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#ordinal_range) - set the output range.
-* [*ordinal*.unknown](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#ordinal_unknown) - set the output value for unknown inputs.
-* [*ordinal*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#ordinal_copy) - create a copy of this scale.
-* [d3.scaleImplicit](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleImplicit) - a special unknown value for implicit domains.
-* [d3.scaleBand](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scaleBand) - create an ordinal band scale.
-* [*band*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_band) - compute the band start corresponding to a given domain value.
-* [*band*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_domain) - set the input domain.
-* [*band*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_range) - set the output range.
-* [*band*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_rangeRound) - set the output range and enable rounding.
-* [*band*.round](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_round) - enable rounding.
-* [*band*.paddingInner](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_paddingInner) - set padding between bands.
-* [*band*.paddingOuter](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_paddingOuter) - set padding outside the first and last bands.
-* [*band*.padding](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_padding) - set padding outside and between bands.
-* [*band*.align](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_align) - set band alignment, if there is extra space.
-* [*band*.bandwidth](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_bandwidth) - get the width of each band.
-* [*band*.step](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_step) - get the distance between the starts of adjacent bands.
-* [*band*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#band_copy) - create a copy of this scale.
-* [d3.scalePoint](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#scalePoint) - create an ordinal point scale.
-* [*point*](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#_point) - compute the point corresponding to a given domain value.
-* [*point*.domain](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_domain) - set the input domain.
-* [*point*.range](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_range) - set the output range.
-* [*point*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_rangeRound) - set the output range and enable rounding.
-* [*point*.round](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_round) - enable rounding.
-* [*point*.padding](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_padding) - set padding outside the first and last point.
-* [*point*.align](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_align) - set point alignment, if there is extra space.
-* [*point*.bandwidth](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_bandwidth) - returns zero.
-* [*point*.step](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_step) - get the distance between the starts of adjacent points.
-* [*point*.copy](https://github.com/d3/d3-scale/blob/v4.0.0/README.md#point_copy) - create a copy of this scale.
+* [d3.scaleOrdinal](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleOrdinal) - create an ordinal scale.
+* [*ordinal*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_ordinal) - compute the range value corresponding to a given domain value.
+* [*ordinal*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#ordinal_domain) - set the input domain.
+* [*ordinal*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#ordinal_range) - set the output range.
+* [*ordinal*.unknown](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#ordinal_unknown) - set the output value for unknown inputs.
+* [*ordinal*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#ordinal_copy) - create a copy of this scale.
+* [d3.scaleImplicit](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleImplicit) - a special unknown value for implicit domains.
+* [d3.scaleBand](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scaleBand) - create an ordinal band scale.
+* [*band*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_band) - compute the band start corresponding to a given domain value.
+* [*band*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_domain) - set the input domain.
+* [*band*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_range) - set the output range.
+* [*band*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_rangeRound) - set the output range and enable rounding.
+* [*band*.round](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_round) - enable rounding.
+* [*band*.paddingInner](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_paddingInner) - set padding between bands.
+* [*band*.paddingOuter](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_paddingOuter) - set padding outside the first and last bands.
+* [*band*.padding](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_padding) - set padding outside and between bands.
+* [*band*.align](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_align) - set band alignment, if there is extra space.
+* [*band*.bandwidth](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_bandwidth) - get the width of each band.
+* [*band*.step](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_step) - get the distance between the starts of adjacent bands.
+* [*band*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#band_copy) - create a copy of this scale.
+* [d3.scalePoint](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#scalePoint) - create an ordinal point scale.
+* [*point*](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#_point) - compute the point corresponding to a given domain value.
+* [*point*.domain](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_domain) - set the input domain.
+* [*point*.range](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_range) - set the output range.
+* [*point*.rangeRound](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_rangeRound) - set the output range and enable rounding.
+* [*point*.round](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_round) - enable rounding.
+* [*point*.padding](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_padding) - set padding outside the first and last point.
+* [*point*.align](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_align) - set point alignment, if there is extra space.
+* [*point*.bandwidth](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_bandwidth) - returns zero.
+* [*point*.step](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_step) - get the distance between the starts of adjacent points.
+* [*point*.copy](https://github.com/d3/d3-scale/blob/v4.0.2/README.md#point_copy) - create a copy of this scale.
 
 ## [Selections (d3-selection)](https://github.com/d3/d3-selection/tree/v3.0.0)
 
@@ -1115,247 +1128,262 @@ Transform the DOM by selecting elements and joining to data.
 * [d3.namespace](https://github.com/d3/d3-selection/blob/v3.0.0/README.md#namespace) - qualify a prefixed XML name, such as “xlink:href”.
 * [d3.namespaces](https://github.com/d3/d3-selection/blob/v3.0.0/README.md#namespaces) - the built-in XML namespaces.
 
-## [Shapes (d3-shape)](https://github.com/d3/d3-shape/tree/v3.0.1)
+## [Shapes (d3-shape)](https://github.com/d3/d3-shape/tree/v3.2.0)
 
 Graphical primitives for visualization.
 
-### [Arcs](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arcs)
+### [Arcs](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arcs)
 
 Circular or annular sectors, as in a pie or donut chart.
 
-* [d3.arc](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc) - create a new arc generator.
-* [*arc*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_arc) - generate an arc for the given datum.
-* [*arc*.centroid](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_centroid) - compute an arc’s midpoint.
-* [*arc*.innerRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_innerRadius) - set the inner radius.
-* [*arc*.outerRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_outerRadius) - set the outer radius.
-* [*arc*.cornerRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_cornerRadius) - set the corner radius, for rounded corners.
-* [*arc*.startAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_startAngle) - set the start angle.
-* [*arc*.endAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_endAngle) - set the end angle.
-* [*arc*.padAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_padAngle) - set the angle between adjacent arcs, for padded arcs.
-* [*arc*.padRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_padRadius) - set the radius at which to linearize padding.
-* [*arc*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#arc_context) - set the rendering context.
+* [d3.arc](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc) - create a new arc generator.
+* [*arc*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_arc) - generate an arc for the given datum.
+* [*arc*.centroid](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_centroid) - compute an arc’s midpoint.
+* [*arc*.innerRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_innerRadius) - set the inner radius.
+* [*arc*.outerRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_outerRadius) - set the outer radius.
+* [*arc*.cornerRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_cornerRadius) - set the corner radius, for rounded corners.
+* [*arc*.startAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_startAngle) - set the start angle.
+* [*arc*.endAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_endAngle) - set the end angle.
+* [*arc*.padAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_padAngle) - set the angle between adjacent arcs, for padded arcs.
+* [*arc*.padRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_padRadius) - set the radius at which to linearize padding.
+* [*arc*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_context) - set the rendering context.
+* [*arc*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#arc_digits) - set the output precision.
 
-### [Pies](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pies)
+### [Pies](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pies)
 
 Compute the necessary angles to represent a tabular dataset as a pie or donut chart.
 
-* [d3.pie](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie) - create a new pie generator.
-* [*pie*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_pie) - compute the arc angles for the given dataset.
-* [*pie*.value](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie_value) - set the value accessor.
-* [*pie*.sort](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie_sort) - set the sort order comparator.
-* [*pie*.sortValues](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie_sortValues) - set the sort order comparator.
-* [*pie*.startAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie_startAngle) - set the overall start angle.
-* [*pie*.endAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie_endAngle) - set the overall end angle.
-* [*pie*.padAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pie_padAngle) - set the pad angle between adjacent arcs.
+* [d3.pie](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie) - create a new pie generator.
+* [*pie*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_pie) - compute the arc angles for the given dataset.
+* [*pie*.value](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie_value) - set the value accessor.
+* [*pie*.sort](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie_sort) - set the sort order comparator.
+* [*pie*.sortValues](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie_sortValues) - set the sort order comparator.
+* [*pie*.startAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie_startAngle) - set the overall start angle.
+* [*pie*.endAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie_endAngle) - set the overall end angle.
+* [*pie*.padAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pie_padAngle) - set the pad angle between adjacent arcs.
 
-### [Lines](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lines)
+### [Lines](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lines)
 
 A spline or polyline, as in a line chart.
 
-* [d3.line](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#line) - create a new line generator.
-* [*line*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_line) - generate a line for the given dataset.
-* [*line*.x](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#line_x) - set the *x* accessor.
-* [*line*.y](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#line_y) - set the *y* accessor.
-* [*line*.defined](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#line_defined) - set the defined accessor.
-* [*line*.curve](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#line_curve) - set the curve interpolator.
-* [*line*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#line_context) - set the rendering context.
-* [d3.lineRadial](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lineRadial) - create a new radial line generator.
-* [*lineRadial*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_lineRadial) - generate a line for the given dataset.
-* [*lineRadial*.angle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lineRadial_angle) - set the angle accessor.
-* [*lineRadial*.radius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lineRadial_radius) - set the radius accessor.
-* [*lineRadial*.defined](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lineRadial_defined) - set the defined accessor.
-* [*lineRadial*.curve](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lineRadial_curve) - set the curve interpolator.
-* [*lineRadial*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#lineRadial_context) - set the rendering context.
+* [d3.line](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line) - create a new line generator.
+* [*line*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_line) - generate a line for the given dataset.
+* [*line*.x](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line_x) - set the *x* accessor.
+* [*line*.y](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line_y) - set the *y* accessor.
+* [*line*.defined](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line_defined) - set the defined accessor.
+* [*line*.curve](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line_curve) - set the curve interpolator.
+* [*line*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line_context) - set the rendering context.
+* [*line*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#line_digits) - set the output precision.
+* [d3.lineRadial](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial) - create a new radial line generator.
+* [*lineRadial*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_lineRadial) - generate a line for the given dataset.
+* [*lineRadial*.angle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial_angle) - set the angle accessor.
+* [*lineRadial*.radius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial_radius) - set the radius accessor.
+* [*lineRadial*.defined](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial_defined) - set the defined accessor.
+* [*lineRadial*.curve](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial_curve) - set the curve interpolator.
+* [*lineRadial*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial_context) - set the rendering context.
+* [*lineRadial*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#lineRadial_digits) - set the output precision.
 
-### [Areas](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areas)
+### [Areas](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areas)
 
 An area, defined by a bounding topline and baseline, as in an area chart.
 
-* [d3.area](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area) - create a new area generator.
-* [*area*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_area) - generate an area for the given dataset.
-* [*area*.x](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_x) - set the *x0* and *x1* accessors.
-* [*area*.x0](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_x0) - set the baseline *x* accessor.
-* [*area*.x1](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_x1) - set the topline *x* accessor.
-* [*area*.y](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_y) - set the *y0* and *y1* accessors.
-* [*area*.y0](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_y0) - set the baseline *y* accessor.
-* [*area*.y1](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_y1) - set the topline *y* accessor.
-* [*area*.defined](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_defined) - set the defined accessor.
-* [*area*.curve](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_curve) - set the curve interpolator.
-* [*area*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_context) - set the rendering context.
-* [*area*.lineX0](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_lineX0) - derive a line for the left edge of an area.
-* [*area*.lineY0](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_lineY0) - derive a line for the top edge of an area.
-* [*area*.lineX1](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_lineX1) - derive a line for the right edge of an area.
-* [*area*.lineY1](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#area_lineY1) - derive a line for the bottom edge of an area.
-* [d3.areaRadial](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial) - create a new radial area generator.
-* [*areaRadial*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_areaRadial) - generate an area for the given dataset.
-* [*areaRadial*.angle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_angle) - set the start and end angle accessors.
-* [*areaRadial*.startAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_startAngle) - set the start angle accessor.
-* [*areaRadial*.endAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_endAngle) - set the end angle accessor.
-* [*areaRadial*.radius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_radius) - set the inner and outer radius accessors.
-* [*areaRadial*.innerRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_innerRadius) - set the inner radius accessor.
-* [*areaRadial*.outerRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_outerRadius) - set the outer radius accessor.
-* [*areaRadial*.defined](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_defined) - set the defined accessor.
-* [*areaRadial*.curve](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_curve) - set the curve interpolator.
-* [*areaRadial*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_context) - set the rendering context.
-* [*areaRadial*.lineStartAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_lineStartAngle) - derive a line for the start edge of an area.
-* [*areaRadial*.lineInnerRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_lineInnerRadius) - derive a line for the inner edge of an area.
-* [*areaRadial*.lineEndAngle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_lineEndAngle) - derive a line for the end edge of an area.
-* [*areaRadial*.lineOuterRadius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#areaRadial_lineOuterRadius) - derive a line for the outer edge of an area.
+* [d3.area](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area) - create a new area generator.
+* [*area*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_area) - generate an area for the given dataset.
+* [*area*.x](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_x) - set the *x0* and *x1* accessors.
+* [*area*.x0](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_x0) - set the baseline *x* accessor.
+* [*area*.x1](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_x1) - set the topline *x* accessor.
+* [*area*.y](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_y) - set the *y0* and *y1* accessors.
+* [*area*.y0](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_y0) - set the baseline *y* accessor.
+* [*area*.y1](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_y1) - set the topline *y* accessor.
+* [*area*.defined](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_defined) - set the defined accessor.
+* [*area*.curve](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_curve) - set the curve interpolator.
+* [*area*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_context) - set the rendering context.
+* [*area*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_digits) - set the output precision.
+* [*area*.lineX0](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_lineX0) - derive a line for the left edge of an area.
+* [*area*.lineY0](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_lineY0) - derive a line for the top edge of an area.
+* [*area*.lineX1](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_lineX1) - derive a line for the right edge of an area.
+* [*area*.lineY1](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#area_lineY1) - derive a line for the bottom edge of an area.
+* [d3.areaRadial](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial) - create a new radial area generator.
+* [*areaRadial*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_areaRadial) - generate an area for the given dataset.
+* [*areaRadial*.angle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_angle) - set the start and end angle accessors.
+* [*areaRadial*.startAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_startAngle) - set the start angle accessor.
+* [*areaRadial*.endAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_endAngle) - set the end angle accessor.
+* [*areaRadial*.radius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_radius) - set the inner and outer radius accessors.
+* [*areaRadial*.innerRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_innerRadius) - set the inner radius accessor.
+* [*areaRadial*.outerRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_outerRadius) - set the outer radius accessor.
+* [*areaRadial*.defined](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_defined) - set the defined accessor.
+* [*areaRadial*.curve](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_curve) - set the curve interpolator.
+* [*areaRadial*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_context) - set the rendering context.
+* [*areaRadial*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_digits) - set the output precision.
+* [*areaRadial*.lineStartAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_lineStartAngle) - derive a line for the start edge of an area.
+* [*areaRadial*.lineInnerRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_lineInnerRadius) - derive a line for the inner edge of an area.
+* [*areaRadial*.lineEndAngle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_lineEndAngle) - derive a line for the end edge of an area.
+* [*areaRadial*.lineOuterRadius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#areaRadial_lineOuterRadius) - derive a line for the outer edge of an area.
 
-### [Curves](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curves)
+### [Curves](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curves)
 
 Interpolate between points to produce a continuous shape.
 
-* [d3.curveBasis](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBasis) - a cubic basis spline, repeating the end points.
-* [d3.curveBasisClosed](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBasisClosed) - a closed cubic basis spline.
-* [d3.curveBasisOpen](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBasisOpen) - a cubic basis spline.
-* [d3.curveBundle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBundle) - a straightened cubic basis spline.
-* [*bundle*.beta](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBundle_beta) - set the bundle tension *beta*.
-* [d3.curveBumpX](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBumpX) - a cubic Bézier spline with horizontal tangents.
-* [d3.curveBumpY](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveBumpY) - a cubic Bézier spline with vertical tangents.
-* [d3.curveCardinal](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCardinal) - a cubic cardinal spline, with one-sided difference at each end.
-* [d3.curveCardinalClosed](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCardinalClosed) - a closed cubic cardinal spline.
-* [d3.curveCardinalOpen](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCardinalOpen) - a cubic cardinal spline.
-* [*cardinal*.tension](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCardinal_tension) - set the cardinal spline tension.
-* [d3.curveCatmullRom](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCatmullRom) - a cubic Catmull–Rom spline, with one-sided difference at each end.
-* [d3.curveCatmullRomClosed](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCatmullRomClosed) - a closed cubic Catmull–Rom spline.
-* [d3.curveCatmullRomOpen](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCatmullRomOpen) - a cubic Catmull–Rom spline.
-* [*catmullRom*.alpha](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveCatmullRom_alpha) - set the Catmull–Rom parameter *alpha*.
-* [d3.curveLinear](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveLinear) - a polyline.
-* [d3.curveLinearClosed](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveLinearClosed) - a closed polyline.
-* [d3.curveMonotoneX](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveMonotoneX) - a cubic spline that, given monotonicity in *x*, preserves it in *y*.
-* [d3.curveMonotoneY](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveMonotoneY) - a cubic spline that, given monotonicity in *y*, preserves it in *x*.
-* [d3.curveNatural](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveNatural) - a natural cubic spline.
-* [d3.curveStep](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveStep) - a piecewise constant function.
-* [d3.curveStepAfter](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveStepAfter) - a piecewise constant function.
-* [d3.curveStepBefore](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curveStepBefore) - a piecewise constant function.
-* [*curve*.areaStart](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curve_areaStart) - start a new area segment.
-* [*curve*.areaEnd](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curve_areaEnd) - end the current area segment.
-* [*curve*.lineStart](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curve_lineStart) - start a new line segment.
-* [*curve*.lineEnd](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curve_lineEnd) - end the current line segment.
-* [*curve*.point](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#curve_point) - add a point to the current line segment.
+* [d3.curveBasis](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBasis) - a cubic basis spline, repeating the end points.
+* [d3.curveBasisClosed](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBasisClosed) - a closed cubic basis spline.
+* [d3.curveBasisOpen](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBasisOpen) - a cubic basis spline.
+* [d3.curveBundle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBundle) - a straightened cubic basis spline.
+* [*bundle*.beta](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBundle_beta) - set the bundle tension *beta*.
+* [d3.curveBumpX](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBumpX) - a cubic Bézier spline with horizontal tangents.
+* [d3.curveBumpY](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveBumpY) - a cubic Bézier spline with vertical tangents.
+* [d3.curveCardinal](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCardinal) - a cubic cardinal spline, with one-sided difference at each end.
+* [d3.curveCardinalClosed](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCardinalClosed) - a closed cubic cardinal spline.
+* [d3.curveCardinalOpen](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCardinalOpen) - a cubic cardinal spline.
+* [*cardinal*.tension](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCardinal_tension) - set the cardinal spline tension.
+* [d3.curveCatmullRom](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCatmullRom) - a cubic Catmull–Rom spline, with one-sided difference at each end.
+* [d3.curveCatmullRomClosed](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCatmullRomClosed) - a closed cubic Catmull–Rom spline.
+* [d3.curveCatmullRomOpen](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCatmullRomOpen) - a cubic Catmull–Rom spline.
+* [*catmullRom*.alpha](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveCatmullRom_alpha) - set the Catmull–Rom parameter *alpha*.
+* [d3.curveLinear](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveLinear) - a polyline.
+* [d3.curveLinearClosed](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveLinearClosed) - a closed polyline.
+* [d3.curveMonotoneX](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveMonotoneX) - a cubic spline that, given monotonicity in *x*, preserves it in *y*.
+* [d3.curveMonotoneY](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveMonotoneY) - a cubic spline that, given monotonicity in *y*, preserves it in *x*.
+* [d3.curveNatural](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveNatural) - a natural cubic spline.
+* [d3.curveStep](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveStep) - a piecewise constant function.
+* [d3.curveStepAfter](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveStepAfter) - a piecewise constant function.
+* [d3.curveStepBefore](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curveStepBefore) - a piecewise constant function.
+* [*curve*.areaStart](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curve_areaStart) - start a new area segment.
+* [*curve*.areaEnd](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curve_areaEnd) - end the current area segment.
+* [*curve*.lineStart](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curve_lineStart) - start a new line segment.
+* [*curve*.lineEnd](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curve_lineEnd) - end the current line segment.
+* [*curve*.point](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#curve_point) - add a point to the current line segment.
 
-### [Links](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#links)
+### [Links](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#links)
 
 A smooth cubic Bézier curve from a source to a target.
 
-* [d3.linkVertical](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#linkVertical) - create a new vertical link generator.
-* [d3.linkHorizontal](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#linkHorizontal) - create a new horizontal link generator.
-* [*link*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_link) - generate a link.
-* [*link*.source](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#link_source) - set the source accessor.
-* [*link*.target](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#link_target) - set the target accessor.
-* [*link*.x](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#link_x) - set the point *x*-accessor.
-* [*link*.y](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#link_y) - set the point *y*-accessor.
-* [*link*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#link_context) - set the rendering context.
-* [d3.linkRadial](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#linkRadial) - create a new radial link generator.
-* [*linkRadial*.angle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#linkRadial_angle) - set the point *angle* accessor.
-* [*linkRadial*.radius](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#linkRadial_radius) - set the point *radius* accessor.
+* [d3.link](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link) - create a new link generator.
+* [d3.linkVertical](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#linkVertical) - create a new vertical link generator.
+* [d3.linkHorizontal](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#linkHorizontal) - create a new horizontal link generator.
+* [*link*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_link) - generate a link.
+* [*link*.source](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link_source) - set the source accessor.
+* [*link*.target](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link_target) - set the target accessor.
+* [*link*.x](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link_x) - set the point *x*-accessor.
+* [*link*.y](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link_y) - set the point *y*-accessor.
+* [*link*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link_context) - set the rendering context.
+* [*link*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#link_digits) - set the output precision.
+* [d3.linkRadial](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#linkRadial) - create a new radial link generator.
+* [*linkRadial*.angle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#linkRadial_angle) - set the point *angle* accessor.
+* [*linkRadial*.radius](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#linkRadial_radius) - set the point *radius* accessor.
 
-### [Symbols](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbols)
+### [Symbols](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbols)
 
 A categorical shape encoding, as in a scatterplot.
 
-* [d3.symbol](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbol) - create a new symbol generator.
-* [*symbol*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_symbol) - generate a symbol for the given datum.
-* [*symbol*.type](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbol_type) - set the symbol type.
-* [*symbol*.size](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbol_size) - set the size of the symbol in square pixels.
-* [*symbol*.context](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbol_context) - set the rendering context.
-* [d3.symbols](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbols) - the array of built-in symbol types.
-* [d3.symbolCircle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolCircle) - a circle.
-* [d3.symbolCross](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolCross) - a Greek cross with arms of equal length.
-* [d3.symbolDiamond](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolDiamond) - a rhombus.
-* [d3.symbolSquare](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolSquare) - a square.
-* [d3.symbolStar](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolStar) - a pentagonal star (pentagram).
-* [d3.symbolTriangle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolTriangle) - an up-pointing triangle.
-* [d3.symbolWye](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolWye) - a Y shape.
-* [d3.pointRadial](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#pointRadial) - relative coordinates of a point given an angle and radius.
-* [*symbolType*.draw](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#symbolType_draw) - draw this symbol to the given context.
+* [d3.symbol](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbol) - create a new symbol generator.
+* [*symbol*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_symbol) - generate a symbol for the given datum.
+* [*symbol*.type](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbol_type) - set the symbol type.
+* [*symbol*.size](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbol_size) - set the size of the symbol in square pixels.
+* [*symbol*.context](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbol_context) - set the rendering context.
+* [*symbol*.digits](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbol_digits) - set the output precision.
+* [d3.symbolsFill](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolsFill) - an array of built-in symbol types for filling.
+* [d3.symbolsStroke](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolsStroke) - an array of built-in symbol types for stroking.
+* [d3.symbolAsterisk](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolAsterisk) - an asterisk; for stroke.
+* [d3.symbolCircle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolCircle) - a circle; for fill or stroke.
+* [d3.symbolCross](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolCross) - a Greek cross with arms of equal length; for fill.
+* [d3.symbolDiamond](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolDiamond) - a rhombus; for fill.
+* [d3.symbolDiamond2](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolDiamond2) - a rotated square; for stroke.
+* [d3.symbolPlus](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolPlus) - a plus sign; for stroke.
+* [d3.symbolSquare](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolSquare) - a square; for fill.
+* [d3.symbolSquare2](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolSquare2) - a square; for stroke.
+* [d3.symbolStar](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolStar) - a pentagonal star (pentagram); for fill.
+* [d3.symbolTriangle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolTriangle) - an up-pointing triangle; for fill.
+* [d3.symbolTriangle2](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolTriangle2) - an up-pointing triangle; for stroke.
+* [d3.symbolWye](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolWye) - a Y shape; for fill.
+* [d3.symbolX](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolX) - an X shape; for stroke.
+* [d3.pointRadial](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#pointRadial) - relative coordinates of a point given an angle and radius.
+* [*symbolType*.draw](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#symbolType_draw) - draw this symbol to the given context.
 
-### [Stacks](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stacks)
+### [Stacks](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stacks)
 
 Stack shapes, placing one adjacent to another, as in a stacked bar chart.
 
-* [d3.stack](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stack) - create a new stack generator.
-* [*stack*](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#_stack) - generate a stack for the given dataset.
-* [*stack*.keys](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stack_keys) - set the keys accessor.
-* [*stack*.value](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stack_value) - set the value accessor.
-* [*stack*.order](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stack_order) - set the order accessor.
-* [*stack*.offset](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stack_offset) - set the offset accessor.
-* [d3.stackOrderAppearance](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOrderAppearance) - put the earliest series on bottom.
-* [d3.stackOrderAscending](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOrderAscending) - put the smallest series on bottom.
-* [d3.stackOrderDescending](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOrderDescending) - put the largest series on bottom.
-* [d3.stackOrderInsideOut](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOrderInsideOut) - put earlier series in the middle.
-* [d3.stackOrderNone](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOrderNone) - use the given series order.
-* [d3.stackOrderReverse](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOrderReverse) - use the reverse of the given series order.
-* [d3.stackOffsetExpand](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOffsetExpand) - normalize the baseline to zero and topline to one.
-* [d3.stackOffsetDiverging](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOffsetDiverging) - positive above zero; negative below zero.
-* [d3.stackOffsetNone](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOffsetNone) - apply a zero baseline.
-* [d3.stackOffsetSilhouette](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOffsetSilhouette) - center the streamgraph around zero.
-* [d3.stackOffsetWiggle](https://github.com/d3/d3-shape/blob/v3.0.1/README.md#stackOffsetWiggle) - minimize streamgraph wiggling.
+* [d3.stack](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stack) - create a new stack generator.
+* [*stack*](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#_stack) - generate a stack for the given dataset.
+* [*stack*.keys](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stack_keys) - set the keys accessor.
+* [*stack*.value](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stack_value) - set the value accessor.
+* [*stack*.order](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stack_order) - set the order accessor.
+* [*stack*.offset](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stack_offset) - set the offset accessor.
+* [d3.stackOrderAppearance](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOrderAppearance) - put the earliest series on bottom.
+* [d3.stackOrderAscending](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOrderAscending) - put the smallest series on bottom.
+* [d3.stackOrderDescending](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOrderDescending) - put the largest series on bottom.
+* [d3.stackOrderInsideOut](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOrderInsideOut) - put earlier series in the middle.
+* [d3.stackOrderNone](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOrderNone) - use the given series order.
+* [d3.stackOrderReverse](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOrderReverse) - use the reverse of the given series order.
+* [d3.stackOffsetExpand](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOffsetExpand) - normalize the baseline to zero and topline to one.
+* [d3.stackOffsetDiverging](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOffsetDiverging) - positive above zero; negative below zero.
+* [d3.stackOffsetNone](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOffsetNone) - apply a zero baseline.
+* [d3.stackOffsetSilhouette](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOffsetSilhouette) - center the streamgraph around zero.
+* [d3.stackOffsetWiggle](https://github.com/d3/d3-shape/blob/v3.2.0/README.md#stackOffsetWiggle) - minimize streamgraph wiggling.
 
-## [Time Formats (d3-time-format)](https://github.com/d3/d3-time-format/tree/v3.0.0)
+## [Time Formats (d3-time-format)](https://github.com/d3/d3-time-format/tree/v4.0.0)
 
 Parse and format times, inspired by strptime and strftime.
 
-* [d3.timeFormat](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#timeFormat) - alias for *locale*.format on the default locale.
-* [d3.timeParse](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#timeParse) - alias for *locale*.parse on the default locale.
-* [d3.utcFormat](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#utcFormat) -  alias for *locale*.utcFormat on the default locale.
-* [d3.utcParse](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#utcParse) -  alias for *locale*.utcParse on the default locale.
-* [d3.isoFormat](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#isoFormat) - an ISO 8601 UTC formatter.
-* [d3.isoParse](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#isoParse) - an ISO 8601 UTC parser.
-* [*locale*.format](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#locale_format) - create a time formatter.
-* [*locale*.parse](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#locale_parse) - create a time parser.
-* [*locale*.utcFormat](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#locale_utcFormat) - create a UTC formatter.
-* [*locale*.utcParse](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#locale_utcParse) - create a UTC parser.
-* [d3.timeFormatLocale](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#timeFormatLocale) - define a custom locale.
-* [d3.timeFormatDefaultLocale](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md#timeFormatDefaultLocale) - define the default locale.
+* [d3.timeFormat](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#timeFormat) - alias for *locale*.format on the default locale.
+* [d3.timeParse](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#timeParse) - alias for *locale*.parse on the default locale.
+* [d3.utcFormat](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#utcFormat) -  alias for *locale*.utcFormat on the default locale.
+* [d3.utcParse](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#utcParse) -  alias for *locale*.utcParse on the default locale.
+* [d3.isoFormat](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#isoFormat) - an ISO 8601 UTC formatter.
+* [d3.isoParse](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#isoParse) - an ISO 8601 UTC parser.
+* [*locale*.format](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#locale_format) - create a time formatter.
+* [*locale*.parse](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#locale_parse) - create a time parser.
+* [*locale*.utcFormat](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#locale_utcFormat) - create a UTC formatter.
+* [*locale*.utcParse](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#locale_utcParse) - create a UTC parser.
+* [d3.timeFormatLocale](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#timeFormatLocale) - define a custom locale.
+* [d3.timeFormatDefaultLocale](https://github.com/d3/d3-time-format/blob/v4.1.0/README.md#timeFormatDefaultLocale) - define the default locale.
 
-## [Time Intervals (d3-time)](https://github.com/d3/d3-time/tree/v3.0.0)
+## [Time Intervals (d3-time)](https://github.com/d3/d3-time/tree/v3.1.0)
 
 A calculator for humanity’s peculiar conventions of time.
 
-* [d3.timeInterval](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeInterval) - implement a new custom time interval.
-* [*interval*](https://github.com/d3/d3-time/blob/v3.0.0/README.md#_interval) - alias for *interval*.floor.
-* [*interval*.floor](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_floor) - round down to the nearest boundary.
-* [*interval*.round](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_round) - round to the nearest boundary.
-* [*interval*.ceil](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_ceil) - round up to the nearest boundary.
-* [*interval*.offset](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_offset) - offset a date by some number of intervals.
-* [*interval*.range](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_range) - generate a range of dates at interval boundaries.
-* [*interval*.filter](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_filter) - create a filtered subset of this interval.
-* [*interval*.every](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_every) - create a filtered subset of this interval.
-* [*interval*.count](https://github.com/d3/d3-time/blob/v3.0.0/README.md#interval_count) - count interval boundaries between two dates.
-* [d3.timeMillisecond](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMillisecond), [d3.utcMillisecond](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMillisecond) - the millisecond interval.
-* [d3.timeMilliseconds](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMillisecond), [d3.utcMilliseconds](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMillisecond) - aliases for millisecond.range.
-* [d3.timeSecond](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSecond), [d3.utcSecond](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSecond) - the second interval.
-* [d3.timeSeconds](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSecond), [d3.utcSeconds](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSecond) - aliases for second.range.
-* [d3.timeMinute](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMinute), [d3.utcMinute](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMinute) - the minute interval.
-* [d3.timeMinutes](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMinute), [d3.utcMinutes](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMinute) - aliases for minute.range.
-* [d3.timeHour](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeHour), [d3.utcHour](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeHour) - the hour interval.
-* [d3.timeHours](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeHour), [d3.utcHours](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeHour) - aliases for hour.range.
-* [d3.timeDay](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeDay), [d3.utcDay](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeDay) - the day interval.
-* [d3.timeDays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeDay), [d3.utcDays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeDay) - aliases for day.range.
-* [d3.timeWeek](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWeek), [d3.utcWeek](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWeek) - aliases for sunday.
-* [d3.timeWeeks](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWeek), [d3.utcWeeks](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWeek) - aliases for week.range.
-* [d3.timeSunday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSunday), [d3.utcSunday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSunday) - the week interval, starting on Sunday.
-* [d3.timeSundays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSunday), [d3.utcSundays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSunday) - aliases for sunday.range.
-* [d3.timeMonday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonday), [d3.utcMonday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonday) - the week interval, starting on Monday.
-* [d3.timeMondays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonday), [d3.utcMondays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonday) - aliases for monday.range.
-* [d3.timeTuesday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeTuesday), [d3.utcTuesday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeTuesday) - the week interval, starting on Tuesday.
-* [d3.timeTuesdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeTuesday), [d3.utcTuesdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeTuesday) - aliases for tuesday.range.
-* [d3.timeWednesday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWednesday), [d3.utcWednesday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWednesday) - the week interval, starting on Wednesday.
-* [d3.timeWednesdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWednesday), [d3.utcWednesdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeWednesday) - aliases for wednesday.range.
-* [d3.timeThursday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeThursday), [d3.utcThursday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeThursday) - the week interval, starting on Thursday.
-* [d3.timeThursdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeThursday), [d3.utcThursdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeThursday) - aliases for thursday.range.
-* [d3.timeFriday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeFriday), [d3.utcFriday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeFriday) - the week interval, starting on Friday.
-* [d3.timeFridays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeFriday), [d3.utcFridays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeFriday) - aliases for friday.range.
-* [d3.timeSaturday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSaturday), [d3.utcSaturday](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSaturday) - the week interval, starting on Saturday.
-* [d3.timeSaturdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSaturday), [d3.utcSaturdays](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeSaturday) - aliases for saturday.range.
-* [d3.timeMonth](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonth), [d3.utcMonth](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonth) - the month interval.
-* [d3.timeMonths](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonth), [d3.utcMonths](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeMonth) - aliases for month.range.
-* [d3.timeYear](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeYear), [d3.utcYear](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeYear) - the year interval.
-* [d3.timeYears](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeYear), [d3.utcYears](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeYear) - aliases for year.range.
-* [d3.timeTicks](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeTicks), [d3.utcTicks](https://github.com/d3/d3-time/blob/v3.0.0/README.md#utcTicks) -
-* [d3.timeTickInterval](https://github.com/d3/d3-time/blob/v3.0.0/README.md#timeTickInterval), [d3.utcTickInterval](https://github.com/d3/d3-time/blob/v3.0.0/README.md#utcTickInterval) -
+* [d3.timeInterval](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeInterval) - implement a new custom time interval.
+* [*interval*](https://github.com/d3/d3-time/blob/v3.1.0/README.md#_interval) - alias for *interval*.floor.
+* [*interval*.floor](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_floor) - round down to the nearest boundary.
+* [*interval*.round](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_round) - round to the nearest boundary.
+* [*interval*.ceil](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_ceil) - round up to the nearest boundary.
+* [*interval*.offset](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_offset) - offset a date by some number of intervals.
+* [*interval*.range](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_range) - generate a range of dates at interval boundaries.
+* [*interval*.filter](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_filter) - create a filtered subset of this interval.
+* [*interval*.every](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_every) - create a filtered subset of this interval.
+* [*interval*.count](https://github.com/d3/d3-time/blob/v3.1.0/README.md#interval_count) - count interval boundaries between two dates.
+* [d3.timeMillisecond](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMillisecond), [d3.utcMillisecond](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMillisecond) - the millisecond interval.
+* [d3.timeMilliseconds](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMillisecond), [d3.utcMilliseconds](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMillisecond) - aliases for millisecond.range.
+* [d3.timeSecond](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSecond), [d3.utcSecond](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSecond) - the second interval.
+* [d3.timeSeconds](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSecond), [d3.utcSeconds](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSecond) - aliases for second.range.
+* [d3.timeMinute](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMinute), [d3.utcMinute](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMinute) - the minute interval.
+* [d3.timeMinutes](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMinute), [d3.utcMinutes](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMinute) - aliases for minute.range.
+* [d3.timeHour](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeHour), [d3.utcHour](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeHour) - the hour interval.
+* [d3.timeHours](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeHour), [d3.utcHours](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeHour) - aliases for hour.range.
+* [d3.timeDay](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeDay), [d3.utcDay](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeDay), [d3.unixDay](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeDay) - the day interval.
+* [d3.timeDays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeDay), [d3.utcDays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeDay), [d3.unixDays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeDay) - aliases for day.range.
+* [d3.timeWeek](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWeek), [d3.utcWeek](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWeek) - aliases for sunday.
+* [d3.timeWeeks](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWeek), [d3.utcWeeks](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWeek) - aliases for week.range.
+* [d3.timeSunday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSunday), [d3.utcSunday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSunday) - the week interval, starting on Sunday.
+* [d3.timeSundays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSunday), [d3.utcSundays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSunday) - aliases for sunday.range.
+* [d3.timeMonday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonday), [d3.utcMonday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonday) - the week interval, starting on Monday.
+* [d3.timeMondays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonday), [d3.utcMondays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonday) - aliases for monday.range.
+* [d3.timeTuesday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeTuesday), [d3.utcTuesday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeTuesday) - the week interval, starting on Tuesday.
+* [d3.timeTuesdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeTuesday), [d3.utcTuesdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeTuesday) - aliases for tuesday.range.
+* [d3.timeWednesday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWednesday), [d3.utcWednesday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWednesday) - the week interval, starting on Wednesday.
+* [d3.timeWednesdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWednesday), [d3.utcWednesdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeWednesday) - aliases for wednesday.range.
+* [d3.timeThursday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeThursday), [d3.utcThursday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeThursday) - the week interval, starting on Thursday.
+* [d3.timeThursdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeThursday), [d3.utcThursdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeThursday) - aliases for thursday.range.
+* [d3.timeFriday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeFriday), [d3.utcFriday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeFriday) - the week interval, starting on Friday.
+* [d3.timeFridays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeFriday), [d3.utcFridays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeFriday) - aliases for friday.range.
+* [d3.timeSaturday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSaturday), [d3.utcSaturday](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSaturday) - the week interval, starting on Saturday.
+* [d3.timeSaturdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSaturday), [d3.utcSaturdays](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeSaturday) - aliases for saturday.range.
+* [d3.timeMonth](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonth), [d3.utcMonth](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonth) - the month interval.
+* [d3.timeMonths](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonth), [d3.utcMonths](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeMonth) - aliases for month.range.
+* [d3.timeYear](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeYear), [d3.utcYear](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeYear) - the year interval.
+* [d3.timeYears](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeYear), [d3.utcYears](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeYear) - aliases for year.range.
+* [d3.timeTicks](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeTicks), [d3.utcTicks](https://github.com/d3/d3-time/blob/v3.1.0/README.md#utcTicks) -
+* [d3.timeTickInterval](https://github.com/d3/d3-time/blob/v3.1.0/README.md#timeTickInterval), [d3.utcTickInterval](https://github.com/d3/d3-time/blob/v3.1.0/README.md#utcTickInterval) -
 
 ## [Timers (d3-timer)](https://github.com/d3/d3-timer/tree/v3.0.1)
 
