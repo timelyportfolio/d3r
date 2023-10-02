@@ -41,7 +41,6 @@ License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: dplyr,
           htmltools,
-          rlang,
           tidyr (>= 0.8.3)
 Suggests: httr,
           jsonlite,
