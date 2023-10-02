@@ -13,3 +13,4 @@ docs
 .V8history
 ^experiments
 ^\.github$
+^CRAN-SUBMISSION$

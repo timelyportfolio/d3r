@@ -1,10 +1,6 @@
-# Comments
-
-fix CRAN errors notified by email
-
 ## Test environments
-* local Windows 10 install, R 4.1.1
-* Github actions standard package check
+* local Windows 10 install, R 4.3.1
+* Github actions ubuntu, mac, windows release check
 * winbuilder devel, release, and old release
 * rhub check_for_cran
 

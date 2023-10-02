@@ -36,7 +36,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">d3r</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.0</span>
       </span>
     </div>
 
@@ -74,81 +74,81 @@
 <h3 id="installing-d3r">Installing d3r<a class="anchor" aria-label="anchor" href="#installing-d3r"></a>
 </h3>
 <p><code>d3r</code> is on CRAN, so install with <code>install.packages("d3r")</code> or for the absolute latest use <code>devtools</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"timelyportfolio/d3r"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"timelyportfolio/d3r"</span>)</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="d3-dependency-functions">d3 Dependency Functions<a class="anchor" aria-label="anchor" href="#d3-dependency-functions"></a>
 </h3>
 <p><code>d3r</code> makes <code>d3.js</code> dependency injection in R easy with <code><a href="reference/d3_dep_v3.html">d3_dep_v3()</a></code>, <code><a href="reference/d3_dep_v4.html">d3_dep_v4()</a></code>, <code><a href="reference/d3_dep_v5.html">d3_dep_v5()</a></code>, <code><a href="reference/d3_dep_v6.html">d3_dep_v6()</a></code>, and the newest <code><a href="reference/d3_dep_v7.html">d3_dep_v7()</a></code>. These functions work well with <code><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">htmltools::tags</a></code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># check web developer tools to see d3 is available</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">browsable</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">attachDependencies</span>(</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tagList</span>(),</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">d3_dep_v7</span>()</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># or include directly in a taglist; I prefer this method.</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">browsable</span>(</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">h1</span>(<span class="st">"I have d3 version "</span>, <span class="fu">span</span>(<span class="at">id=</span><span class="st">"version"</span>)),</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    tags<span class="sc">$</span><span class="fu">script</span>(<span class="st">"d3.select('#version').text(d3.version)"</span>),</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">d3_dep_v7</span>()</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># check web developer tools to see d3 is available</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">browsable</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  <span class="fu">attachDependencies</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>    <span class="fu">tagList</span>(),</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>    <span class="fu">d3_dep_v7</span>()</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>  )</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>)</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co"># or include directly in a taglist; I prefer this method.</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="fu">browsable</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    <span class="fu">h1</span>(<span class="st">"I have d3 version "</span>, <span class="fu">span</span>(<span class="at">id=</span><span class="st">"version"</span>)),</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>    tags<span class="sc">$</span><span class="fu">script</span>(<span class="st">"d3.select('#version').text(d3.version)"</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>    <span class="fu">d3_dep_v7</span>()</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>  )</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>)</span></code></pre></div>
 <p>Also, I will commit to keeping <code>d3r</code> up-to-date with <code>d3.js</code>, so you’ll no longer need multiple copies of <code>d3.js</code> for your <code>htmlwidgets</code>. If you are a <code>htmlwidget</code> author, you will no longer need to worry every time <code>d3.js</code> gets a new release. See <code>treebar</code> <a href="https://github.com/timelyportfolio/treebar/blob/master/R/treebar.R#L66-L74" class="external-link">lines</a> for an example of using <code>d3r</code> with your <code>htmlwidget</code>.</p>
 </div>
 <div class="section level3">
 <h3 id="d3-hierarchy-from-dataframe">d3 Hierarchy from data.frame<a class="anchor" aria-label="anchor" href="#d3-hierarchy-from-dataframe"></a>
 </h3>
 <p>Building <code>d3.js</code> hierarchies can be very difficult. <code><a href="reference/d3_nest.html">d3r::d3_nest()</a></code> will convert <code>table</code> and <code>data.frame</code> to a nested <code>d3.js</code> hierarchy ready for work with <a href="https://github.com/d3/d3-hierarchy" class="external-link"><code>d3-hierarchy</code></a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_nest</span>(<span class="fu">as.data.frame</span>(Titanic))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">d3_nest</span>(<span class="fu">as.data.frame</span>(Titanic))</span></code></pre></div>
 <p>As another example, let’s go from <code>treemap</code> to <code>d3.js</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemap)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_nest</span>(</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  treemap<span class="sc">::</span><span class="fu">random.hierarchical.data</span>(),</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">value_cols =</span> <span class="st">"x"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">library</span>(treemap)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="fu">d3_nest</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  treemap<span class="sc">::</span><span class="fu">random.hierarchical.data</span>(),</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  <span class="at">value_cols =</span> <span class="st">"x"</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>)</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="d3-hierarchy-from-partykit--rpart">d3 Hierarchy from partykit / rpart<a class="anchor" aria-label="anchor" href="#d3-hierarchy-from-partykit--rpart"></a>
 </h3>
 <p><code>rpart</code> and similar objects in <code>R</code> are very difficult to convert but make perfect subjects for <code>d3</code> hierarchical layouts. <code>d3_party</code> helps convert these objects for easy usage with <code>d3.js</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github("timelyportfolio/d3treeR")</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3treeR)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># example from ?rpart</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"kyphosis"</span>, <span class="at">package=</span><span class="st">"rpart"</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">&lt;-</span>  rpart<span class="sc">::</span><span class="fu">rpart</span>(</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  Kyphosis <span class="sc">~</span> Age <span class="sc">+</span> Number <span class="sc">+</span> Start,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kyphosis</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># get the json hierarchy</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_party</span>(<span class="at">tree=</span>rp)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># interactive plot with d3treeR</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="fu">d3tree2</span>(</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">d3_party</span>(<span class="at">tree=</span>rp),</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">celltext=</span><span class="st">"description"</span>,</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">valueField=</span><span class="st">"n"</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">#devtools::install_github("timelyportfolio/d3treeR")</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="fu">library</span>(d3treeR)</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="co"># example from ?rpart</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"kyphosis"</span>, <span class="at">package=</span><span class="st">"rpart"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>rp <span class="ot">&lt;-</span>  rpart<span class="sc">::</span><span class="fu">rpart</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>  Kyphosis <span class="sc">~</span> Age <span class="sc">+</span> Number <span class="sc">+</span> Start,</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  <span class="at">data =</span> kyphosis</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>)</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="co"># get the json hierarchy</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="fu">d3_party</span>(<span class="at">tree=</span>rp)</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="co"># interactive plot with d3treeR</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="fu">d3tree2</span>(</span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>  <span class="fu">d3_party</span>(<span class="at">tree=</span>rp),</span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>  <span class="at">celltext=</span><span class="st">"description"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>  <span class="at">valueField=</span><span class="st">"n"</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>)</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="d3-network-from-igraph">d3 Network from igraph<a class="anchor" aria-label="anchor" href="#d3-network-from-igraph"></a>
 </h3>
 <p><code>igraph</code> to <code>d3.js</code> network of <code>nodes</code> and <code>links</code> is a very common conversion. <code><a href="reference/d3_igraph.html">d3r::d3_igraph</a></code> will do this for you.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">d3_igraph</span>(igraph<span class="sc">::</span><span class="fu">watts.strogatz.game</span>(<span class="dv">1</span>, <span class="dv">50</span>, <span class="dv">4</span>, <span class="fl">0.05</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">library</span>(d3r)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">d3_igraph</span>(igraph<span class="sc">::</span><span class="fu">watts.strogatz.game</span>(<span class="dv">1</span>, <span class="dv">50</span>, <span class="dv">4</span>, <span class="fl">0.05</span>))</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="todo">Todo<a class="anchor" aria-label="anchor" href="#todo"></a>
