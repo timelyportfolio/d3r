@@ -2,10 +2,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/d3r)](https://cran.r-project.org/package=d3r)
-[![Travis-CI Build
-Status](https://travis-ci.org/timelyportfolio/d3r.svg?branch=master)](https://travis-ci.org/timelyportfolio/d3r)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/NA/NA/master.svg)](https://codecov.io/github/timelyportfolio/d3r?branch=master)
+[![R-CMD-check](https://github.com/timelyportfolio/d3r/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/timelyportfolio/d3r/actions/workflows/R-CMD-check.yaml)
 
 ### Installing d3r
 
